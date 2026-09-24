@@ -1,0 +1,18 @@
+.ai-connection-dialog { width: min(760px,94vw); }
+.ai-connection-dialog p { margin: 12px 0; font-size: .9rem; }
+.ai-connection-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.ai-connection-heading h2 { margin: 4px 0 8px; }
+.ai-connection-dialog fieldset { border: 0; padding: 0; margin: 18px 0; min-width: 0; }
+.ai-connection-dialog legend { font-weight: 750; }
+.ai-connection-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+.ai-connection-grid > label { min-width: 0; }
+.ai-connection-state { padding: 12px 14px; background: #0e1729; border: 1px solid var(--line); border-radius: 9px; }
+.ai-connection-review { margin: 20px 0; padding: 18px; border: 1px solid var(--orange); border-radius: 12px; }
+.ai-connection-review dl { margin: 12px 0; }
+.ai-connection-review dt { font-weight: 750; margin-top: 12px; }
+.ai-connection-review dd { margin: 5px 0 12px; overflow-wrap: anywhere; }
+.ai-connection-review code { white-space: normal; }
+.ai-connection-help { margin-top: 20px; }
+.ai-connection-help summary { cursor: pointer; }
+.ai-connection-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 20px; font-size: .85rem; }
+@media(max-width:540px) { .ai-connection-grid { grid-template-columns: 1fr; gap: 0; } .ai-connection-dialog { padding: 18px; } .ai-connection-heading { flex-wrap: wrap; } }

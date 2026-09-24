@@ -1,0 +1,19 @@
+/* Scoped to the personal move dialog; count rows remain usable in Basic. */
+#libraryMoveDialog { width: min(820px, 94vw); }
+.move-form { border-top: 1px solid var(--line); margin-top: 22px; padding-top: 15px; }
+.move-form p { margin: 10px 0; font-size: .88rem; }
+.move-form-rows { border: 0; padding: 0; margin: 14px 0; min-width: 0; }
+.move-form-rows > legend { font-weight: 750; margin-bottom: 8px; }
+.move-form-row { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px 16px; margin: 0 0 18px; min-width: 0; }
+.move-form-row > legend { color: var(--orange); font-weight: 750; padding: 0 7px; }
+.move-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.move-form-grid > label { min-width: 0; }
+.move-form-facing, .move-form-json { margin: 14px 0; }
+.move-form summary { cursor: pointer; }
+.move-form-summary { padding: 11px 13px; background: #0e1729; border-radius: 8px; border: 1px solid var(--line); }
+.move-form-summary.has-error { color: var(--bad); border-color: var(--bad); }
+.move-form [aria-invalid=true] { border-color: var(--bad); }
+.move-form-confirm, .move-form-pending { border: 1px solid var(--orange); padding: 12px; border-radius: 9px; margin: 12px 0; }
+.move-form-confirm button, .move-form-pending button { margin: 4px 8px 4px 0; }
+.move-form-json textarea { font-family: ui-monospace, monospace; font-size: .86rem; }
+@media (max-width: 540px) { .move-form-grid { grid-template-columns: 1fr; gap: 0; } #libraryMoveDialog { padding: 18px; } }

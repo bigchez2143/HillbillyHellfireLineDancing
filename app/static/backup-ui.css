@@ -1,0 +1,6 @@
+.private-backup .backup-path,.private-backup li{overflow-wrap:anywhere}
+.private-backup details{margin:1rem 0}
+.private-backup details ul{max-height:18rem;overflow:auto;padding-left:1.4rem}
+.private-backup hr{border:0;border-top:1px solid var(--line,#334155);margin:1.8rem 0}
+.private-backup [hidden]{display:none!important}
+.private-backup .button{display:inline-block;padding:.65rem 1rem;border:1px solid var(--line,#475569);border-radius:.5rem;text-decoration:none}

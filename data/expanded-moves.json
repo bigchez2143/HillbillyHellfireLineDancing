@@ -1,0 +1,2194 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "aj": {
+      "title": "AJ Dance Sheffield — Glynn Rodgers glossary",
+      "url": "https://www.ajdancesheffield.com/_files/ugd/2a7956_a35972b446e0473ea9125bc9cd6170ac.pdf"
+    },
+    "nta": {
+      "title": "National Teachers Association — Line Dance Level Breakdown",
+      "url": "https://www.ntadance.com/line-dance-level-breakdown/"
+    },
+    "linedancer": {
+      "title": "Linedancer Guide to Line Dance Level Definitions",
+      "url": "https://www.linedancerweb.com/viewpdf.php?dance=46311"
+    },
+    "taipei": {
+      "title": "Taipei International Line Dance Association — terminology",
+      "url": "https://www.taipeilinedance.org.tw/about/terminology"
+    },
+    "maddison-glover-pencil-example": {
+      "title": "Johnnie Walker Blues — Maddison Glover, original choreographer's stepsheet (single-support half-pencil example)",
+      "url": "https://www.copperknob.co.uk/stepsheets/CD952FD/johnnie-walker-blues"
+    },
+    "steezy-moonwalk": {
+      "title": "How To Do The Moonwalk (Backslide) — STEEZY, Charise Roberts",
+      "url": "https://www.steezy.co/posts/how-to-do-the-moonwalk-backslide"
+    },
+    "steezy-roger-rabbit": {
+      "title": "How To Do The Roger Rabbit — STEEZY, Charise Roberts",
+      "url": "https://www.steezy.co/posts/how-to-do-the-roger-rabbit"
+    }
+  },
+  "moves": [
+    {
+      "id": "expansion-wizard-right-diagonal",
+      "name": "Wizard / Dorothy — right diagonal",
+      "aliases": [
+        "Dorothy step",
+        "Wizard step",
+        "Right Dorothy"
+      ],
+      "level": "I",
+      "family": "locking",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "N",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Step right toward the right forward diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Lock left behind right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Step right farther along that diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Travel on a forward diagonal with a step, a weighted lock behind, and another step. The quick final step lands after count 2: count 1, 2&.",
+      "source_ids": [
+        "nta",
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Wizard / Dorothy",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-sailor-right-1-4",
+      "name": "Sailor 1/4 right turn — three transfers",
+      "aliases": [
+        "Turning sailor 1/4 right"
+      ],
+      "level": "I",
+      "family": "sailor",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 90,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Cross right behind left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and take a small left step to the side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Step onto right to finish, keeping the stated facing.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "A right-led sailor variation completes a 1/4 turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning sailors",
+      "review_note": "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-sailor-right-1-2",
+      "name": "Sailor 1/2 right turn — three transfers",
+      "aliases": [
+        "Turning sailor 1/2 right"
+      ],
+      "level": "INT",
+      "family": "sailor",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 180,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Cross right behind left and take weight; rotate 90 degrees right on this action.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and take a small left step to the side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Step onto right to finish, keeping the stated facing.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "A right-led sailor variation completes a 1/2 turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning sailors",
+      "review_note": "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-sailor-right-3-4",
+      "name": "Sailor 3/4 right turn — three transfers",
+      "aliases": [
+        "Turning sailor 3/4 right"
+      ],
+      "level": "A",
+      "family": "sailor",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 270,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Cross right behind left and take weight; rotate 90 degrees right on this action.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and take a small left step to the side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and step onto right to finish.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "A right-led sailor variation completes a 3/4 turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning sailors",
+      "review_note": "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-sailor-right-full",
+      "name": "Sailor full right turn — three transfers",
+      "aliases": [
+        "Turning sailor full right"
+      ],
+      "level": "A",
+      "family": "sailor",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Cross right behind left and take weight; rotate 180 degrees right on this action.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "180"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and take a small left step to the side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and step onto right to finish.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "A right-led sailor variation completes a full turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning sailors",
+      "review_note": "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-triple-right-1-4",
+      "name": "Triple 1/4 right turn — RLR",
+      "aliases": [
+        "Turning triple 1/4 right"
+      ],
+      "level": "I",
+      "family": "triple_turn",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 90,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Step right to the side and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Bring left beside right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and step right forward in the new facing.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "Three weighted steps on 1&2 complete a 1/4 right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning triples",
+      "review_note": "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-triple-right-1-2",
+      "name": "Triple 1/2 right turn — RLR",
+      "aliases": [
+        "Turning triple 1/2 right"
+      ],
+      "level": "I",
+      "family": "triple_turn",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 180,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and step onto right.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Bring left beside right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and step right forward in the new facing.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "Three weighted steps on 1&2 complete a 1/2 right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning triples",
+      "review_note": "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-triple-right-3-4",
+      "name": "Triple 3/4 right turn — RLR",
+      "aliases": [
+        "Turning triple 3/4 right"
+      ],
+      "level": "INT",
+      "family": "triple_turn",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 270,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and step onto right.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and take weight onto left beside right.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and step right forward in the new facing.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "Three weighted steps on 1&2 complete a 3/4 right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning triples",
+      "review_note": "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-triple-right-full",
+      "name": "Triple full right turn — RLR",
+      "aliases": [
+        "Turning triple full right"
+      ],
+      "level": "A",
+      "family": "triple_turn",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Turn 180 degrees right and step onto right.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "180"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and take weight onto left beside right.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and step right forward in the new facing.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "Three weighted steps on 1&2 complete a full right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Turning triples",
+      "review_note": "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-heel-jack-close-touch",
+      "name": "Heel jack — back, heel, close, touch",
+      "aliases": [],
+      "level": "INT",
+      "family": "heel_jack",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "S",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Step right slightly back and right, taking weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Present the left heel forward without taking weight.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Bring left back beside right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Touch right beside left without weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "This two-count heel-jack variation presents the left heel and closes it before a final right touch. Its four actions use 1&2&; the ending is part of the variant.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Heel jack",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-heel-jack-close-step",
+      "name": "Heel jack — back, heel, close, step",
+      "aliases": [],
+      "level": "INT",
+      "family": "heel_jack",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "S",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Step right slightly back and right, taking weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Present the left heel forward without taking weight.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Bring left back beside right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Step right beside left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "This two-count heel-jack variation presents the left heel and closes it before a final right step. Its four actions use 1&2&; the ending is part of the variant.",
+      "source_ids": [
+        "nta",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Heel jack",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-vaudeville-cross-close",
+      "name": "Vaudeville — cross, side, heel, close",
+      "aliases": [],
+      "level": "INT",
+      "family": "heel_jack",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "W",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Cross right in front of left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Step left to the left side, taking weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Extend the right heel toward the right diagonal without weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Close right beside left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Cross, move sideways, show the free heel, then close that foot with weight. This version uses 1&2& and leaves left free.",
+      "source_ids": [
+        "nta",
+        "taipei",
+        "aj"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Vaudeville",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-kick-ball-cross-right",
+      "name": "Kick-ball-cross — right kick",
+      "aliases": [
+        "Right kick-ball-cross"
+      ],
+      "level": "I",
+      "family": "kick_ball",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Kick right forward without transferring weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Set the ball of right near left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Cross left in front of right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "A right kick leads into a right ball step and a weighted left cross on 1&2. Right is free at the end.",
+      "source_ids": [
+        "nta",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Kick-ball-cross",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-heel-switches-open",
+      "name": "Heel switches — open finish",
+      "aliases": [],
+      "level": "I",
+      "family": "switches",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Touch the right heel forward without weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Close right beside left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Touch the left heel forward without weight.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Alternate right and left heel presentations by closing the first foot with weight. Leave the second presentation unweighted; left remains free.",
+      "source_ids": [
+        "nta"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Heel/toe switches",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-heel-switches-closed",
+      "name": "Heel switches — closed finish",
+      "aliases": [],
+      "level": "I",
+      "family": "switches",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Touch the right heel forward without weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Close right beside left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Touch the left heel forward without weight.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Close left beside right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Alternate right and left heel presentations by closing the first foot with weight. Close the second foot on the final & count; right is free again.",
+      "source_ids": [
+        "nta"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Heel/toe switches",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-toe-switches-open",
+      "name": "Toe switches — open finish",
+      "aliases": [],
+      "level": "I",
+      "family": "switches",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Point right to the right side without weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Close right beside left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Point left to the left side without weight.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Alternate right and left toe presentations by closing the first foot with weight. Leave the second presentation unweighted; left remains free.",
+      "source_ids": [
+        "nta"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Heel/toe switches",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-toe-switches-closed",
+      "name": "Toe switches — closed finish",
+      "aliases": [],
+      "level": "I",
+      "family": "switches",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Point right to the right side without weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Close right beside left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Point left to the left side without weight.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Close left beside right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Alternate right and left toe presentations by closing the first foot with weight. Close the second foot on the final & count; right is free again.",
+      "source_ids": [
+        "nta"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Heel/toe switches",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-forward-locking-triple",
+      "name": "Forward locking triple — RLR",
+      "aliases": [
+        "Forward lock step",
+        "Forward lock shuffle"
+      ],
+      "level": "I",
+      "family": "locking",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "N",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Step right forward and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Lock left behind right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Step right forward again.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Travel forward through step, lock behind, step on 1&2. This rhythm differs from the Wizard variation even though both use three weighted actions.",
+      "source_ids": [
+        "nta",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Forward locking triple",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-anchor-back-rock-triple",
+      "name": "Anchor — back rock triple",
+      "aliases": [
+        "Anchor step",
+        "Anchor triple"
+      ],
+      "level": "INT",
+      "family": "anchor",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Place right slightly behind left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Recover weight onto left without moving it.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Return weight onto right, keeping the feet close.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Set a small back position and alternate weight right, left, right on 1&2. This compact anchor finishes with left free.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Anchor step",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-nightclub-side-behind-recover",
+      "name": "Nightclub basic — side, behind-rock, recover",
+      "aliases": [],
+      "level": "INT",
+      "family": "nightclub",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "E",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Take a right side step with weight and sustain it through count 1.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Place left slightly behind right and rock weight onto it.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Recover weight onto right in its current position.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "A sustained side step is followed by a compact behind-rock and recovery on 1, 2&. Keep this variation separate from a nightclub basic that finishes with a crossing step.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Nightclub basic",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-nightclub-side-close-cross",
+      "name": "Nightclub basic — side, close, cross",
+      "aliases": [],
+      "level": "INT",
+      "family": "nightclub",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "E",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Step right to the side and sustain the weight through count 1.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Close left slightly behind right and take weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Cross right in front of left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Follow a sustained right side step with a small closing step and a right cross on 1, 2&. This finishes in a crossing position, unlike the behind-rock recovery version.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Nightclub basic",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-samba-forward-1a2",
+      "name": "Forward samba — 1a2",
+      "aliases": [
+        "Forward samba"
+      ],
+      "level": "INT",
+      "family": "samba",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "N",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "3/4",
+          "text": "Step right forward with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/4",
+          "duration_counts": "1/4",
+          "text": "Place the ball of left slightly to the left side and take a brief weight transfer.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Return weight onto right in its current position.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Use a forward right step, a brief left side transfer, and a return to right. This explicitly selects 1a2 timing; a straight 1&2 variation needs different event spacing.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Samba step",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-samba-cross-1a2",
+      "name": "Cross samba — 1a2",
+      "aliases": [
+        "Cross samba",
+        "Bota fogo"
+      ],
+      "level": "INT",
+      "family": "samba",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "3/4",
+          "text": "Cross right in front of left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3/4",
+          "duration_counts": "1/4",
+          "text": "Place the ball of left slightly to the left side and take a brief weight transfer.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Return weight onto right in its current position.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Use a crossing right step, a brief left side transfer, and a return to right. This explicitly selects 1a2 timing; a straight 1&2 variation needs different event spacing.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Samba step",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-volta-right-1-4",
+      "name": "Volta 1/4 right turn — crossing rhythm",
+      "aliases": [],
+      "level": "A",
+      "family": "volta",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 90,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Turn 45 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Take a small left ball step to the side to continue around the turn.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 45 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        }
+      ],
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a 1/4 right turn. This selected variation lasts 2 counts and ends weighted right.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Volta turn",
+      "review_note": "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-volta-right-1-2",
+      "name": "Volta 1/2 right turn — crossing rhythm",
+      "aliases": [],
+      "level": "A",
+      "family": "volta",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": 180,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Take a small left ball step to the side to continue around the turn.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a 1/2 right turn. This selected variation lasts 2 counts and ends weighted right.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Volta turn",
+      "review_note": "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-volta-right-3-4",
+      "name": "Volta 3/4 right turn — crossing rhythm",
+      "aliases": [],
+      "level": "A",
+      "family": "volta",
+      "duration_counts": "3",
+      "start_free_foot": "R",
+      "net_rotation_deg": 270,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Take a small left ball step to the side to continue around the turn.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Take a small left ball step to the side to continue around the turn.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a 3/4 right turn. This selected variation lasts 3 counts and ends weighted right.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Volta turn",
+      "review_note": "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-volta-right-full",
+      "name": "Volta full right turn — crossing rhythm",
+      "aliases": [],
+      "level": "A",
+      "family": "volta",
+      "duration_counts": "4",
+      "start_free_foot": "R",
+      "net_rotation_deg": 360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Take a small left ball step to the side to continue around the turn.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "3/2",
+          "duration_counts": "1/2",
+          "text": "Take a small left ball step to the side to continue around the turn.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1/2",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "5/2",
+          "duration_counts": "1/2",
+          "text": "Take a small left ball step to the side to continue around the turn.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "3",
+          "duration_counts": "1",
+          "text": "Turn 90 degrees right and place right across the front of left with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        }
+      ],
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a full right turn. This selected variation lasts 4 counts and ends weighted right.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Volta turn",
+      "review_note": "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-diamond-half-right",
+      "name": "Diamond half right — diagonal entry",
+      "aliases": [],
+      "level": "INT",
+      "family": "diamond",
+      "duration_counts": "4",
+      "start_free_foot": "R",
+      "net_rotation_deg": 180,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Step right forward along the starting diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn one eighth right and step left to the side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn one eighth right and step right back along the new diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1/2",
+          "text": "Step left back on that diagonal.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "5/2",
+          "duration_counts": "1/2",
+          "text": "Turn one eighth right and step right to the side.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "3",
+          "duration_counts": "1",
+          "text": "Turn one eighth right and step left forward on the new diagonal.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "45"
+        }
+      ],
+      "explanation": "Begin facing the left forward diagonal (315 degrees from the block wall). Alternate forward and backward diagonal passages with eighth-turn side steps; finish facing the opposite diagonal after a half turn.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Diamond",
+      "review_note": "Requires a 315-degree entry facing relative to the block wall. The side-step and diagonal transitions are explicit; instructor review of this selected diamond path is pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements.",
+      "entry_facing_deg": 315
+    },
+    {
+      "id": "expansion-diamond-full-right",
+      "name": "Diamond full right — diagonal entry",
+      "aliases": [],
+      "level": "A",
+      "family": "diamond",
+      "duration_counts": "8",
+      "start_free_foot": "R",
+      "net_rotation_deg": 360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1/2",
+          "text": "Step right forward along the starting diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1/2",
+          "duration_counts": "1/2",
+          "text": "Turn one eighth right and step left to the side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn one eighth right and step right back along the new diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1/2",
+          "text": "Step left back on that diagonal.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "5/2",
+          "duration_counts": "1/2",
+          "text": "Turn one eighth right and step right to the side.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "3",
+          "duration_counts": "1",
+          "text": "Turn one eighth right and step left forward on the new diagonal.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "4",
+          "duration_counts": "1/2",
+          "text": "Step right forward along the starting diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "9/2",
+          "duration_counts": "1/2",
+          "text": "Turn one eighth right and step left to the side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "5",
+          "duration_counts": "1",
+          "text": "Turn one eighth right and step right back along the new diagonal.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "6",
+          "duration_counts": "1/2",
+          "text": "Step left back on that diagonal.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "13/2",
+          "duration_counts": "1/2",
+          "text": "Turn one eighth right and step right to the side.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "45"
+        },
+        {
+          "offset_counts": "7",
+          "duration_counts": "1",
+          "text": "Turn one eighth right and step left forward on the new diagonal.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "45"
+        }
+      ],
+      "explanation": "Begin facing the left forward diagonal (315 degrees from the block wall). Alternate forward and backward diagonal passages with eighth-turn side steps; repeat the half-diamond passage to return to the starting facing.",
+      "source_ids": [
+        "aj",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Diamond",
+      "review_note": "Requires a 315-degree entry facing relative to the block wall. The side-step and diagonal transitions are explicit; instructor review of this selected diamond path is pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements.",
+      "entry_facing_deg": 315
+    },
+    {
+      "id": "expansion-hinge-half-left",
+      "name": "Hinge half left — two quarter-turn steps",
+      "aliases": [],
+      "level": "INT",
+      "family": "hinge",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": -180,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Turn a quarter left and step right back with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "-90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn a quarter left and step left to the side with weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "-90"
+        }
+      ],
+      "explanation": "Use consecutive quarter-left turns while stepping right back and left to the side. The two weighted steps complete a half turn over two counts.",
+      "source_ids": [
+        "taipei",
+        "linedancer"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Hinge turn",
+      "review_note": "This row defines a specific back-and-side hinge path. Other entry positions or turn directions require a distinct variant.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-hinge-full-left",
+      "name": "Hinge full left — two quarter-turn steps repeated",
+      "aliases": [],
+      "level": "A",
+      "family": "hinge",
+      "duration_counts": "4",
+      "start_free_foot": "R",
+      "net_rotation_deg": -360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Turn a quarter left and step right back with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "-90"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn a quarter left and step left to the side with weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "-90"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1",
+          "text": "Turn a quarter left and step right back with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "-90"
+        },
+        {
+          "offset_counts": "3",
+          "duration_counts": "1",
+          "text": "Turn a quarter left and step left to the side with weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "-90"
+        }
+      ],
+      "explanation": "Use consecutive quarter-left turns while stepping right back and left to the side. Repeat the pair for a complete turn over four counts.",
+      "source_ids": [
+        "taipei",
+        "linedancer"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Hinge turn",
+      "review_note": "This row defines a specific back-and-side hinge path. Other entry positions or turn directions require a distinct variant.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-spiral-left-3-4",
+      "name": "Spiral 3/4 left — step onto right",
+      "aliases": [],
+      "level": "A",
+      "family": "spiral",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": -270,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Step right forward with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Spiral 270 degrees left on right; keep left unweighted as it folds near the right leg.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "-270"
+        }
+      ],
+      "explanation": "Step onto right, then rotate 3/4 left while keeping right as the supporting foot. The left leg remains free; review its final placement before connecting another step.",
+      "source_ids": [
+        "aj",
+        "taipei",
+        "linedancer"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Spiral turn",
+      "review_note": "Single-support turn with explicit rotation, not an extra pivot weight change. The free-leg shape and balance need instructor review.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-spiral-left-full",
+      "name": "Spiral full left — step onto right",
+      "aliases": [],
+      "level": "A",
+      "family": "spiral",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": -360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Step right forward with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Spiral 360 degrees left on right; keep left unweighted as it folds near the right leg.",
+          "support_before": "R",
+          "support_after": "R",
+          "rotation_deg": "-360"
+        }
+      ],
+      "explanation": "Step onto right, then rotate full left while keeping right as the supporting foot. The left leg remains free; review its final placement before connecting another step.",
+      "source_ids": [
+        "aj",
+        "taipei",
+        "linedancer"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Spiral turn",
+      "review_note": "Single-support turn with explicit rotation, not an extra pivot weight change. The free-leg shape and balance need instructor review.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-twinkle-right-cross",
+      "name": "Twinkle — right cross, side, side",
+      "aliases": [
+        "Right twinkle"
+      ],
+      "level": "INT",
+      "family": "waltz",
+      "duration_counts": "3",
+      "start_free_foot": "R",
+      "net_rotation_deg": 0,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Cross right in front of left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Take a small left side step with weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1",
+          "text": "Transfer onto a small right side step to finish.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Use three weighted steps over three waltz counts: cross, side, side. Keep the overall facing unchanged in this selected version.",
+      "source_ids": [
+        "nta",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Twinkle",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-twinkle-quarter-right",
+      "name": "Twinkle 1/4 right — cross, back, side",
+      "aliases": [
+        "Quarter turning twinkle"
+      ],
+      "level": "INT",
+      "family": "waltz",
+      "duration_counts": "3",
+      "start_free_foot": "R",
+      "net_rotation_deg": 90,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Cross right in front of left and take weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Turn a quarter right and step left back with weight.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1",
+          "text": "Step right to the side with weight.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "A right crossing step leads into a quarter-right back step and a side finish. Each action takes one of the three waltz counts.",
+      "source_ids": [
+        "nta",
+        "taipei"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Twinkle",
+      "review_note": "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending.",
+      "provenance_note": "New event instructions and explanation authored for this project. Source links are terminology/comparison references, not copied passages or endorsements."
+    },
+    {
+      "id": "expansion-pencil-turn-quarter-left-on-l",
+      "name": "Pencil turn — quarter left on L (two counts)",
+      "aliases": [
+        "Quarter left pencil turn"
+      ],
+      "level": "INT",
+      "family": "turning",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": -90,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "2",
+          "text": "Turn a quarter left in place on L over both counts, drawing the unweighted R foot close beside L without transferring weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "-90"
+        }
+      ],
+      "explanation": "Start with weight on L and R free. This two-count practice variant finishes with R still free; its timing and turn amount apply only to this named variant.",
+      "source_ids": [
+        "maddison-glover-pencil-example"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Pencil turn",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    },
+    {
+      "id": "expansion-pencil-turn-half-left-on-l",
+      "name": "Pencil turn — half left on L (two counts)",
+      "aliases": [
+        "Half left pencil turn"
+      ],
+      "level": "INT",
+      "family": "turning",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": -180,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "2",
+          "text": "Turn a half left in place on L over both counts, drawing the unweighted R foot close beside L without transferring weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "-180"
+        }
+      ],
+      "explanation": "Start with weight on L and R free. This two-count practice variant finishes with R still free; its timing and turn amount apply only to this named variant.",
+      "source_ids": [
+        "maddison-glover-pencil-example"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Pencil turn",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    },
+    {
+      "id": "expansion-pencil-turn-full-left-on-l",
+      "name": "Pencil turn — full left on L (two counts)",
+      "aliases": [
+        "Full left pencil turn"
+      ],
+      "level": "INT",
+      "family": "turning",
+      "duration_counts": "2",
+      "start_free_foot": "R",
+      "net_rotation_deg": -360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "2",
+          "text": "Turn a full left in place on L over both counts, drawing the unweighted R foot close beside L without transferring weight.",
+          "support_before": "L",
+          "support_after": "L",
+          "rotation_deg": "-360"
+        }
+      ],
+      "explanation": "Start with weight on L and R free. This two-count practice variant finishes with R still free; its timing and turn amount apply only to this named variant.",
+      "source_ids": [
+        "maddison-glover-pencil-example"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Pencil turn",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    },
+    {
+      "id": "expansion-figure-eight-turn-right-lead-side-finish",
+      "name": "Figure-eight turn — right lead, full turn, side finish",
+      "aliases": [
+        "Figure-eight grapevine with side finish"
+      ],
+      "level": "I",
+      "family": "turning",
+      "duration_counts": "8",
+      "start_free_foot": "R",
+      "net_rotation_deg": 360,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "1",
+          "text": "Step R to the right side and take weight on R.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "1",
+          "duration_counts": "1",
+          "text": "Cross L behind R and take weight on L.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "2",
+          "duration_counts": "1",
+          "text": "Turn a quarter right as R steps forward into the new facing.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "3",
+          "duration_counts": "1",
+          "text": "Step L forward and take weight on L.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "4",
+          "duration_counts": "1",
+          "text": "Pivot a half turn right, transferring weight from L to R.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "180"
+        },
+        {
+          "offset_counts": "5",
+          "duration_counts": "1",
+          "text": "Turn a quarter right as L steps to the left side.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "90"
+        },
+        {
+          "offset_counts": "6",
+          "duration_counts": "1",
+          "text": "Cross R behind L and take weight on R.",
+          "support_before": "L",
+          "support_after": "R",
+          "rotation_deg": "0"
+        },
+        {
+          "offset_counts": "7",
+          "duration_counts": "1",
+          "text": "Step L to the left side and take weight on L.",
+          "support_before": "R",
+          "support_after": "L",
+          "rotation_deg": "0"
+        }
+      ],
+      "explanation": "Start with R free and use one count for each listed action. This explicitly defined side-finish variant changes travel direction, completes a full rightward rotation, and ends facing the starting wall with R free; other figure-eight endings need their own instructions.",
+      "source_ids": [
+        "linedancer"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Figure-eight turn",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    },
+    {
+      "id": "expansion-spiral-lock-provisional-cue",
+      "name": "Spiral lock — provisional cue",
+      "aliases": [],
+      "level": "A",
+      "family": "turning",
+      "duration_counts": "2",
+      "start_free_foot": null,
+      "net_rotation_deg": null,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "2",
+          "text": "Use the demonstrated spiral-and-lock combination, following the instructor's order for the turning action and crossed foot placement.",
+          "support_before": "unknown",
+          "support_after": "unknown",
+          "rotation_deg": null
+        }
+      ],
+      "explanation": "The turning action and lock position need a complete demonstration, including which foot takes weight. Two counts is a provisional display window, not an asserted standard duration; the starting foot, turn amount, direction, support changes, and finish remain unspecified.",
+      "source_ids": [
+        "linedancer"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Spiral lock",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    },
+    {
+      "id": "expansion-spiral-hitch-provisional-cue",
+      "name": "Spiral hitch — provisional cue",
+      "aliases": [],
+      "level": "A",
+      "family": "turning",
+      "duration_counts": "2",
+      "start_free_foot": null,
+      "net_rotation_deg": null,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "2",
+          "text": "Use the demonstrated spiral-and-hitch combination, following the instructor's order for the turn and knee lift.",
+          "support_before": "unknown",
+          "support_after": "unknown",
+          "rotation_deg": null
+        }
+      ],
+      "explanation": "The instructor must establish how the turn and knee lift fit together and which foot supports each part. Two counts is a provisional display window, not an asserted standard duration; the starting foot, rotation, weight changes, and finish remain unspecified.",
+      "source_ids": [
+        "linedancer"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Spiral hitch",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    },
+    {
+      "id": "expansion-moonwalk-provisional-cue",
+      "name": "Moonwalk — provisional cue",
+      "aliases": [
+        "Moon walk",
+        "Backslide"
+      ],
+      "level": "A",
+      "family": "traveling",
+      "duration_counts": "2",
+      "start_free_foot": null,
+      "net_rotation_deg": null,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "2",
+          "text": "Use the demonstrated moonwalk glide, coordinating the backward sliding action with alternating heel lifts.",
+          "support_before": "unknown",
+          "support_after": "unknown",
+          "rotation_deg": null
+        }
+      ],
+      "explanation": "A moonwalk travels backward while the foot action suggests forward walking. This two-count display window is provisional, not a claim that a complete cycle always lasts two counts; the starting foot, support-switch timing, finish, and any turn need instructor specification.",
+      "source_ids": [
+        "steezy-moonwalk"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Moonwalk",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    },
+    {
+      "id": "expansion-roger-rabbit-provisional-cue",
+      "name": "Roger Rabbit — provisional cue",
+      "aliases": [],
+      "level": "A",
+      "family": "traveling",
+      "duration_counts": "2",
+      "start_free_foot": null,
+      "net_rotation_deg": null,
+      "travel": "",
+      "events": [
+        {
+          "offset_counts": "0",
+          "duration_counts": "2",
+          "text": "Use the demonstrated alternating kick-and-hop action with a rocking body rhythm, following the instructor's preparation and landing sequence.",
+          "support_before": "unknown",
+          "support_after": "unknown",
+          "rotation_deg": null
+        }
+      ],
+      "explanation": "Roger Rabbit combines a rocking bounce with alternating leg actions. This two-count display window is provisional rather than a standard cycle length; the preparation, support changes, travel, rotation, and final free foot need a complete instructor-led sequence.",
+      "source_ids": [
+        "steezy-roger-rabbit"
+      ],
+      "review_status": "mechanics_draft_instructor_review_pending",
+      "generator_eligible": false,
+      "group": "Roger Rabbit",
+      "review_note": "Instructor review of the named variation remains pending.",
+      "provenance_note": "New explanation and event draft; not a copied source passage or a claim of copyright or instructor certification."
+    }
+  ]
+}

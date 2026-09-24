@@ -1,0 +1,4 @@
+# Optional local lyric-timestamping add-on. Install only when you need
+# WhisperX alignment; it downloads a local speech model on first use.
+-r requirements.txt
+whisperx>=3.7.9,<3.8

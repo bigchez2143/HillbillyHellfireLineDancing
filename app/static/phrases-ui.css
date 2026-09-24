@@ -1,0 +1,8 @@
+#phraseTools summary{cursor:pointer;font-size:1.05rem;padding:.4rem 0}
+.phrase-columns{display:grid;grid-template-columns:minmax(220px,1fr) minmax(280px,1.45fr);gap:1.5rem}
+.phrase-columns input,.phrase-columns select{max-width:100%}
+.phrase-list{max-height:29rem;overflow:auto;margin-top:1rem}
+.phrase-tile{padding:1rem;border:1px solid var(--border,#394657);border-radius:10px;margin-bottom:.8rem;overflow-wrap:anywhere}
+.phrase-tile p{margin:.5rem 0}.phrase-tile .actions{margin-top:.6rem}
+#phraseSaveBtn{margin-top:.8rem}#phrasePreviewDialog{width:min(760px,calc(100vw - 2rem));max-height:90vh;overflow:auto}
+@media(max-width:950px){.phrase-columns{grid-template-columns:1fr}}

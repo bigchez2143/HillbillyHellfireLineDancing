@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound Repair Studio</title>
+  <link rel="stylesheet" href="/static/repair.css">
+  <script>
+    // The visual preview can be opened directly from this folder as well as
+    // through the local app.  A relative stylesheet keeps the preview styled.
+    if (window.location.protocol === "file:") {
+      document.write('<link rel="stylesheet" href="repair.css">');
+    }
+  </script>
+</head>
+<body>
+  <div id="fileMode" class="preview-notice" hidden>
+    <strong>Preview mode:</strong> the layout is available here, but song upload, stem splitting, and repair need the local app to be running. Start <b>app/run.bat</b>, then use the page it opens.
+  </div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Sound Repair Studio home">
+        <span class="brand-mark" aria-hidden="true">SR</span>
+        <span><small>HILLBILLY HELLFIRE</small><strong>Sound Repair Studio</strong></span>
+      </a>
+      <a class="quiet-link" href="/dance">Line Dance Creator <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">RESTORE THE MOMENT</p>
+        <h1>Bring the band<br>back in.</h1>
+        <p class="lede">Split your song into downloadable stems, then borrow a good phrase from an earlier chorus to repair a dropped drum groove or missing accompaniment.</p>
+      </div>
+      <div class="hero-note"><span>01</span><p>Start with the full mix.<br>We always preserve it.</p></div>
+    </section>
+
+    <section class="workspace" aria-label="Sound repair workspace">
+      <aside class="sidebar">
+        <div class="side-label">PROJECT</div>
+        <select id="projectSelect" aria-label="Choose repair project"></select>
+        <button id="newProjectBtn" class="outline-btn">+ New repair project</button>
+        <div class="side-rule"></div>
+        <ol class="steps" aria-label="Repair steps">
+          <li class="active"><b>01</b><span>Load song</span></li>
+          <li><b>02</b><span>Split stems</span></li>
+          <li><b>03</b><span>Repair passage</span></li>
+          <li><b>04</b><span>Audition &amp; download</span></li>
+        </ol>
+        <p class="side-tip">Best results come from copying the same lyric line or bar from Chorus 1 or 2 into the matching space in Chorus 3.</p>
+      </aside>
+
+      <div class="content">
+        <nav class="studio-tabs" aria-label="Sound Repair Studio steps" role="tablist">
+          <button class="studio-tab active" type="button" data-tab="song" role="tab" aria-selected="true"><span>01</span> Load song</button>
+          <button class="studio-tab" type="button" data-tab="stems" role="tab" aria-selected="false"><span>02</span> Split stems</button>
+          <button class="studio-tab" type="button" data-tab="repair" role="tab" aria-selected="false"><span>03</span> Repair dropout</button>
+          <button class="studio-tab" type="button" data-tab="export" role="tab" aria-selected="false"><span>04</span> Listen &amp; download</button>
+        </nav>
+
+        <section class="panel song-panel" data-panel="song" aria-labelledby="songHeading">
+          <div class="section-title"><span>01</span><div><p>YOUR SOURCE</p><h2 id="songHeading">Load a song</h2></div></div>
+          <div class="upload-grid">
+            <label class="upload-zone" id="dropZone" for="songFile">
+              <input id="songFile" type="file" accept=".mp3,.wav,.m4a,.flac,.ogg,.aac" hidden>
+              <span class="upload-symbol" aria-hidden="true">↥</span>
+              <strong>Drop your song here</strong>
+              <small>or choose MP3, WAV, M4A, FLAC, OGG, AAC</small>
+            </label>
+            <div class="song-meta">
+              <label>Song title <input id="songTitle" placeholder="e.g. Boots on the Floor"></label>
+              <label>Artist <input id="songArtist" placeholder="Artist name"></label>
+              <button id="saveSongBtn" class="text-btn">Save song details</button>
+              <p id="songStatus" class="status" aria-live="polite">Choose a song to begin.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="stems" aria-labelledby="stemsHeading" hidden>
+          <div class="section-title"><span>02</span><div><p>EDITABLE PARTS</p><h2 id="stemsHeading">Split into stems</h2></div></div>
+          <div class="separation-row">
+            <div>
+              <p class="description">Create separate WAV files for drums, bass, vocals, guitar, piano/keys, and other instruments. Download every available part to use in your DAW too.</p>
+              <button id="separateBtn" class="primary-btn">Split my song <span aria-hidden="true">→</span></button>
+              <p id="separationStatus" class="status" aria-live="polite"></p>
+            </div>
+            <div class="truth-card"><strong>What “Other” contains</strong><p>Fiddle, banjo, bagpipes and instruments that cannot be identified cleanly in a finished stereo mix usually live here. Backing vocals may remain with Vocals.</p></div>
+          </div>
+          <div id="stemGrid" class="stem-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="panel repair-panel" data-panel="repair" aria-labelledby="repairHeading" hidden>
+          <div class="section-title"><span>03</span><div><p>PHRASE MATCH</p><h2 id="repairHeading">Repair the dropout</h2></div></div>
+          <p class="description">Play the song and put the cursor at the start/end of one good phrase and the matching missing phrase. The selected stem is time-matched, blended in and saved as a new full mix.</p>
+
+          <div class="transport">
+            <audio id="originalAudio" controls preload="metadata"></audio>
+            <div class="scrub-row"><span id="playhead">0:00.0</span><input id="scrubber" type="range" min="0" max="0" value="0" step="0.01" aria-label="Song playhead"><span id="duration">--:--</span></div>
+          </div>
+
+          <div class="selection-wrap">
+            <fieldset>
+              <legend>1. A good phrase to copy</legend>
+              <p>For a missing third chorus, choose the matching phrase from Chorus 1 or 2.</p>
+              <div class="time-row">
+                <label>Starts at <input id="sourceStart" type="number" min="0" step="0.01" value="0"></label>
+                <button class="set-time" data-target="sourceStart">Set at cursor</button>
+                <label>Ends at <input id="sourceEnd" type="number" min="0" step="0.01" value="8"></label>
+                <button class="set-time" data-target="sourceEnd">Set at cursor</button>
+              </div>
+            </fieldset>
+            <fieldset class="target-fieldset">
+              <legend>2. The missing passage</legend>
+              <p>Mark the exact place where the beat or accompaniment drops out.</p>
+              <div class="time-row">
+                <label>Starts at <input id="targetStart" type="number" min="0" step="0.01" value="0"></label>
+                <button class="set-time" data-target="targetStart">Set at cursor</button>
+                <label>Ends at <input id="targetEnd" type="number" min="0" step="0.01" value="8"></label>
+                <button class="set-time" data-target="targetEnd">Set at cursor</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="render-controls">
+            <label>Part to restore
+              <select id="repairStem"><option value="drums">Drums</option></select>
+            </label>
+            <label>Blend at each edge
+              <select id="fadeMs"><option value="60">60 ms · tight</option><option value="120" selected>120 ms · natural</option><option value="220">220 ms · gentle</option><option value="400">400 ms · soft</option></select>
+            </label>
+            <label>Restore level
+              <select id="gainDb"><option value="-8">-8 dB · subtle</option><option value="-5">-5 dB · low</option><option value="-2" selected>-2 dB · matching</option><option value="0">0 dB · full</option><option value="2">+2 dB · louder</option></select>
+            </label>
+            <button id="renderBtn" class="primary-btn">Make repaired mix <span aria-hidden="true">→</span></button>
+          </div>
+          <p id="renderStatus" class="status" aria-live="polite">Separate the song, then choose a stem to restore.</p>
+        </section>
+
+        <section id="outputPanel" class="panel output-panel" data-panel="export" hidden aria-labelledby="outputHeading">
+          <div class="section-title"><span>04</span><div><p>COMPARE &amp; KEEP</p><h2 id="outputHeading">Your repaired full mix</h2></div></div>
+          <p id="renderSummary" class="description"></p>
+          <audio id="repairedAudio" controls preload="metadata"></audio>
+          <div class="download-row"><a id="downloadMix" class="primary-btn" download>Download repaired WAV <span aria-hidden="true">↓</span></a><span>Original song stays unchanged.</span></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <dialog id="newProjectDialog" class="new-project-dialog">
+    <form id="newProjectForm" method="dialog">
+      <p class="eyebrow">NEW REPAIR PROJECT</p>
+      <h2>Give this repair a working name.</h2>
+      <label>Project name <input id="newProjectName" required maxlength="120" placeholder="My song repair" autofocus></label>
+      <div><button type="button" id="cancelProjectBtn" class="outline-btn">Cancel</button><button type="submit" class="primary-btn">Create project</button></div>
+    </form>
+  </dialog>
+  <script src="/static/repair.js"></script>
+  <script>
+    if (window.location.protocol === "file:") {
+      const localScript = document.createElement("script");
+      localScript.src = "repair.js";
+      document.body.appendChild(localScript);
+    }
+  </script>
+<footer class="hh-publisher-note"><p>Discover <strong>Hillbilly Hellfire</strong> — visit our YouTube channel and website.</p><a href="https://www.youtube.com/@HillbillyHellfire" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.hillbillyhellfire.com/" target="_blank" rel="noopener noreferrer">Website</a></footer>
+</body>
+</html>

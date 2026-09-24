@@ -1,0 +1,2299 @@
+{
+  "schema_version": 1,
+  "purpose": "Independent common-move explanation drafts covering preserved references and appended expansion variants.",
+  "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+  "reference_scope": "Drafting used existing names, aliases, and structural fields, not the earlier catalog descriptions or the private reference guide. One narrow technical fact check for Electric Kicks is identified separately below. Common movement identities and historical provenance are not claimed as newly invented.",
+  "review_status": "draft_needs_instructor_review",
+  "mechanics_policy": "This file changes no catalog identity, alias, count, rotation, foot state, or weight-change field. Teaching variants and ambiguity flags require separate instructor and mechanics review before adoption.",
+  "entries": [
+    {
+      "index": 0,
+      "name": "Balance",
+      "category": "concept",
+      "explanation": "Balance is the ability to stay steady while standing, stepping, or turning. If a dance uses “balance” as the name of a step sequence, that sequence needs its own instructions.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether this entry teaches general balance or names a particular balance-step pattern."
+      ]
+    },
+    {
+      "index": 1,
+      "name": "Ball",
+      "category": "concept",
+      "explanation": "The ball of the foot is the padded area just behind the toes. Placing weight there is different from standing on the tips of your toes.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 2,
+      "name": "Beats",
+      "category": "concept",
+      "explanation": "A beat is a regular pulse you can hear or feel in the music. Dancers use those pulses to place their movements in time.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 3,
+      "name": "Bpm",
+      "category": "concept",
+      "explanation": "BPM means beats per minute and describes how fast the music's pulse moves. A higher BPM means more beats happen each minute.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 4,
+      "name": "Break",
+      "category": "concept",
+      "explanation": "A break step usually checks or changes the direction of movement through a weight change. The dance must specify the stepping foot, direction, and what follows; “break” can also describe a change or pause in the music.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether “break” means a checking step, a musical break, or a choreographic interruption."
+      ]
+    },
+    {
+      "index": 5,
+      "name": "Bridge",
+      "category": "concept",
+      "explanation": "A bridge is a connecting or contrasting section of music or choreography. In a dance, its movements, length, and placement must be explained.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm the glossary's intended distinction between a bridge and a tag."
+      ]
+    },
+    {
+      "index": 6,
+      "name": "Cha Cha",
+      "category": "concept",
+      "explanation": "Cha cha can describe a musical style, dance style, or a step rhythm with a quick group of weight changes. The name alone does not specify the feet, direction, or timing of a particular sequence.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether the entry concerns cha cha music, styling, rhythm, or a specific step pattern."
+      ]
+    },
+    {
+      "index": 7,
+      "name": "Clockwise",
+      "category": "concept",
+      "explanation": "Clockwise means turning in the same direction as the hands of a clock. Imagine looking down at the dancer from above.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 8,
+      "name": "Count",
+      "category": "concept",
+      "explanation": "A count is a spoken or written timing marker that helps you match movements to music. The dance instructions show what happens on each numbered count or subdivision.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 9,
+      "name": "Count \"&\"",
+      "category": "concept",
+      "explanation": "An “&” count marks a timing point between numbered counts. It commonly sits halfway between them, but the intended rhythm should make its placement clear.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm the intended subdivision when the rhythm is uneven or swung."
+      ]
+    },
+    {
+      "index": 10,
+      "name": "Counter Clockwise",
+      "category": "concept",
+      "explanation": "Counterclockwise, also called anticlockwise, means turning opposite to the hands of a clock. Imagine looking down at the dancer from above.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 11,
+      "name": "Diagonal",
+      "category": "concept",
+      "explanation": "Diagonal means moving or facing at a slant between straight ahead, sideways, or backward directions. The instructions should identify which diagonal and whether it refers to your body or the room.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specify whether diagonals use the dancer's current facing or fixed room directions."
+      ]
+    },
+    {
+      "index": 12,
+      "name": "Forward",
+      "category": "concept",
+      "explanation": "Forward usually means toward the direction your body is facing. A dance may instead use a fixed room direction, so follow its stated reference.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 13,
+      "name": "Home",
+      "category": "concept",
+      "explanation": "Home means a reference position that the dancer returns to. The dance must establish whether this means a foot position, body position, or place on the floor.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Define the home position within the dance."
+      ]
+    },
+    {
+      "index": 14,
+      "name": "Phrased",
+      "category": "concept",
+      "explanation": "A phrased dance is organized into named or lettered sections that follow a stated order. Those sections can repeat or change order to match the music.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 15,
+      "name": "Restart",
+      "category": "concept",
+      "explanation": "A restart means beginning the dance again before completing the usual sequence. The instructions identify where this happens and any adjustment needed to begin again.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 16,
+      "name": "Rhythm",
+      "category": "concept",
+      "explanation": "Rhythm is the pattern of timing and emphasis in music or movement. It includes how long actions last and where the stronger accents fall.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 17,
+      "name": "Spot Dance",
+      "category": "concept",
+      "explanation": "A spot dance stays within a relatively small area instead of continually traveling around the floor. It can still include steps in different directions and turns.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 18,
+      "name": "Stationary Turn",
+      "category": "concept",
+      "explanation": "A stationary turn changes your facing while keeping you in roughly the same place. The turn amount, direction, footwork, and timing must be specified separately.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 19,
+      "name": "Syncopation",
+      "category": "concept",
+      "explanation": "Syncopation places movement or emphasis between, or across, the main beats. The dance instructions show exactly where those actions fall.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 20,
+      "name": "Tag",
+      "category": "concept",
+      "explanation": "A tag is an extra section added at a specified point in the dance. Its movements, length, and location must be given so you know when to add it.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 21,
+      "name": "Tempo",
+      "category": "concept",
+      "explanation": "Tempo is the speed of the music's underlying pulse. It describes how fast the beat moves, rather than how many steps you take.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 22,
+      "name": "Turn",
+      "category": "concept",
+      "explanation": "A turn changes the direction your body faces. Its direction, amount, timing, and supporting footwork need separate instructions.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 23,
+      "name": "Turn In",
+      "category": "concept",
+      "explanation": "Turn in means rotate a body part or change your facing inward relative to a stated reference. Specify what turns, what inward means here, and the amount of rotation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Define the inward reference before teaching the turn."
+      ]
+    },
+    {
+      "index": 24,
+      "name": "Turn Out",
+      "category": "concept",
+      "explanation": "Turn out means rotate a body part or change your facing outward relative to a stated reference. Specify what turns, what outward means here, and the amount of rotation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Define the outward reference before teaching the turn."
+      ]
+    },
+    {
+      "index": 25,
+      "name": "Waltz",
+      "category": "concept",
+      "explanation": "Waltz can describe music with a repeating three-beat grouping or a dance style associated with that music. The label does not specify a particular step sequence, direction, or turn.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether the entry concerns waltz music, styling, or a particular step pattern."
+      ]
+    },
+    {
+      "index": 26,
+      "name": "Across",
+      "category": "footwork_primitive",
+      "explanation": "Step across the front of the other leg and transfer weight to the crossing foot. Specify which foot leads and how far it crosses.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 27,
+      "name": "Ball Change",
+      "category": "footwork_primitive",
+      "explanation": "Take weight briefly onto the ball of one foot, then transfer weight to the other foot. State the foot placements and rhythm so the two changes fit the intended count.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 28,
+      "name": "Behind",
+      "category": "footwork_primitive",
+      "explanation": "Step behind the other leg and transfer weight to the crossing foot. Keep the crossing distance suited to the next step.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 29,
+      "name": "Brush",
+      "category": "footwork_primitive",
+      "explanation": "Swing the free foot so its ball lightly brushes the floor, then continues onward without taking weight. Specify the direction of the swing.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 30,
+      "name": "Chug",
+      "category": "footwork_primitive",
+      "explanation": "Make a small forward movement on the supporting foot while keeping the other foot free. The dance should specify the free-leg position and whether the supporting foot slides or briefly leaves the floor.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether chug uses a slide or hop and specify the free-leg action."
+      ]
+    },
+    {
+      "index": 31,
+      "name": "Cross",
+      "category": "footwork_primitive",
+      "explanation": "Step across the line of the other leg and take weight on that foot. The instructions must say whether the crossing is in front or behind.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 32,
+      "name": "Cross Kick",
+      "category": "footwork_primitive",
+      "explanation": "Extend the free leg into a kick across the front of the body. Keep your weight on the supporting foot and use the stated kick height and direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 33,
+      "name": "Diagonal Kick",
+      "category": "footwork_primitive",
+      "explanation": "Kick the free foot toward the stated diagonal without transferring weight. Specify whether that diagonal is measured from the body or a fixed wall.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 34,
+      "name": "Dig",
+      "category": "footwork_primitive",
+      "explanation": "Place the indicated part of the free foot on the floor as a firm accent without transferring weight. Specify whether this is a heel dig or another contact, and where the foot goes.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Dig requires an explicit heel or other contact; the name alone is not a unique foot instruction."
+      ]
+    },
+    {
+      "index": 35,
+      "name": "Drag",
+      "category": "footwork_primitive",
+      "explanation": "Draw the free foot along the floor toward the supporting foot or another stated position. This entry finishes without transferring weight to the moving foot.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Draw is shared by Drag and Slide, whose recorded weight changes are zero and one. Do not merge them by alias."
+      ]
+    },
+    {
+      "index": 36,
+      "name": "Fan",
+      "category": "footwork_primitive",
+      "explanation": "Keep one part of a foot in contact with the floor while swinging the other part outward and back. Specify whether the heel or toes move and which foot performs the action.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 37,
+      "name": "Flare",
+      "category": "footwork_primitive",
+      "explanation": "Flare is a label that needs a specific foot or leg action before it can be followed. State the moving contact or body part, its path, and the finish without assuming a full-leg swing or a particular fan variation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The name does not establish a unique leg path or finishing position."
+      ]
+    },
+    {
+      "index": 38,
+      "name": "Flick",
+      "category": "footwork_primitive",
+      "explanation": "Bend the free knee to send the foot into a quick lifted accent, commonly behind or beside the body. State the direction and return position without transferring weight to that foot.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 39,
+      "name": "Heel Bounce",
+      "category": "footwork_primitive",
+      "explanation": "Raise and lower the indicated heel or heels while keeping the front of the foot on the floor. Specify the number of bounces and which foot carries the weight.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 40,
+      "name": "Heel Clicks",
+      "category": "footwork_primitive",
+      "explanation": "Bring the heels together to make the stated clicking accent. Specify the starting foot position, supporting contacts, and whether the action stays grounded or leaves the floor.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Starting support and heel-click technique need confirmation; do not infer a jump from the label."
+      ]
+    },
+    {
+      "index": 41,
+      "name": "Heel Fan",
+      "category": "footwork_primitive",
+      "explanation": "Keep the toes in place while moving the heel outward and back. Use the named foot and keep the weight arrangement specified for the dance.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 42,
+      "name": "Heel Twist",
+      "category": "footwork_primitive",
+      "explanation": "Rotate the heels toward the stated side while the front of the feet provides the contact with the floor. The dance must give the return action and whether one or both heels move.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 43,
+      "name": "Hitch",
+      "category": "footwork_primitive",
+      "explanation": "Lift the free knee while keeping weight on the supporting leg. State the knee direction and the position needed for the next action.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 44,
+      "name": "Hold",
+      "category": "footwork_primitive",
+      "explanation": "Wait for the stated count or counts without taking another step. Keep the current weight placement unless an additional styling instruction says otherwise.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 45,
+      "name": "Hook",
+      "category": "footwork_primitive",
+      "explanation": "Bend the free knee and bring that foot across the supporting leg in the specified hook position. Keep it unweighted and distinguish a front hook from any behind-the-leg variation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 46,
+      "name": "Hop",
+      "category": "footwork_primitive",
+      "explanation": "Leave the floor briefly from one foot and land on that same foot. Specify any travel or turn separately.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 47,
+      "name": "Jumping Jacks",
+      "category": "footwork_primitive",
+      "explanation": "Jump to an open foot position, then jump back toward a closed position. The dance must specify the landing support, spacing, and any arm action.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Landing support is unspecified in the structural record."
+      ]
+    },
+    {
+      "index": 48,
+      "name": "Kick",
+      "category": "footwork_primitive",
+      "explanation": "Extend the free leg into a kick in the stated direction, keeping weight on the other foot. Use the height and return position called for by the dance.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 49,
+      "name": "Knee Pops",
+      "category": "footwork_primitive",
+      "explanation": "Make a small knee accent by bending and releasing the indicated knee, allowing the heel action needed for that movement. The dance must identify the knee and support position; this entry does not add a weight transfer.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 50,
+      "name": "Leap",
+      "category": "footwork_primitive",
+      "explanation": "Push off one foot and land on the other foot with a brief airborne phase between them. Specify the travel direction and landing position.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 51,
+      "name": "Louie Louis",
+      "category": "footwork_primitive",
+      "explanation": "This name needs a demonstrated foot-and-heel sequence before it can be followed reliably. The recorded variation lasts two counts without changing weight, so its starting position, heel actions, and ending position must be supplied.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Rare label: a reliable step sequence was not inferred from the name and mechanics alone."
+      ]
+    },
+    {
+      "index": 52,
+      "name": "Lunge",
+      "category": "footwork_primitive",
+      "explanation": "Step into the stated side direction and take weight onto that leg while bending its knee. Use a comfortable distance and specify how the dancer returns or continues.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 53,
+      "name": "Mashed Potatoes",
+      "category": "footwork_primitive",
+      "explanation": "Mashed potatoes names a family of swiveling footwork variations rather than one universal sequence. Specify the heel and toe actions, travel, and support; a variation that changes weight needs different weight-change data from this entry.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The record has zero weight changes; weight-changing mashed-potatoes variations need separate mechanics."
+      ]
+    },
+    {
+      "index": 54,
+      "name": "Pigeon Toed",
+      "category": "footwork_primitive",
+      "explanation": "Use alternating inward and outward angles of the feet to make the specified sideways movement. The dance must explain which heels or toes pivot and how the feet are supported throughout.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm the exact contact pattern and how the zero recorded weight changes fit the traveling variation."
+      ]
+    },
+    {
+      "index": 55,
+      "name": "Point",
+      "category": "footwork_primitive",
+      "explanation": "Extend the free foot to the stated position and touch the toe to the floor without taking weight. Keep it available for the next action.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 56,
+      "name": "Press",
+      "category": "footwork_primitive",
+      "explanation": "Place the free foot forward and apply the stated pressure while the same foot remains the primary support. If the movement fully transfers weight, record that as a different variation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Clarify partial pressure versus a full transfer; this record has zero weight changes."
+      ]
+    },
+    {
+      "index": 57,
+      "name": "Recover",
+      "category": "footwork_primitive",
+      "explanation": "Return weight to the foot that was supporting you before the preceding rock or similar action. Keep the feet placed as directed rather than automatically taking a new traveling step.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 58,
+      "name": "Ronde de Jambe",
+      "category": "footwork_primitive",
+      "explanation": "Trace a curved path with the free leg around the supporting leg. Specify whether the toe stays near the floor or is lifted, and give the start, direction, and finish of the arc.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 59,
+      "name": "Scoot",
+      "category": "footwork_primitive",
+      "explanation": "Make a small forward scooting movement on the supporting foot, keeping that same foot as the support. Specify the free-leg action; a step-and-hop skip is a separate weight-changing variation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The Skip alias can imply different step-and-hop weight transfers from this zero-transfer scoot."
+      ]
+    },
+    {
+      "index": 60,
+      "name": "Scuff",
+      "category": "footwork_primitive",
+      "explanation": "Swing the free foot so its heel briefly grazes the floor and continues forward. Keep the foot unweighted after the scuff unless a following instruction places it down.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 61,
+      "name": "Slap",
+      "category": "footwork_primitive",
+      "explanation": "Use a hand to make the stated slapping accent, such as contacting the thigh or the raised foot. Specify the hand, target, and timing while maintaining the required support.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 62,
+      "name": "Slide",
+      "category": "footwork_primitive",
+      "explanation": "Move a foot smoothly along the floor to the stated position and take weight on it. This weighted slide differs from drawing an unweighted foot toward the support foot.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Draw is shared by Drag and Slide, whose recorded weight changes are zero and one. Do not merge them by alias."
+      ]
+    },
+    {
+      "index": 63,
+      "name": "Splits",
+      "category": "footwork_primitive",
+      "explanation": "Open the indicated heels or toes apart, then bring them back as directed. Specify which part of each foot stays in contact with the floor; this is foot swiveling rather than a full-leg split.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 64,
+      "name": "Stamp",
+      "category": "footwork_primitive",
+      "explanation": "Strike the floor with the indicated foot as an accent and leave it unweighted. Make the intended support clear because some dances use stamp and stomp differently.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Stamp and stomp vocabulary varies; this entry is explicitly unweighted."
+      ]
+    },
+    {
+      "index": 65,
+      "name": "Step",
+      "category": "footwork_primitive",
+      "explanation": "Place a foot in the stated direction and transfer weight onto it. Specify the distance and facing when those affect the next movement.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 66,
+      "name": "Stomp",
+      "category": "footwork_primitive",
+      "explanation": "Place the indicated foot firmly on the floor and take weight on it. This record is a weighted stomp; an unweighted stomp-up must be identified and recorded separately.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Stomp up alias implies an unweighted variation, but the record has one weight change."
+      ]
+    },
+    {
+      "index": 67,
+      "name": "Stride",
+      "category": "footwork_primitive",
+      "explanation": "Take a traveling step of the length stated in the dance and transfer weight onto that foot. Keep the distance comfortable and specify the travel direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 68,
+      "name": "Sweep",
+      "category": "footwork_primitive",
+      "explanation": "Move the free foot through a smooth arc around the supporting foot without transferring weight. State the start and finish positions and whether the toe stays on the floor.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 69,
+      "name": "Swivel",
+      "category": "footwork_primitive",
+      "explanation": "Rotate the specified heels, toes, or feet toward a side using the stated contact points. Give the order, return action, and support position; swivel alone does not define one fixed sequence.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 70,
+      "name": "Swivet",
+      "category": "footwork_primitive",
+      "explanation": "Pivot one foot through its heel contact while the other pivots through the ball or front of the foot. Specify the side, weight placement, and any return action before beginning this coordinated foot action.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review must confirm heel/toe support and return sequence."
+      ]
+    },
+    {
+      "index": 71,
+      "name": "Toe Fan",
+      "category": "footwork_primitive",
+      "explanation": "Keep the heel in place while opening the toes outward, then return the toes as directed. Specify the foot and how the weight is supported.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 72,
+      "name": "Together",
+      "category": "footwork_primitive",
+      "explanation": "Bring the free foot beside the supporting foot and transfer weight to it. A touch beside the other foot is different because it does not take weight.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Together can mean the single closing transfer or the two-count Step Together sequence. Do not collapse these entries through the shared alias."
+      ]
+    },
+    {
+      "index": 73,
+      "name": "Touch",
+      "category": "footwork_primitive",
+      "explanation": "Contact the floor lightly with the indicated part of the free foot without taking weight. Specify where the touch goes and leave that foot free for the next action.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 74,
+      "name": "Walk",
+      "category": "footwork_primitive",
+      "explanation": "Take a walking step in the stated direction and transfer weight onto the moving foot. Use the pace and step length required by the dance.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 75,
+      "name": "Weight Change",
+      "category": "footwork_primitive",
+      "explanation": "Move your weight from the current supporting foot to the other foot. The feet may stay in place or move as separately instructed.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 76,
+      "name": "Ankle Rock",
+      "category": "step_pattern",
+      "explanation": "An ankle rock needs instructions for the foot positions and rocking action. This version uses two weight changes over two counts and finishes facing the starting direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The name and structural data do not establish the ankle-rock mechanics."
+      ]
+    },
+    {
+      "index": 77,
+      "name": "Balance ½ Turn",
+      "category": "step_pattern",
+      "explanation": "This balance-turn sequence uses three weight-changing steps over three counts and finishes a half turn. The starting foot, step directions, and placement of the turn must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The exact catalog label has encoding damage: the supplied label is “Balance replacement-character Turn,” with alias “Balance Half Turn.” Preserve that issue for correction rather than silently guessing the damaged character."
+      ]
+    },
+    {
+      "index": 78,
+      "name": "Balance Step",
+      "category": "step_pattern",
+      "explanation": "This balance step uses three weight-changing steps over three counts and finishes with no net turn. The name alone does not establish the step directions or foot placements.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Balance step is not sufficiently specific to establish a unique three-step pattern."
+      ]
+    },
+    {
+      "index": 79,
+      "name": "Boogie Walk",
+      "category": "step_pattern",
+      "explanation": "A boogie walk is a stylized walking sequence. This version uses three weight changes over three counts with no net turn; the walking direction and intended knee, leg, or body styling need explanation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm the intended equivalence of Boogie Walk and Camel Walk and specify the styling."
+      ]
+    },
+    {
+      "index": 80,
+      "name": "Box Step",
+      "category": "step_pattern",
+      "explanation": "A box step arranges movement around a box-shaped floor pattern. This version records three weight changes across four counts with no net turn, so the exact step order and action without a weight transfer must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The recorded three weight changes across four counts require an explicit unweighted action or hold; do not substitute a four-transfer box automatically."
+      ]
+    },
+    {
+      "index": 81,
+      "name": "Break Turn",
+      "category": "step_pattern",
+      "explanation": "This is a two-count turning sequence with two weight changes. The starting foot, turn direction, turn amount, and placement of the weight transfers must be supplied.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The aliases do not establish one universal turn amount or direction. Both remain unspecified."
+      ]
+    },
+    {
+      "index": 82,
+      "name": "Charleston",
+      "category": "step_pattern",
+      "explanation": "A Charleston sequence combines stepping with unweighted foot actions, such as kicks or touches. This version takes four counts, changes weight twice, and has no net turn; the exact order and directions must be given.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specify whether the unweighted actions are kicks, points, touches, or a combination."
+      ]
+    },
+    {
+      "index": 83,
+      "name": "Coaster Step",
+      "category": "step_pattern",
+      "explanation": "A coaster step moves back, brings the feet together, then steps forward. This version fits three weight changes into two counts without a turn; the starting foot and timing must be stated.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 84,
+      "name": "Cross & Unwind",
+      "category": "step_pattern",
+      "explanation": "Cross a foot as directed, then unwind to finish a half turn from the starting facing. This two-count version records two weight changes, so the crossing position and weight transfer during the unwind need explicit instructions.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm where the second weight change occurs and which foot supports the finish; unwind instructions can otherwise leave weight unclear."
+      ]
+    },
+    {
+      "index": 85,
+      "name": "Cross Rock",
+      "category": "step_pattern",
+      "explanation": "Rock onto a crossed step, then recover weight to the other foot. This version uses two counts and two weight changes without a turn; the starting foot and crossing position must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 86,
+      "name": "Cross Shuffle",
+      "category": "step_pattern",
+      "explanation": "A cross shuffle combines a crossing step, a side step, and another crossing step. This version fits three weight changes into two counts without a turn; the starting foot, crossing position, and timing must be stated.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 87,
+      "name": "Electric Kicks",
+      "category": "step_pattern",
+      "explanation": "Alternate a forward rock and recovery with a backward rock and recovery while adding a kick by the free leg on each action. Specify each kick direction and keep the four weight changes clear; confirm this electric-kicks variation with an instructor.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Mechanical sequence independently drafted after a narrow fact check against an instructor-authored glossary. Confirm kick directions and the intended four-transfer variation."
+      ]
+    },
+    {
+      "index": 88,
+      "name": "Extended Grapevine",
+      "category": "step_pattern",
+      "explanation": "An extended grapevine lengthens the sideways travel through side and crossing steps. This version has no net turn, but its length, crossing order, weight changes, and ending action must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Duration and weight changes are unspecified; “extended” does not establish a particular length."
+      ]
+    },
+    {
+      "index": 89,
+      "name": "Grapevine",
+      "category": "step_pattern",
+      "explanation": "A grapevine travels sideways through side and crossing steps. This four-count version has three weight changes and no net turn; the instructions must identify the crossing position and the action that does not transfer weight.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 90,
+      "name": "Grapevine 1/4 Turn",
+      "category": "step_pattern",
+      "explanation": "This grapevine combines sideways travel and crossing steps with a quarter turn. It uses four counts and three weight changes; the instructions must locate the turn and identify the action without a weight transfer.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 91,
+      "name": "Heel Ball Change",
+      "category": "step_pattern",
+      "explanation": "Make an unweighted heel touch, take weight onto the ball of that foot, then change weight to the other foot. This version fits the actions into two counts with two weight changes and no net turn; foot placements and timing must be stated.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 92,
+      "name": "Heel Ball Cross",
+      "category": "step_pattern",
+      "explanation": "Make an unweighted heel touch, take weight onto the ball of that foot, then cross the other foot with weight. This version takes two counts and has two weight changes without a turn; the heel placement, crossing position, and timing must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Heel Ball Cross records two weight changes but changes foot_start R to foot_end L. Confirm the field convention and intended ending support before using this as a validated transition."
+      ]
+    },
+    {
+      "index": 93,
+      "name": "Heel Grind",
+      "category": "step_pattern",
+      "explanation": "Place weight onto a heel and rotate the foot around that heel, then transfer weight as directed. This version takes two counts with two weight changes and no net turn; the swivel direction and exit step must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 94,
+      "name": "Heel Jack",
+      "category": "step_pattern",
+      "explanation": "A heel jack combines a heel presentation with accompanying steps. This entry records four counts, two weight changes, and no net turn, so the full step order, heel placement, and unweighted actions must be supplied.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Heel jack has insufficient sequencing information here to teach a specific four-count, two-transfer variant."
+      ]
+    },
+    {
+      "index": 95,
+      "name": "Heel Pivot",
+      "category": "step_pattern",
+      "explanation": "A heel pivot uses a heel as a pivoting contact point during a turn. This version takes two counts with two weight changes; the supporting foot, turn direction, turn amount, and transfer sequence must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Turn direction and amount are missing."
+      ]
+    },
+    {
+      "index": 96,
+      "name": "Heel Strut",
+      "category": "step_pattern",
+      "explanation": "Put a foot down heel first, then lower the front of that foot to complete the step. This version takes two counts for one weight change and has no net turn.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 97,
+      "name": "Heel Swivets",
+      "category": "step_pattern",
+      "explanation": "This heel-focused swiveling sequence lasts four counts and finishes with no net turn. The supporting contact points, swivel directions, and any weight changes must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether “heel swivets” denotes a specific swivet pattern or a heel-swivel sequence; contact points and weight changes are missing."
+      ]
+    },
+    {
+      "index": 98,
+      "name": "Heel Turn",
+      "category": "step_pattern",
+      "explanation": "A heel turn uses a heel as a pivoting contact point. This version records two counts and two weight changes, but the complete footwork, turn direction, and turn amount must be supplied.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Turn direction and amount are missing; the distinction from Heel Pivot also needs clarification."
+      ]
+    },
+    {
+      "index": 99,
+      "name": "Jazz Box",
+      "category": "step_pattern",
+      "explanation": "Step across, step back, step to the side, then take a finishing step. This version uses four weight changes over four counts and finishes facing the starting direction; the starting foot and final foot placement must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 100,
+      "name": "Jazz Box 1/4 Turn",
+      "category": "step_pattern",
+      "explanation": "This jazz box combines crossing, backward, sideward, and finishing steps with a quarter turn. It uses four weight changes over four counts; the starting foot, placement of the turn, and final step must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 101,
+      "name": "Kick Ball Change",
+      "category": "step_pattern",
+      "explanation": "Kick without transferring weight, step onto the ball of that foot, then change weight to the other foot. This version fits the actions into two counts with two weight changes and no net turn; the kick direction, foot placements, and timing must be stated.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 102,
+      "name": "Kick Ball Cross",
+      "category": "step_pattern",
+      "explanation": "Kick without transferring weight, step onto the ball of that foot, then cross the other foot with weight. This version takes two counts with two weight changes and no net turn; the kick direction, crossing position, and timing must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 103,
+      "name": "Lock Step",
+      "category": "step_pattern",
+      "explanation": "Step, bring the following foot into a crossed lock position near the stepping foot, then step again. This version fits three weight changes into two counts without a turn; the travel direction, starting foot, and timing must be supplied.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 104,
+      "name": "Mambo Step",
+      "category": "step_pattern",
+      "explanation": "Rock in the stated direction, recover weight, then take the finishing step. This version fits three weight changes into two counts with no net turn; the final foot placement and timing must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 105,
+      "name": "Monterey 1/2 Turn",
+      "category": "step_pattern",
+      "explanation": "A Monterey combines side points with closing weight changes and a turn. This version uses four counts and two weight changes to finish a half turn; the instructions must identify the starting foot and where the turn occurs.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 106,
+      "name": "Monterey 1/4 Turn",
+      "category": "step_pattern",
+      "explanation": "A Monterey combines side points with closing weight changes and a turn. This version uses four counts and two weight changes to finish a quarter turn; the instructions must identify the starting foot and where the turn occurs.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 107,
+      "name": "Paddle Turn",
+      "category": "step_pattern",
+      "explanation": "This recorded paddle-turn version finishes a quarter turn over two counts without changing the supporting foot. The instructions must explain the free foot's action and how the turn is made; a version that transfers weight between feet would require different weight-change data.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Zero weight changes is an explicit property of this record and needs instructor confirmation. Do not replace it with alternating weighted steps while retaining the recorded value."
+      ]
+    },
+    {
+      "index": 108,
+      "name": "Pivot 1/4 Turn",
+      "category": "step_pattern",
+      "explanation": "This pivoting sequence finishes a quarter turn over two counts with two weight changes. The starting foot, pivot action, and ending support must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 109,
+      "name": "Pivot 3/4 Turn",
+      "category": "step_pattern",
+      "explanation": "This pivoting sequence finishes three quarters of a turn over two counts with two weight changes. The starting foot, pivot action, and ending support must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 110,
+      "name": "Pivot Turn",
+      "category": "step_pattern",
+      "explanation": "This pivoting sequence finishes a half turn over two counts with two weight changes. The starting foot, pivot action, and ending support must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 111,
+      "name": "Progressive Turn",
+      "category": "step_pattern",
+      "explanation": "A progressive turn changes facing while traveling across the floor. Specify its step sequence, travel direction, total rotation, and timing before using this general label.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 112,
+      "name": "Push Step",
+      "category": "step_pattern",
+      "explanation": "A push step needs a defined pushing action and three weight transfers within this two-count entry. Specify the direction, rhythm, and finishing footwork rather than treating the name as a complete sequence.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The name does not uniquely establish the three foot placements or pushing technique."
+      ]
+    },
+    {
+      "index": 113,
+      "name": "Ramble",
+      "category": "step_pattern",
+      "explanation": "Ramble names a traveling footwork variation whose exact sequence depends on the dance. Give the heel or toe actions, direction, count length, and weight changes before using it as an instruction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Length and weight changes are unspecified; do not infer a fixed four-count sequence."
+      ]
+    },
+    {
+      "index": 114,
+      "name": "Reverse Pivot",
+      "category": "step_pattern",
+      "explanation": "Take the stated backward step and pivot to face half a turn from the starting direction. This record has two weight changes; specify the turn direction and finishing support.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm turn direction and both weight transfers for the reverse-pivot variation."
+      ]
+    },
+    {
+      "index": 115,
+      "name": "Rock Step",
+      "category": "step_pattern",
+      "explanation": "Rock onto one foot in the stated direction, then recover weight to the other foot. Use the named starting foot and return position without adding a turn unless one is separately recorded.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 116,
+      "name": "Rock Step with 1/4 turn",
+      "category": "step_pattern",
+      "explanation": "Rock to the stated side, then recover while completing a quarter turn. Specify the turning direction and where the rotation happens so the final facing is clear.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Aliases name opposite turn directions; the numeric rotation represents only one recorded direction."
+      ]
+    },
+    {
+      "index": 117,
+      "name": "Rocking Chair",
+      "category": "step_pattern",
+      "explanation": "Rock forward and recover, then rock back and recover. Begin with the stated foot and keep each of the four weight changes distinct.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 118,
+      "name": "Rolling Full Turn",
+      "category": "step_pattern",
+      "explanation": "Travel sideways through three weight-changing steps that complete one full turn. Specify the starting foot, turning direction, and rotation on each step.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Full-turn label and 360-degree record must remain distinct from the half-turn entry sharing rolling-vine aliases."
+      ]
+    },
+    {
+      "index": 119,
+      "name": "Running Man",
+      "category": "step_pattern",
+      "explanation": "Running man combines a running-like leg action with movements of the supporting foot. Specify the complete four-count sequence, including how the two weight changes fit with the lifted legs and any slides or hops.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Complete footwork, support, and kick/hop/slide actions need instructor specification."
+      ]
+    },
+    {
+      "index": 120,
+      "name": "Sailor Step",
+      "category": "step_pattern",
+      "explanation": "Cross a foot behind the other, take a small side step with the other foot, then step onto the starting foot. State the rhythm and final placement for this three-step pattern over two counts.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 121,
+      "name": "Sailor Step Turning",
+      "category": "step_pattern",
+      "explanation": "Use the sailor sequence of behind, side, and finishing step while completing a quarter turn. Specify the turning direction and which steps carry the rotation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The general turning-sailor name currently records only a quarter-turn variation."
+      ]
+    },
+    {
+      "index": 122,
+      "name": "Scissors",
+      "category": "step_pattern",
+      "explanation": "Step to the side, close the other foot with weight, then cross the starting foot in front with weight. State the leading foot and the timing of the three steps over two counts.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 123,
+      "name": "Shuffle",
+      "category": "step_pattern",
+      "explanation": "Take three steps in a step-close-step pattern over two counts. Specify the lead foot, direction, and rhythm; the label may describe forward, backward, or sideways travel.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 124,
+      "name": "Skate",
+      "category": "step_pattern",
+      "explanation": "Slide or step one foot toward its forward diagonal with a skating quality, then do the same with the other foot. Transfer weight on each movement and specify the size and foot angles.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 125,
+      "name": "Spin",
+      "category": "step_pattern",
+      "explanation": "Rotate through one full turn while keeping the same supporting foot for this entry. Specify the turning direction, free-foot position, and finish before attempting the movement.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 126,
+      "name": "Step Touch",
+      "category": "step_pattern",
+      "explanation": "Take a step with weight, then touch the other foot at the stated position without taking weight. Specify the step direction and where the touch finishes.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 127,
+      "name": "Stroll",
+      "category": "step_pattern",
+      "explanation": "Take the specified two forward weight-changing steps with the requested strolling style. The exact foot placements and styling need explanation if they differ from ordinary walking.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm the intended strolling foot placements; this name may be used for more specific patterns."
+      ]
+    },
+    {
+      "index": 128,
+      "name": "Strut",
+      "category": "step_pattern",
+      "explanation": "Place the leading part of a foot on the floor, then lower the rest of that foot to complete the step over two counts. Specify heel-first or toe-first contact and the travel direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 129,
+      "name": "Sugarfoot",
+      "category": "step_pattern",
+      "explanation": "Use the stated heel-and-toe presentation or swivel of the free foot while the same foot remains the primary support. Specify the order, placement, and supporting-foot action because sugarfoot has several variations.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specify which sugarfoot variation is meant before attaching detailed footwork."
+      ]
+    },
+    {
+      "index": 130,
+      "name": "Switches",
+      "category": "step_pattern",
+      "explanation": "Alternate the stated heel touches or toe points by closing and weighting one foot before presenting the other. Give the complete four-count rhythm and sequence so the two weight changes and unweighted contacts are clear.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Exact four-count sequence and placement of the two weight changes need confirmation."
+      ]
+    },
+    {
+      "index": 131,
+      "name": "Syncopated Grapevine",
+      "category": "step_pattern",
+      "explanation": "Travel sideways through side and crossing steps on a syncopated rhythm. This entry fits four weight-changing steps into two counts, so specify the exact crossing order and subdivisions.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 132,
+      "name": "Three Step Turn",
+      "category": "step_pattern",
+      "explanation": "Take three weight-changing steps that together complete a full turn. Specify the direction of travel, turning direction, and amount of turn on each step.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 133,
+      "name": "Toe Heel Cross Swivels",
+      "category": "step_pattern",
+      "explanation": "Present the free toe and heel with the stated swivel action, then make the crossing step with weight. Specify the duration and timing of each action across the four counts.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specify the duration and timing of the named actions across the four recorded counts; an additional action is not automatically implied."
+      ]
+    },
+    {
+      "index": 134,
+      "name": "Traveling Applejacks",
+      "category": "step_pattern",
+      "explanation": "Combine coordinated heel-and-toe pivots with sideways travel. The dance must give the four-count contact pattern and the two weight transfers rather than treating stationary applejacks as automatically equivalent.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The traveling contact sequence and two weight changes need instructor confirmation."
+      ]
+    },
+    {
+      "index": 135,
+      "name": "Triple Step Turn 1/4",
+      "category": "step_pattern",
+      "explanation": "Take three weight-changing steps over two counts while completing a quarter turn. Specify the lead foot, foot placements, rhythm, and turning direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 136,
+      "name": "Triple Step Turn 1/2",
+      "category": "step_pattern",
+      "explanation": "Take three weight-changing steps over two counts while completing a half turn. Specify the lead foot, foot placements, rhythm, and turning direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 137,
+      "name": "Triple Step Turn 3/4",
+      "category": "step_pattern",
+      "explanation": "Take three weight-changing steps over two counts while completing three quarters of a turn. Specify the lead foot, foot placements, rhythm, and turning direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 138,
+      "name": "Triple Step Full Turn",
+      "category": "step_pattern",
+      "explanation": "Take three weight-changing steps over two counts while completing one full turn. Specify the lead foot, foot placements, rhythm, and turning direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 139,
+      "name": "Vaudeville",
+      "category": "step_pattern",
+      "explanation": "A vaudeville combines crossing and sideward footwork with an unweighted heel presentation. Give the exact two-count sequence, including the placement of all three weight transfers recorded for this variation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm the particular two-count, three-transfer vaudeville variation and placement of each transfer."
+      ]
+    },
+    {
+      "index": 140,
+      "name": "Weave",
+      "category": "step_pattern",
+      "explanation": "Travel sideways with a sequence that alternates side steps and crossing steps. Specify whether the first crossing is in front or behind and give all four weighted steps.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 141,
+      "name": "Willies",
+      "category": "step_pattern",
+      "explanation": "This name needs a complete description of the intended traveling footwork. The record specifies two forward weight-changing actions over two counts, but the foot placements and any swivel styling still need instructor confirmation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Rare label: no complete sequence inferred from the name and mechanics alone."
+      ]
+    },
+    {
+      "index": 142,
+      "name": "Wizard",
+      "category": "step_pattern",
+      "explanation": "Step toward the right forward diagonal, lock the other foot behind with weight, then step again on the starting foot. Count 1, 2& for this Wizard/Dorothy variation; a locking triple on 1&2 has a different rhythm.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Count notation corrected to 1-2&; instructor review of technique remains pending."
+      ]
+    },
+    {
+      "index": 143,
+      "name": "Apple Jack",
+      "category": "styling",
+      "explanation": "Apple jack describes heel-and-toe swiveling footwork that changes the angles of the feet. The dance must specify the weight placement, direction, and sequence; “fancy feet” alone is a broader, less precise label.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm that “fancy feet” is intended to mean apple jack here, and provide the actual footwork separately."
+      ]
+    },
+    {
+      "index": 144,
+      "name": "Body Alignment",
+      "category": "styling",
+      "explanation": "Body alignment describes how parts of your body line up with one another and with your supporting feet. It helps you recognize the intended position while standing or moving.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 145,
+      "name": "Body Angle",
+      "category": "styling",
+      "explanation": "Body angle describes the direction or tilt of the body relative to a reference, such as the feet or a wall. The instructions should identify the body part and reference involved.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specify whether angle refers to facing, tilt, or both."
+      ]
+    },
+    {
+      "index": 146,
+      "name": "Body Roll",
+      "category": "styling",
+      "explanation": "A body roll is a wave-like movement that passes through different parts of the body. Its starting point, direction, size, and timing need to be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 147,
+      "name": "Boogie",
+      "category": "styling",
+      "explanation": "Boogie suggests a loose, rhythmic styling quality rather than one universal movement. The dance should explain whether it calls for movement in the knees, hips, shoulders, feet, or a combination.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Boogie needs a demonstrated or explicitly described action."
+      ]
+    },
+    {
+      "index": 148,
+      "name": "Boogie Roll",
+      "category": "styling",
+      "explanation": "Boogie roll is a styling label that can refer to a rolling action through the body or hips. The body parts involved, direction, and timing need an explanation or demonstration.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Boogie roll needs a demonstrated or explicitly described action."
+      ]
+    },
+    {
+      "index": 149,
+      "name": "Center",
+      "category": "styling",
+      "explanation": "Center can mean the body's central area used to organize movement, or a reference point in the dance space. The instructions should make clear which meaning applies.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether center refers to the body or the dance space."
+      ]
+    },
+    {
+      "index": 150,
+      "name": "Cuban Motion",
+      "category": "styling",
+      "explanation": "Cuban motion is coordinated hip and pelvic movement associated with changes in weight and leg action. The dance should specify the intended technique and timing rather than treating it as an isolated hip wiggle.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 151,
+      "name": "Frame",
+      "category": "styling",
+      "explanation": "Frame is the organized position of the arms and upper body during dancing. Its exact shape depends on the style and whether the dancer is working alone or with a partner.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 152,
+      "name": "Grind",
+      "category": "styling",
+      "explanation": "Grind is an informal styling term that may describe a sustained rolling or circling action of the hips or pelvis. The intended action, direction, size, and timing must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Grind needs a demonstrated or explicitly described action."
+      ]
+    },
+    {
+      "index": 153,
+      "name": "Hip Bump",
+      "category": "styling",
+      "explanation": "A hip bump is a distinct accent made by moving the hip toward a stated direction. The instructions should explain the weight placement and whether the action repeats.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 154,
+      "name": "Hip Lift",
+      "category": "styling",
+      "explanation": "A hip lift raises one side of the pelvis to create an upward accent. The side, supporting position, and timing need to be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 155,
+      "name": "Hip Roll",
+      "category": "styling",
+      "explanation": "A hip roll moves the hips through a rounded or circling path. The direction, size, weight placement, and timing depend on the dance.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 156,
+      "name": "Posture",
+      "category": "styling",
+      "explanation": "Posture is the overall way you hold and carry your body. Dance instructions may ask for a particular posture to support the movement or express a style.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 157,
+      "name": "Roll",
+      "category": "styling",
+      "explanation": "Roll is a broad instruction for a smooth, rounded, or wave-like action. It needs a named body part and a direction to distinguish a body roll from a shoulder, hip, or other roll.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Identify the body part and type of roll."
+      ]
+    },
+    {
+      "index": 158,
+      "name": "Shimmy",
+      "category": "styling",
+      "explanation": "A shimmy is a repeated alternating action of the shoulders that creates a shaking effect across the upper body. Its speed, size, and duration depend on the dance.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 159,
+      "name": "Sway",
+      "category": "styling",
+      "explanation": "A sway is a smooth movement of the body toward one side or another. Whether the feet move or the weight transfers must be specified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 160,
+      "name": "Torque",
+      "category": "styling",
+      "explanation": "Torque describes a twisting effect created when parts of the body rotate relative to one another. As a dance cue, it needs clear instructions about the body parts, direction, and intended amount.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Confirm whether torque is being taught as a movement quality, a preparation, or a specific action."
+      ]
+    },
+    {
+      "index": 161,
+      "name": "Vine with 1/4 turn",
+      "category": "step_pattern",
+      "explanation": "Use the stated vine footwork while completing a quarter turn. Specify the step order, placement and direction of the turn, and whether the finishing action takes weight.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Weight-change count is missing; do not infer a weighted or unweighted finish from the name alone."
+      ]
+    },
+    {
+      "index": 162,
+      "name": "Vine with 1/2 turn",
+      "category": "step_pattern",
+      "explanation": "Use the stated vine footwork to travel sideways while completing a half turn across four counts. Specify the individual steps, turn direction, and ending action; a full rolling vine has a different total rotation.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Half-turn mechanics conflict with shared aliases commonly also used for a full rolling vine; explicit variation required."
+      ]
+    },
+    {
+      "index": 163,
+      "name": "Jazz Box with 1/4 turn",
+      "category": "step_pattern",
+      "explanation": "Cross a foot in front, step back, step to the side, and take the finishing step while completing a quarter turn. Specify which step turns and where the last foot is placed.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 164,
+      "name": "Toe Strut",
+      "category": "step_pattern",
+      "explanation": "Place the toe of the moving foot first, then lower its heel to complete the step over two counts. Specify the direction of travel and when the weight settles onto that foot.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 165,
+      "name": "Point / Touch",
+      "category": "footwork_primitive",
+      "explanation": "Place the free foot lightly at the stated position without transferring weight. A point normally uses the toe; a broader touch instruction should identify the intended contact.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 166,
+      "name": "Pivot Turn 1/2",
+      "category": "step_pattern",
+      "explanation": "Step as directed, then pivot to finish half a turn from the starting facing. Specify the turn direction and ending support so the next free foot is clear.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 167,
+      "name": "Pivot Turn 1/4",
+      "category": "step_pattern",
+      "explanation": "Step as directed, then pivot to finish a quarter turn from the starting facing. Specify the turn direction and ending support so the next free foot is clear.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 168,
+      "name": "Monterey Turn 1/2",
+      "category": "step_pattern",
+      "explanation": "Point the starting foot to the side, turn halfway while closing it with weight, point the other foot to the side, then close it with weight. Specify the starting foot and turning direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 169,
+      "name": "Monterey Turn 1/4",
+      "category": "step_pattern",
+      "explanation": "Point the starting foot to the side, turn a quarter while closing it with weight, point the other foot to the side, then close it with weight. Specify the starting foot and turning direction.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 170,
+      "name": "Scissor Step",
+      "category": "step_pattern",
+      "explanation": "Step to the side, bring the other foot beside it with weight, then cross the starting foot in front with weight. Give the leading foot and rhythm for the three actions over two counts.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": []
+    },
+    {
+      "index": 171,
+      "name": "Clap",
+      "category": "footwork_primitive",
+      "explanation": "Bring the hands together for a clap on the stated count. Keep the footwork and supporting position given by the surrounding dance instructions.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Recorded foot_start is 'e', which is not a meaningful foot designation. Hand action does not establish support."
+      ]
+    },
+    {
+      "index": 172,
+      "name": "Step Together",
+      "category": "step_pattern",
+      "explanation": "Take the stated first step with weight, then bring the other foot beside it and take weight again. This two-step sequence differs from a single closing step or an unweighted touch.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "The Together alias overlaps the single-transfer closing entry, while this is a two-count step-and-close sequence."
+      ]
+    },
+    {
+      "index": 173,
+      "name": "Wizard / Dorothy — right diagonal",
+      "category": "step_pattern",
+      "explanation": "Travel on a forward diagonal with a step, a weighted lock behind, and another step. The quick final step lands after count 2: count 1, 2&.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 174,
+      "name": "Sailor 1/4 right turn — three transfers",
+      "category": "step_pattern",
+      "explanation": "A right-led sailor variation completes a 1/4 turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way."
+      ]
+    },
+    {
+      "index": 175,
+      "name": "Sailor 1/2 right turn — three transfers",
+      "category": "step_pattern",
+      "explanation": "A right-led sailor variation completes a 1/2 turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way."
+      ]
+    },
+    {
+      "index": 176,
+      "name": "Sailor 3/4 right turn — three transfers",
+      "category": "step_pattern",
+      "explanation": "A right-led sailor variation completes a 3/4 turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way."
+      ]
+    },
+    {
+      "index": 177,
+      "name": "Sailor full right turn — three transfers",
+      "category": "step_pattern",
+      "explanation": "A right-led sailor variation completes a full turn through three weight transfers on 1&2. The event list fixes where rotation occurs; do not substitute another sailor variation without checking its exit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Specified compact turning variation; the larger rotations especially require instructor and floor validation. Not an assertion that all sailors distribute rotation this way."
+      ]
+    },
+    {
+      "index": 178,
+      "name": "Triple 1/4 right turn — RLR",
+      "category": "step_pattern",
+      "explanation": "Three weighted steps on 1&2 complete a 1/4 right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space."
+      ]
+    },
+    {
+      "index": 179,
+      "name": "Triple 1/2 right turn — RLR",
+      "category": "step_pattern",
+      "explanation": "Three weighted steps on 1&2 complete a 1/2 right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space."
+      ]
+    },
+    {
+      "index": 180,
+      "name": "Triple 3/4 right turn — RLR",
+      "category": "step_pattern",
+      "explanation": "Three weighted steps on 1&2 complete a 3/4 right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space."
+      ]
+    },
+    {
+      "index": 181,
+      "name": "Triple full right turn — RLR",
+      "category": "step_pattern",
+      "explanation": "Three weighted steps on 1&2 complete a full right turn. Follow the separate rotation on each action so the turn and ending support are explicit.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "This is a selected RLR turning triple; larger turns require instructor review of foot placements and available space."
+      ]
+    },
+    {
+      "index": 182,
+      "name": "Heel jack — back, heel, close, touch",
+      "category": "step_pattern",
+      "explanation": "This two-count heel-jack variation presents the left heel and closes it before a final right touch. Its four actions use 1&2&; the ending is part of the variant.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 183,
+      "name": "Heel jack — back, heel, close, step",
+      "category": "step_pattern",
+      "explanation": "This two-count heel-jack variation presents the left heel and closes it before a final right step. Its four actions use 1&2&; the ending is part of the variant.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 184,
+      "name": "Vaudeville — cross, side, heel, close",
+      "category": "step_pattern",
+      "explanation": "Cross, move sideways, show the free heel, then close that foot with weight. This version uses 1&2& and leaves left free.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 185,
+      "name": "Kick-ball-cross — right kick",
+      "category": "step_pattern",
+      "explanation": "A right kick leads into a right ball step and a weighted left cross on 1&2. Right is free at the end.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 186,
+      "name": "Heel switches — open finish",
+      "category": "step_pattern",
+      "explanation": "Alternate right and left heel presentations by closing the first foot with weight. Leave the second presentation unweighted; left remains free.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 187,
+      "name": "Heel switches — closed finish",
+      "category": "step_pattern",
+      "explanation": "Alternate right and left heel presentations by closing the first foot with weight. Close the second foot on the final & count; right is free again.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 188,
+      "name": "Toe switches — open finish",
+      "category": "step_pattern",
+      "explanation": "Alternate right and left toe presentations by closing the first foot with weight. Leave the second presentation unweighted; left remains free.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 189,
+      "name": "Toe switches — closed finish",
+      "category": "step_pattern",
+      "explanation": "Alternate right and left toe presentations by closing the first foot with weight. Close the second foot on the final & count; right is free again.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 190,
+      "name": "Forward locking triple — RLR",
+      "category": "step_pattern",
+      "explanation": "Travel forward through step, lock behind, step on 1&2. This rhythm differs from the Wizard variation even though both use three weighted actions.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 191,
+      "name": "Anchor — back rock triple",
+      "category": "step_pattern",
+      "explanation": "Set a small back position and alternate weight right, left, right on 1&2. This compact anchor finishes with left free.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 192,
+      "name": "Nightclub basic — side, behind-rock, recover",
+      "category": "step_pattern",
+      "explanation": "A sustained side step is followed by a compact behind-rock and recovery on 1, 2&. Keep this variation separate from a nightclub basic that finishes with a crossing step.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 193,
+      "name": "Nightclub basic — side, close, cross",
+      "category": "step_pattern",
+      "explanation": "Follow a sustained right side step with a small closing step and a right cross on 1, 2&. This finishes in a crossing position, unlike the behind-rock recovery version.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 194,
+      "name": "Forward samba — 1a2",
+      "category": "step_pattern",
+      "explanation": "Use a forward right step, a brief left side transfer, and a return to right. This explicitly selects 1a2 timing; a straight 1&2 variation needs different event spacing.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 195,
+      "name": "Cross samba — 1a2",
+      "category": "step_pattern",
+      "explanation": "Use a crossing right step, a brief left side transfer, and a return to right. This explicitly selects 1a2 timing; a straight 1&2 variation needs different event spacing.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 196,
+      "name": "Volta 1/4 right turn — crossing rhythm",
+      "category": "step_pattern",
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a 1/4 right turn. This selected variation lasts 2 counts and ends weighted right.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation."
+      ]
+    },
+    {
+      "index": 197,
+      "name": "Volta 1/2 right turn — crossing rhythm",
+      "category": "step_pattern",
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a 1/2 right turn. This selected variation lasts 2 counts and ends weighted right.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation."
+      ]
+    },
+    {
+      "index": 198,
+      "name": "Volta 3/4 right turn — crossing rhythm",
+      "category": "step_pattern",
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a 3/4 right turn. This selected variation lasts 3 counts and ends weighted right.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation."
+      ]
+    },
+    {
+      "index": 199,
+      "name": "Volta full right turn — crossing rhythm",
+      "category": "step_pattern",
+      "explanation": "Alternate right crossing steps with small left ball steps while tracing a full right turn. This selected variation lasts 4 counts and ends weighted right.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Selected crossing-turn construction with explicit increments; validate the foot technique and arc with an instructor before treating it as a standard volta variation."
+      ]
+    },
+    {
+      "index": 200,
+      "name": "Diamond half right — diagonal entry",
+      "category": "step_pattern",
+      "explanation": "Begin facing the left forward diagonal (315 degrees from the block wall). Alternate forward and backward diagonal passages with eighth-turn side steps; finish facing the opposite diagonal after a half turn.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Requires a 315-degree entry facing relative to the block wall. The side-step and diagonal transitions are explicit; instructor review of this selected diamond path is pending."
+      ]
+    },
+    {
+      "index": 201,
+      "name": "Diamond full right — diagonal entry",
+      "category": "step_pattern",
+      "explanation": "Begin facing the left forward diagonal (315 degrees from the block wall). Alternate forward and backward diagonal passages with eighth-turn side steps; repeat the half-diamond passage to return to the starting facing.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Requires a 315-degree entry facing relative to the block wall. The side-step and diagonal transitions are explicit; instructor review of this selected diamond path is pending."
+      ]
+    },
+    {
+      "index": 202,
+      "name": "Hinge half left — two quarter-turn steps",
+      "category": "step_pattern",
+      "explanation": "Use consecutive quarter-left turns while stepping right back and left to the side. The two weighted steps complete a half turn over two counts.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "This row defines a specific back-and-side hinge path. Other entry positions or turn directions require a distinct variant."
+      ]
+    },
+    {
+      "index": 203,
+      "name": "Hinge full left — two quarter-turn steps repeated",
+      "category": "step_pattern",
+      "explanation": "Use consecutive quarter-left turns while stepping right back and left to the side. Repeat the pair for a complete turn over four counts.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "This row defines a specific back-and-side hinge path. Other entry positions or turn directions require a distinct variant."
+      ]
+    },
+    {
+      "index": 204,
+      "name": "Spiral 3/4 left — step onto right",
+      "category": "step_pattern",
+      "explanation": "Step onto right, then rotate 3/4 left while keeping right as the supporting foot. The left leg remains free; review its final placement before connecting another step.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Single-support turn with explicit rotation, not an extra pivot weight change. The free-leg shape and balance need instructor review."
+      ]
+    },
+    {
+      "index": 205,
+      "name": "Spiral full left — step onto right",
+      "category": "step_pattern",
+      "explanation": "Step onto right, then rotate full left while keeping right as the supporting foot. The left leg remains free; review its final placement before connecting another step.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Single-support turn with explicit rotation, not an extra pivot weight change. The free-leg shape and balance need instructor review."
+      ]
+    },
+    {
+      "index": 206,
+      "name": "Twinkle — right cross, side, side",
+      "category": "step_pattern",
+      "explanation": "Use three weighted steps over three waltz counts: cross, side, side. Keep the overall facing unchanged in this selected version.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 207,
+      "name": "Twinkle 1/4 right — cross, back, side",
+      "category": "step_pattern",
+      "explanation": "A right crossing step leads into a quarter-right back step and a side finish. Each action takes one of the three waltz counts.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "One explicit teaching variation. Timing and foot continuity are encoded; instructor technique review is still pending."
+      ]
+    },
+    {
+      "index": 208,
+      "name": "Pencil turn — quarter left on L (two counts)",
+      "category": "step_pattern",
+      "explanation": "Start with weight on L and R free. This two-count practice variant finishes with R still free; its timing and turn amount apply only to this named variant.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    },
+    {
+      "index": 209,
+      "name": "Pencil turn — half left on L (two counts)",
+      "category": "step_pattern",
+      "explanation": "Start with weight on L and R free. This two-count practice variant finishes with R still free; its timing and turn amount apply only to this named variant.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    },
+    {
+      "index": 210,
+      "name": "Pencil turn — full left on L (two counts)",
+      "category": "step_pattern",
+      "explanation": "Start with weight on L and R free. This two-count practice variant finishes with R still free; its timing and turn amount apply only to this named variant.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    },
+    {
+      "index": 211,
+      "name": "Figure-eight turn — right lead, full turn, side finish",
+      "category": "step_pattern",
+      "explanation": "Start with R free and use one count for each listed action. This explicitly defined side-finish variant changes travel direction, completes a full rightward rotation, and ends facing the starting wall with R free; other figure-eight endings need their own instructions.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    },
+    {
+      "index": 212,
+      "name": "Spiral lock — provisional cue",
+      "category": "step_pattern",
+      "explanation": "The turning action and lock position need a complete demonstration, including which foot takes weight. Two counts is a provisional display window, not an asserted standard duration; the starting foot, turn amount, direction, support changes, and finish remain unspecified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    },
+    {
+      "index": 213,
+      "name": "Spiral hitch — provisional cue",
+      "category": "step_pattern",
+      "explanation": "The instructor must establish how the turn and knee lift fit together and which foot supports each part. Two counts is a provisional display window, not an asserted standard duration; the starting foot, rotation, weight changes, and finish remain unspecified.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    },
+    {
+      "index": 214,
+      "name": "Moonwalk — provisional cue",
+      "category": "step_pattern",
+      "explanation": "A moonwalk travels backward while the foot action suggests forward walking. This two-count display window is provisional, not a claim that a complete cycle always lasts two counts; the starting foot, support-switch timing, finish, and any turn need instructor specification.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    },
+    {
+      "index": 215,
+      "name": "Roger Rabbit — provisional cue",
+      "category": "step_pattern",
+      "explanation": "Roger Rabbit combines a rocking bounce with alternating leg actions. This two-count display window is provisional rather than a standard cycle length; the preparation, support changes, travel, rotation, and final free foot need a complete instructor-led sequence.",
+      "review_status": "draft_needs_instructor_review",
+      "authorship_note": "New explanation draft written for this project; not a copyright certification or instructor approval.",
+      "review_notes": [
+        "Instructor review of the named variation remains pending."
+      ]
+    }
+  ],
+  "review_findings": [
+    {
+      "indexes": [
+        77
+      ],
+      "code": "damaged_name_encoding",
+      "note": "The existing name contains U+FFFD. Its half-turn alias and 180-degree field agree, but the name is preserved exactly for a separate reviewed correction."
+    },
+    {
+      "indexes": [
+        35,
+        62
+      ],
+      "code": "shared_alias_different_weight",
+      "note": "Draw is shared by Drag and Slide, whose recorded weight changes are zero and one. Do not merge them by alias."
+    },
+    {
+      "indexes": [
+        66
+      ],
+      "code": "weighted_stomp_unweighted_alias",
+      "note": "The Stomp record has one weight change while its Stomp up alias can mean an unweighted action. Keep the weighted explanation explicit and review the alias."
+    },
+    {
+      "indexes": [
+        92
+      ],
+      "code": "end_foot_needs_review",
+      "note": "Heel Ball Cross records two weight changes but changes foot_start R to foot_end L. Confirm the field convention and intended ending support before using this as a validated transition."
+    },
+    {
+      "indexes": [
+        118,
+        162
+      ],
+      "code": "same_alias_different_rotation",
+      "note": "Rolling vine and Rolling grapevine appear under both the 360-degree Rolling Full Turn and the 180-degree Vine with 1/2 turn. Preserve both identities and require explicit variation selection."
+    },
+    {
+      "indexes": [
+        53
+      ],
+      "code": "variation_weight_changes",
+      "note": "Mashed Potatoes records zero weight changes. A traveling variation with transfers must not inherit that value unchanged."
+    },
+    {
+      "indexes": [
+        59
+      ],
+      "code": "skip_alias_not_equivalent",
+      "note": "Scoot has zero weight changes; its Skip alias can describe a different step-and-hop pattern with transfers."
+    },
+    {
+      "indexes": [
+        80
+      ],
+      "code": "box_finishing_action_unspecified",
+      "note": "Box Step records four counts and three transfers, so a four-transfer box cannot be silently substituted."
+    },
+    {
+      "indexes": [
+        107
+      ],
+      "code": "paddle_support_needs_review",
+      "note": "The paddle-turn record has zero weight changes. Confirm continuing support and free-foot action rather than teaching alternating weighted steps."
+    },
+    {
+      "indexes": [
+        116
+      ],
+      "code": "aliases_include_opposite_turns",
+      "note": "The side-rock quarter-turn aliases name both left and right turns. The single signed numeric rotation cannot represent both simultaneously."
+    },
+    {
+      "indexes": [
+        121
+      ],
+      "code": "general_name_specific_rotation",
+      "note": "Sailor Step Turning is a broad name but the record defines one quarter-turn magnitude. Other turn amounts need separate mechanics."
+    },
+    {
+      "indexes": [
+        171
+      ],
+      "code": "invalid_foot_designation",
+      "note": "Clap has foot_start='e'. A hand clap does not by itself establish a free or supporting foot."
+    },
+    {
+      "indexes": [
+        72,
+        172
+      ],
+      "code": "close_alias_different_sequence",
+      "note": "Together can mean the single closing transfer or the two-count Step Together sequence. Do not collapse these entries through the shared alias."
+    },
+    {
+      "indexes": [
+        51,
+        76,
+        94,
+        97,
+        112,
+        113,
+        119,
+        141
+      ],
+      "code": "sequence_not_established",
+      "note": "Names and available structural fields do not establish complete teachable sequences for these variations. Each needs instructor-supplied details before being presented as a fixed pattern."
+    }
+  ],
+  "technical_fact_checks": [
+    {
+      "indexes": [
+        87
+      ],
+      "title": "AJ Dance Sheffield step glossary, compiled by Glynn Rodgers (2022)",
+      "url": "https://www.ajdancesheffield.com/_files/ugd/2a7956_a35972b446e0473ea9125bc9cd6170ac.pdf",
+      "scope": "Verified that the named Electric Kicks variation can combine four rocking weight changes with free-leg kicks. The new explanation is not a copied step-sheet passage.",
+      "checked_date": "2026-09-03"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# --- SECRETS: never commit real credentials ---
+config/secrets.json
+config/secrets.local.json
+.env
+*.secret
+app/settings.json
+data/custom-moves.json
+# keep the template
+!config/secrets.example.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# app data / large corpora / audio
+data/corpus/
+data/cache/
+*.wav
+*.mp3
+*.m4a
+*.flac
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Private research and working material (kept locally)
+/glossary-linedance_steps.pdf
+/references/step-levels-and-glossary.md
+/references/sheet-examples.md
+/references/example-1-high-valley-fools-copperknob.png
+/references/example-2-cut-loose-get-loud-bootstepper.png
+/docs/steering/legacy/
+/private-audit/
+/data/line-dance.db*
+/app/projects/
+/exports/
+**/.pytest_cache/
+
+/build/
+/.uv-cache/
+.test-cache/
+*-results.xml
+
+/.test-tmp/
+/work/
+
+# Local teaching and media stores
+/app/instructor-data/
+/app/library/
+/library/

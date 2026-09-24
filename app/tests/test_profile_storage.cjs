@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const {create}=require('../static/profile-storage.js');
+const entries=new Map();const storage={getItem:k=>entries.has(k)?entries.get(k):null,setItem:(k,v)=>entries.set(k,String(v)),removeItem:k=>entries.delete(k)};
+const a=create(storage,{profile_id:'a'}),b=create(storage,{profile_id:'b',browser_preferences:{mode:'advanced'}});
+a.set('recovery.same-project','original draft');
+assert.equal(b.get('recovery.same-project'),null);
+assert.equal(a.get('recovery.same-project'),'original draft');
+assert.equal(b.get('mode'),'advanced');b.set('mode','basic');assert.equal(b.get('mode'),'basic');
+entries.set('ldc.recovery.legacy','old original draft');
+assert.equal(b.get('recovery.legacy'),null);
+const original=create(storage,{profile_id:'original',can_migrate_legacy_browser_state:true});
+assert.equal(original.get('recovery.legacy'),'old original draft');
+assert(!entries.has('ldc.recovery.legacy'));assert.equal(b.get('recovery.legacy'),null);
+assert.throws(()=>create(storage,{profile_id:'../bad'}));
+console.log('PASS: recovered drafts and restored preferences remain isolated by profile');

@@ -1,0 +1,2 @@
+# Complete tested development resolution, including pytest/httpx and core.
+-r dev-win-py312.lock.txt

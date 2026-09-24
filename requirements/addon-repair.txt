@@ -1,0 +1,4 @@
+# Opt-in local stem tool. Never installed by the normal launcher/build.
+# Its resolved dependencies and downloaded model licences need separate review.
+-r core.txt
+demucs>=4.0.1

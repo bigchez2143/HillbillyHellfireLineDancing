@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Line Dance Creator</title>
+<link rel="stylesheet" href="/static/style.css?v=20260903-lyric-scan">
+<script>
+if (window.location.protocol === "file:") {
+  document.write('<link rel="stylesheet" href="style.css">');
+}
+</script>
+</head>
+<body>
+<div id="fileMode" class="file-mode" hidden>
+  <div>
+    <strong>This is a visual preview only.</strong> Your saved projects live in the Line Dance Creator app, not in this preview.
+    <span>If the app is not already running, launch <strong>app/run.bat</strong> first.</span>
+  </div>
+  <a class="btn small file-open-link" href="http://127.0.0.1:8766/dance">Open your saved projects</a>
+</div>
+<div class="app-shell">
+<header>
+  <div class="brand brand-upgrade">
+    <span class="brand-mark" aria-hidden="true">LD</span>
+    <span><small>HILLBILLY HELLFIRE</small><strong>Line Dance Creator</strong></span>
+  </div>
+  <div class="brand">🤠 Line Dance Creator</div>
+  <div class="proj-bar"><a class="btn small" href="/dance" id="creatorHome">Main workspace</a>
+    <span class="project-label">SAVED PROJECTS</span>
+    <select id="projectSelect" aria-label="Saved projects"></select>
+    <button id="openProjectBtn" class="btn small">Open project</button>
+    <button id="newProjectBtn" class="btn small">+ New Project</button>
+    <button id="saveProjectBtn" class="btn small primary" title="Save everything (Ctrl+S)">💾 Save</button>
+    <button id="settingsBtn" class="btn small" title="Optional AI connection settings">Settings</button>
+    <button id="askAiBtn" class="btn small ai-trigger" title="Ask the optional AI assistant">Ask AI</button>
+    <button id="deleteProjectBtn" class="btn small danger" title="Delete project">🗑</button>
+  </div>
+</header>
+
+<nav id="tabs">
+  <div class="workflow-label">CREATE A DANCE</div>
+  <button data-tab="song" class="tab active">1 · Song</button>
+  <button data-tab="sections" class="tab">2 · Sections</button>
+  <button data-tab="check" class="tab">3 · Dance Fit</button>
+  <button data-tab="generate" class="tab">4 · Auto generate</button>
+  <button data-tab="editor" class="tab">5 · Manual build</button>
+  <button data-tab="tutorial" class="tab">6 · Tutorial</button>
+  <button data-tab="export" class="tab">7 · Export</button>
+  <div class="rail-note"><span></span>Built for the floor,<br>not just the page.</div>
+</nav>
+
+<main>
+<!-- ======================= 1 SONG ======================= -->
+<section id="tab-song" class="tabpane active">
+  <div class="cols">
+    <div class="card">
+      <h2>Song</h2>
+      <label>Title <input id="songTitle" placeholder="Firefly Rave"></label>
+      <label>Artist <input id="songArtist" placeholder="Hillbilly Hellfire"></label>
+      <label>Audio file path
+        <input id="songPath" placeholder="C:\Users\you\Music\song.mp3">
+      </label>
+      <div id="fileDropZone" class="drop-zone" tabindex="0" role="button" aria-label="Upload audio file">
+        <span class="drop-icon" aria-hidden="true">AUDIO</span>
+        <span><strong>Drop your song here</strong><small>MP3, WAV, M4A, FLAC, OGG, or AAC</small></span>
+        <span class="drop-action">Browse files</span>
+      </div>
+      <div class="row">
+        <button id="setPathBtn" class="btn">Use this file</button>
+        <span class="hint">or</span>
+        <input type="file" id="songFile" accept=".mp3,.wav,.m4a,.flac">
+      </div>
+      <p id="songStatus" class="hint"></p>
+      <hr>
+      <button id="analyzeBtn" class="btn primary">▶ Analyze audio</button>
+      <p id="analyzeStatus" class="status"></p>
+    </div>
+    <div class="card" id="analysisCard" style="display:none">
+      <h2>Measured (never trusted from the label)</h2>
+      <div class="bigstat"><span id="bpmValue">—</span> BPM
+        <span id="bpmConfidence" class="chip"></span></div>
+      <div id="bpmNotes" class="notes"></div>
+      <table class="kv" id="methodsTable"></table>
+      <div id="octaveWarn" class="warnbox" style="display:none"></div>
+      <div id="driftWarn" class="warnbox" style="display:none"></div>
+      <div id="candidatesBox" class="notes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 2 SECTIONS ======================= -->
+<section id="tab-sections" class="tabpane">
+  <div class="card">
+    <h2>Waveform &amp; sections</h2>
+    <p class="hint">Play the song. <b>Shift+click</b> the waveform to drop a section
+      boundary (snaps to the nearest downbeat). Drag a boundary to move it.
+      <b>Double-click</b> a boundary to remove it. Plain click seeks playback.</p>
+    <div id="waveViewport" class="wave-viewport">
+      <canvas id="wave" height="180"></canvas>
+    </div>
+    <div class="row">
+      <button id="playBtn" class="btn">▶ Play</button>
+      <span id="timeReadout" class="mono">0:00.0</span>
+      <span class="wave-zoom" role="group" aria-label="Waveform zoom controls">
+        <span id="waveZoomReadout" class="wave-zoom-readout">100%</span>
+        <button id="zoomOutBtn" class="btn subtle" type="button" title="Zoom out on waveform">− Zoom</button>
+        <button id="zoomInBtn" class="btn subtle" type="button" title="Zoom in on waveform">+ Zoom</button>
+        <button id="resetZoomBtn" class="btn subtle" type="button">Reset zoom</button>
+      </span>
+      <label class="inline"><input type="checkbox" id="snapChk" checked> snap to downbeats</label>
+    </div>
+    <audio id="audio"></audio>
+  </div>
+  <div class="cols">
+    <div class="card">
+      <h2>Lyrics &amp; section names</h2>
+      <p class="hint">No lyric sheet? Let the app listen locally and build an editable section draft. The first scan may download the speech model and take several minutes. If you already have the lyrics, paste them for the more accurate alignment workflow.</p>
+      <textarea id="lyricsText" rows="10" placeholder="[Intro]&#10;...&#10;[Verse 1]&#10;..."></textarea>
+      <div class="row wrap">
+        <button id="scanLyricsBtn" class="btn primary">Scan song &amp; draft sections</button>
+        <button id="saveLyricsBtn" class="btn">Save lyrics &amp; tags</button>
+        <button id="alignLyricsBtn" class="btn">Align pasted lyrics</button>
+        <button id="autoLabelBtn" class="btn">Use tags on my markers</button>
+      </div>
+      <p class="hint compact-hint">A scan creates a reviewable draft. It will not replace lyrics or section markers you entered yourself.</p>
+      <div id="alignStatus" class="status"></div>
+      <div id="lyricTags" class="chips"></div>
+    </div>
+    <div class="card">
+      <h2>Sections</h2>
+      <p class="hint">Give each section a name and edit its start or end time here. Type seconds (<span class="mono">32.1</span>) or minutes:seconds (<span class="mono">0:32.1</span>), then press Enter or click away to apply it; shared endpoints stay linked. Zoom centers on the playhead, and you can scroll the waveform sideways to inspect another area.</p>
+      <table id="sectionsTable" class="list"></table>
+      <div class="row wrap">
+        <button id="addSectionBtn" class="btn">+ Add section at playhead</button>
+        <button id="saveSectionsBtn" class="btn primary">Save sections</button>
+      </div>
+    </div>
+  </div>
+  <div id="alignmentCard" class="card alignment-card">
+    <div class="alignment-heading">
+      <div>
+        <h2>Timed lyrics</h2>
+        <p id="alignmentSummary" class="hint">Paste lyrics, then align them to the song. Your waveform markers will not change until you accept a suggestion; instrumental intros and outros stay manual.</p>
+      </div>
+      <span id="alignmentBadge" class="chip">Not aligned</span>
+    </div>
+    <div id="captionList" class="caption-list"></div>
+    <div class="row wrap alignment-actions">
+      <button id="acceptAlignmentBtn" class="btn primary">Use suggested section markers</button>
+      <button id="keepManualMarkersBtn" class="btn">Keep my manual markers</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3 CHECK ======================= -->
+<section id="tab-check" class="tabpane">
+  <div class="card">
+    <h2>Dance fit — your music map stays in charge</h2>
+    <p class="hint">Keep each section exactly where the song changes to your ear. This builds a private count overlay for the dance; it never moves, rounds, or “fixes” your music markers.</p>
+    <div class="row">
+      <label class="inline">Dance pattern length
+        <select id="patternLen">
+          <option>16</option><option selected>32</option>
+          <option>48</option><option>64</option>
+        </select> counts</label>
+      <button id="phraseBtn" class="btn primary">Build dance fit</button>
+    </div>
+    <div id="phraseStatus"></div>
+    <div id="phraseFlags"></div>
+    <table id="phraseTable" class="list"></table>
+    <div id="phraseTotals" class="notes"></div>
+  </div>
+</section>
+
+<!-- ======================= 4 GENERATE ======================= -->
+<section id="tab-generate" class="tabpane">
+  <div class="card">
+    <h2>Auto-generate a strong dance foundation</h2>
+    <p class="hint">The publication-quality pass favors variety, memorable 8-count blocks, and a balanced floor feel. It is a strong draft for your editor - not a substitute for a real floor test.</p>
+    <div class="row wrap">
+      <label class="inline">Level
+        <select id="genLevel">
+          <option value="AB" selected>Absolute Beginner</option>
+          <option value="B">Beginner</option>
+          <option value="I">Improver</option>
+          <option value="INT">Intermediate</option>
+          <option value="A">Advanced</option>
+        </select></label>
+      <label class="inline">Walls
+        <select id="genWall">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="4">4</option>
+        </select></label>
+      <label class="inline">Turn
+        <select id="genTurnDir">
+          <option value="L" selected>left (CCW)</option>
+          <option value="R">right (CW)</option>
+        </select></label>
+      <label class="inline">Counts
+        <select id="genCounts">
+          <option>16</option><option selected>32</option>
+          <option>48</option><option>64</option>
+        </select></label>
+      <label class="inline">Seed <input id="genSeed" type="number" value="0" style="width:5rem"></label>
+      <label class="inline">Variants <input id="genK" type="number" value="3" min="1" max="6" style="width:4rem"></label>
+      <label class="inline"><input type="checkbox" id="genSync"> allow &amp; syncopation</label>
+      <label class="inline"><input type="checkbox" id="genPolish" checked> prefer publication-quality variety</label>
+      <label class="inline"><input type="checkbox" id="genCustom"> include my reviewed custom moves</label>
+      <button id="generateBtn" class="btn primary">⚙ Generate</button>
+    </div>
+    <div class="build-mode-choice">
+      <div><b>Three ways to build:</b> Generate creates a local starting foundation, lyric-guided drafting follows clear dance calls in the song, and Manual Build lets you choose every move yourself.</div>
+      <button id="manualBuildBtn" class="btn">Build manually instead</button>
+    </div>
+    <div id="tempoGate" class="notes"></div>
+    <label id="experimentalToggle" class="inline" style="display:none">
+      <input type="checkbox" id="genExperimental"> I understand this is experimental and requires manual review
+    </label>
+    <div id="genError"></div>
+    <div id="candidates" class="cand-grid"></div>
+
+    <div id="lyricMovePanel" class="lyric-move-panel">
+      <div class="lyric-move-heading">
+        <div>
+          <p class="eyebrow">LYRIC-GUIDED DRAFT</p>
+          <h3>Build from lyric moves</h3>
+          <p class="hint">Find clear dance calls in the timed lyrics, lock only the moves the words support, and optionally fill the remaining counts with compatible reviewed moves.</p>
+        </div>
+        <span id="lyricMoveBadge" class="tutorial-badge empty">NOT BUILT</span>
+      </div>
+      <div class="row wrap lyric-move-controls">
+        <label class="inline lyric-fill-option"><input id="lyricFillGaps" type="checkbox" checked> fill remaining counts with compatible moves</label>
+        <label id="lyricPassageControl" class="inline lyric-passage-control" hidden>Instruction passage
+          <select id="lyricPassageSelect" disabled>
+            <option value="">Choose after the first scan</option>
+          </select>
+        </label>
+        <button id="lyricMoveDraftBtn" type="button" class="btn primary">Build from lyric moves</button>
+      </div>
+      <p class="hint lyric-safety-note">This creates a private, reviewable draft. It will not replace or save your current dance.</p>
+      <div id="lyricMoveStatus" class="status" role="status" aria-live="polite"></div>
+      <div id="lyricMoveSummary"></div>
+      <div class="lyric-review-grid">
+        <div id="lyricLockedCues"></div>
+        <div id="lyricMoveIssues"></div>
+      </div>
+      <div id="lyricMoveCandidates" class="lyric-candidate-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 5 EDITOR ======================= -->
+<section id="tab-editor" class="tabpane">
+  <div class="cols">
+    <div class="card">
+      <h2>Step library</h2>
+      <div class="row">
+        <input id="libFilter" placeholder="filter steps...">
+        <label class="inline">Show up to
+          <select id="libLevel"><option value="A" selected>Advanced</option><option value="INT">Intermediate</option><option value="I">Improver</option><option value="B">Beginner</option><option value="AB">Absolute Beginner</option></select>
+        </label>
+        <label class="inline"><input type="checkbox" id="libABOnly"> AB-safe only</label>
+        <label class="inline"><input type="checkbox" id="libCustomOnly"> my custom moves</label>
+      </div>
+      <div id="library" class="lib-list"></div>
+      <div class="library-admin">
+        <h3>Move library manager</h3>
+        <p id="librarySummary" class="hint">Loading the local move library...</p>
+        <details>
+          <summary>Add one move manually</summary>
+          <form id="customMoveForm" class="move-form">
+            <div class="settings-grid">
+              <label>Name <input id="customMoveName" required maxlength="120" placeholder="Diagonal Rock Recover"></label>
+              <label>Level <select id="customMoveLevel"><option value="AB">Absolute Beginner</option><option value="B">Beginner</option><option value="I" selected>Improver</option><option value="INT">Intermediate</option><option value="A">Advanced</option></select></label>
+              <label>Counts <input id="customMoveCounts" type="number" min="1" max="8" value="2" required></label>
+              <label>Net turn <select id="customMoveRotation"><option value="0">No turn</option><option value="90">¼ right</option><option value="-90">¼ left</option><option value="180">½ right</option><option value="-180">½ left</option><option value="360">Full right</option><option value="-360">Full left</option></select></label>
+              <label>Starts on free foot <select id="customMoveStart"><option value="R">Right</option><option value="L">Left</option><option value="F">Either / no weight change</option></select></label>
+              <label>Ends with free foot <select id="customMoveEnd"><option value="R">Right</option><option value="L">Left</option><option value="SAME">Same free foot</option></select></label>
+              <label>Travel <select id="customMoveTravel"><option value="">In place</option><option value="N">Forward</option><option value="S">Back</option><option value="E">Dancer's right</option><option value="W">Dancer's left</option></select></label>
+              <label>Movement family <input id="customMoveFamily" maxlength="60" placeholder="rock"></label>
+            </div>
+            <label>Teaching instructions <textarea id="customMoveInstructions" required maxlength="500" placeholder="Rock R diagonally forward, recover weight to L."></textarea></label>
+            <label class="inline"><input id="customMoveSync" type="checkbox"> includes syncopation / &amp; count</label>
+            <label class="inline"><input id="customMoveGenerator" type="checkbox"> I have checked this move and allow auto-generation to use it</label>
+            <button type="submit" class="btn small primary">Add custom move</button>
+            <p id="customMoveStatus" class="settings-status"></p>
+          </form>
+        </details>
+        <details>
+          <summary>Import moves from JSON, Word, Excel, PDF, or Notepad</summary>
+          <p class="hint">Use a JSON, CSV/TSV, TXT/MD, XLSX, DOCX, or text-based PDF. Imported rows need a name, counts, start foot, end foot, level, and teaching instructions. Incomplete rows are shown for review instead of guessed.</p>
+          <div class="row wrap">
+            <input id="moveImportFile" type="file" accept=".json,.csv,.tsv,.txt,.md,.xlsx,.docx,.pdf">
+            <button id="importMovesBtn" type="button" class="btn small">Import move file</button>
+            <button id="downloadMoveTemplateBtn" type="button" class="btn small">Download JSON template</button>
+          </div>
+          <div id="moveImportResult" class="import-result"></div>
+        </details>
+        <div id="customMovesList" class="custom-moves-list"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Your manual sequence
+        <span class="hint">(click a step in the library to add)</span></h2>
+      <div class="build-mode-choice compact">
+        <span><b>Manual build:</b> choose each move, then let the app check counts, feet, and walls.</span>
+        <button id="autoBuildBtn" class="btn small">Use auto-generate</button>
+      </div>
+      <div class="row wrap">
+        <label class="inline">Counts
+          <select id="edCounts"><option>16</option><option selected>32</option><option>48</option><option>64</option></select></label>
+        <label class="inline">Walls
+          <select id="edWall"><option value="1">1</option><option value="2" selected>2</option><option value="4">4</option></select></label>
+        <label class="inline">Turn
+          <select id="edTurnDir"><option value="L" selected>left</option><option value="R">right</option></select></label>
+        <button id="edLoadGenerated" class="btn small">Load current dance</button>
+        <button id="edClear" class="btn small danger">Clear</button>
+      </div>
+      <div id="editorDraftNotice" class="editor-draft-notice" hidden>
+        Lyric-guided draft loaded for review. Nothing has been saved; use <b>Save as the project dance</b> only when you are satisfied with it.
+      </div>
+      <ol id="sequence" class="seq-list"></ol>
+      <div id="edValidation"></div>
+      <button id="edSaveBtn" class="btn primary">Save as the project dance</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 6 TUTORIAL ======================= -->
+<section id="tab-tutorial" class="tabpane">
+  <div class="card tutorial-hero">
+    <div class="tutorial-heading">
+      <div>
+        <p class="eyebrow">COUNT-LOCKED PRODUCTION PLAN</p>
+        <h2>Tutorial Blueprint</h2>
+        <p class="hint">Turn the validated dance into one shared source for unobstructed feet, Georgia Belle's move calls, camera direction, and later video generation. Nothing is marked ready until you confirm every movement cue.</p>
+      </div>
+      <span id="tutorialBadge" class="tutorial-badge empty">NOT BUILT</span>
+    </div>
+    <div class="row wrap tutorial-controls">
+      <label class="inline">Call moves this many counts early
+        <select id="tutorialLead">
+          <option value="1">1</option><option value="2" selected>2</option>
+          <option value="4">4</option><option value="8">8</option>
+        </select>
+      </label>
+      <label class="inline">Caller <input id="tutorialVoice" value="Georgia Belle" maxlength="80"></label>
+      <label class="inline">Count 1 song time (seconds)
+        <input id="tutorialAnchor" type="number" min="0" step="0.001" placeholder="auto after Intro">
+      </label>
+      <label class="inline tempo-confirm"><input id="tutorialTempoConfirmed" type="checkbox"> I listened and confirm the displayed BPM is the dance count</label>
+      <button id="buildTutorialBtn" class="btn primary">Build / rebuild blueprint</button>
+    </div>
+    <p class="hint">The BPM confirmation is only required when the analyzer finds a believable half-time or double-time grid.</p>
+    <div id="tutorialStatus" aria-live="polite"></div>
+  </div>
+
+  <div class="cols tutorial-overview">
+    <div class="card">
+      <h2>Wall &amp; timing plan</h2>
+      <div id="tutorialSummary" class="tutorial-summary"></div>
+      <div id="tutorialWalls" class="wall-plan"></div>
+    </div>
+    <div class="card">
+      <h2>Production exports</h2>
+      <p class="hint">These files are for the video workflow. The regular CopperKnob-style step sheet remains in Export.</p>
+      <div class="row wrap">
+        <a id="tutorialTxtLink" class="btn disabled-link" target="_blank" aria-disabled="true">Call &amp; shot list</a>
+        <a id="tutorialCsvLink" class="btn disabled-link" target="_blank" aria-disabled="true">Timeline CSV</a>
+        <a id="tutorialJsonLink" class="btn disabled-link" target="_blank" aria-disabled="true">Blueprint JSON</a>
+      </div>
+      <label>Count-in spoken by GB
+        <input id="tutorialCountIn" value="Five, six, seven, eight" maxlength="160">
+      </label>
+      <label>Voice direction
+        <textarea id="tutorialVoiceNotes" rows="3" placeholder="Clear, upbeat, confident; call the next move before it begins."></textarea>
+      </label>
+      <label>Producer notes
+        <textarea id="tutorialProducerNotes" rows="3" placeholder="Floor-test notes, difficult transitions, or camera reminders."></textarea>
+      </label>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tutorial-heading compact-heading">
+      <div>
+        <h2>Count-locked cue sheet</h2>
+        <p class="hint">Footwork comes directly from the reviewed move library. Camera choices are suggestions. Confirm a row only after its counts, feet, call, and view have been checked together.</p>
+      </div>
+      <button id="saveTutorialBtn" class="btn primary" disabled>Save cue reviews</button>
+    </div>
+    <div class="table-scroll tutorial-scroll">
+      <table id="tutorialTable" class="list tutorial-table"></table>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 7 EXPORT ======================= -->
+<section id="tab-export" class="tabpane">
+  <div class="cols">
+    <div class="card">
+      <h2>Sheet details</h2>
+      <label>Dance title <input id="metaDanceTitle" placeholder="Sweet Tea Stomp"></label>
+      <p class="hint">This is the choreography title. It can be different from the song title.</p>
+      <label>Choreographer <input id="metaChoreo" placeholder="Hillbilly Hellfire"></label>
+      <label>Country <input id="metaCountry" placeholder="USA"></label>
+      <label>Contact <input id="metaContact" placeholder="email or site (optional)"></label>
+      <label>Level label <input id="metaLevel" placeholder="Absolute Beginner"></label>
+      <label>Description (prose intro)
+        <textarea id="metaDesc" rows="3"></textarea></label>
+      <label>Signature moment (parenthetical on the last count)
+        <input id="metaSig" placeholder="hit the last count with a stomp and a grin"></label>
+      <label>Ending line <input id="metaEnding" placeholder="Stomp R forward and tip your hat!"></label>
+      <label>YouTube video URL <input id="metaYoutubeUrl" placeholder="https://www.youtube.com/watch?v=..."></label>
+      <label>Published sheet URL <input id="metaSheetUrl" placeholder="CopperKnob or BootStepper link (add after publishing)"></label>
+      <button id="metaSaveBtn" class="btn">Save details</button>
+      <hr>
+      <div class="row wrap">
+        <a id="txtLink" class="btn" target="_blank">📄 TXT</a>
+        <a id="htmlLink" class="btn" target="_blank">🖨 Print view</a>
+        <a id="pdfLink" class="btn" target="_blank">📕 PDF</a>
+        <button id="publisherBtn" class="btn">📣 Publisher kit</button>
+        <button id="exportAllBtn" class="btn primary">💾 Export all to folder</button>
+      </div>
+      <p id="exportResult" class="hint"></p>
+    </div>
+    <div class="card">
+      <h2>Preview</h2>
+      <div id="sheetWarn"></div>
+      <iframe id="sheetFrame" title="sheet preview"></iframe>
+    </div>
+  </div>
+  <div class="card" id="publisherCard" style="display:none">
+    <h2>Publisher kit</h2>
+    <p class="hint">Use the generated PDF for both sites. This kit gives you the supporting copy and a quick manual submission checklist.</p>
+    <label>YouTube line-dance title <input id="pkTitle" readonly></label>
+    <label>YouTube description add-on <textarea id="pkYoutube" rows="12" readonly></textarea></label>
+    <label>Relevant hashtags <input id="pkTags" readonly></label>
+    <label>CopperKnob submission comments <textarea id="pkCopperComments" rows="6" readonly></textarea></label>
+    <div class="cols publisher-checklists">
+      <div>
+        <h3>CopperKnob</h3>
+        <ol id="pkCopperList" class="notes"></ol>
+      </div>
+      <div>
+        <h3>BootStepper</h3>
+        <ol id="pkBootList" class="notes"></ol>
+      </div>
+    </div>
+    <div class="row wrap">
+      <button class="btn copybtn" data-copy="pkTitle">Copy title</button>
+      <button class="btn copybtn" data-copy="pkYoutube">Copy add-on</button>
+      <button class="btn copybtn" data-copy="pkTags">Copy hashtags</button>
+      <button class="btn copybtn" data-copy="pkCopperComments">Copy CopperKnob comments</button>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+
+<dialog id="newProjectDialog" class="project-dialog" aria-labelledby="newProjectHeading">
+  <form id="newProjectForm">
+    <h2 id="newProjectHeading">Start a new dance project</h2>
+    <p class="hint">Give the project a working name. You can change the song, dance title, and all other details later.</p>
+    <label>Project name
+      <input id="newProjectName" required maxlength="120" placeholder="Sweet Tea Stomp" autocomplete="off">
+    </label>
+    <p id="newProjectError" class="dialog-error" role="alert"></p>
+    <div class="row dialog-actions">
+      <button id="cancelNewProjectBtn" type="button" class="btn">Cancel</button>
+      <button id="createProjectBtn" type="submit" class="btn primary">Create project</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="projectLibraryDialog" class="project-dialog library-dialog" aria-labelledby="projectLibraryHeading">
+  <div class="project-library">
+    <div class="library-heading">
+      <div>
+        <h2 id="projectLibraryHeading">Open a saved project</h2>
+        <p class="hint">Choose a project you have already saved in Line Dance Creator.</p>
+      </div>
+      <button id="closeProjectLibraryBtn" type="button" class="btn small">Close</button>
+    </div>
+    <div id="projectLibraryList" class="project-library-list" aria-live="polite"></div>
+    <div class="dialog-actions library-actions">
+      <button id="libraryNewProjectBtn" type="button" class="btn">+ New Project</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="settingsDialog" class="project-dialog settings-dialog" aria-labelledby="settingsHeading">
+  <form id="aiSettingsForm">
+    <div class="library-heading">
+      <div>
+        <h2 id="settingsHeading">Optional AI assistant</h2>
+        <p class="hint">The built-in dance generator remains your main tool. AI is an optional idea partner and is off by default.</p>
+      </div>
+      <button id="closeSettingsBtn" type="button" class="btn small">Close</button>
+    </div>
+    <div class="ai-safety-note">
+      Your key is protected for this Windows account. It is never saved inside a dance project, included in backups, or added to exports.
+    </div>
+    <label class="toggle-setting"><input id="aiEnabled" type="checkbox"> Enable optional AI assistant when you are ready to use it</label>
+    <div class="settings-grid">
+      <label>Connection type
+        <select id="aiProvider">
+          <option value="openai_compatible">OpenAI-compatible chat API</option>
+          <option value="anthropic_messages">Anthropic Messages API</option>
+          <option value="custom">Save a custom connection for later</option>
+        </select>
+      </label>
+      <label>Model name
+        <input id="aiModel" maxlength="160" placeholder="Choose this after you pick a provider" autocomplete="off">
+      </label>
+    </div>
+    <label>API address
+      <input id="aiEndpoint" type="url" placeholder="https://api.example.com/v1" autocomplete="url">
+      <span class="field-hint">Use HTTPS, except for an AI running only on this computer.</span>
+    </label>
+    <div class="settings-grid">
+      <label>API key
+        <input id="aiApiKey" type="password" placeholder="Leave blank to keep the saved key" autocomplete="new-password">
+        <span id="aiKeyStatus" class="field-hint"></span>
+      </label>
+      <label>Connection timeout
+        <select id="aiTimeout">
+          <option value="30">30 seconds</option>
+          <option value="60">60 seconds</option>
+          <option value="90">90 seconds</option>
+          <option value="120">120 seconds</option>
+          <option value="180">180 seconds</option>
+        </select>
+      </label>
+    </div>
+    <p id="aiSettingsStatus" class="settings-status" aria-live="polite"></p>
+    <div class="row dialog-actions settings-actions">
+      <button id="forgetAiKeyBtn" type="button" class="btn danger">Forget saved key</button>
+      <button id="saveAiSettingsBtn" type="submit" class="btn primary">Save optional AI settings</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="aiChatDialog" class="project-dialog ai-chat-dialog" aria-labelledby="aiChatHeading">
+  <div class="ai-chat-shell">
+    <div class="library-heading">
+      <div>
+        <h2 id="aiChatHeading">Ask your optional AI assistant</h2>
+        <p class="hint">It offers ideas and feedback only. Nothing is changed or saved until you decide to use it.</p>
+      </div>
+      <button id="closeAiChatBtn" type="button" class="btn small">Close</button>
+    </div>
+    <div id="aiChatConnection" class="ai-chat-connection" aria-live="polite"></div>
+    <div class="ai-chat-tools">
+      <span>Try asking:</span>
+      <button type="button" class="prompt-chip" data-prompt="Give me three distinct 32-count beginner line-dance foundations with a memorable chorus moment.">Three dance foundations</button>
+      <button type="button" class="prompt-chip" data-prompt="Suggest a signature 8-count chorus motif that feels fun, teachable, and different from the rest of this dance.">Chorus signature idea</button>
+      <button type="button" class="prompt-chip" data-prompt="Review this project as a line-dance instructor. Identify repetition, teaching risks, and floor-test questions.">Floor-test review</button>
+    </div>
+    <div id="aiChatMessages" class="ai-chat-messages" aria-live="polite">
+      <div class="ai-chat-empty">Ask for dance ideas, a teaching review, a chorus signature, or help shaping a draft.</div>
+    </div>
+    <form id="aiChatForm" class="ai-chat-form">
+      <label class="toggle-setting"><input id="includeProjectContext" type="checkbox" checked> Include this project’s song map and current dance as reference</label>
+      <label class="sr-only" for="aiPrompt">Your message for the optional AI assistant</label>
+      <textarea id="aiPrompt" maxlength="6000" placeholder="Example: Give me two Beginner-friendly ways to make the chorus feel bigger without making the dance harder."></textarea>
+      <div class="row ai-chat-actions">
+        <button id="clearAiChatBtn" type="button" class="btn">Clear conversation</button>
+        <button id="openAiSettingsBtn" type="button" class="btn">AI settings</button>
+        <button id="sendAiPromptBtn" type="submit" class="btn primary">Ask AI</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<div id="toast"></div>
+<script src="/static/draft-merge.js?v=1"></script>
+<script src="/static/app.js?v=20260903-draft-cas"></script>
+<script>
+if (window.location.protocol === "file:") {
+  const localScript = document.createElement("script");
+  localScript.src = "app.js";
+  document.body.appendChild(localScript);
+}
+</script>
+<footer class="hh-publisher-note"><p>Discover <strong>Hillbilly Hellfire</strong> — visit our YouTube channel and website.</p><a href="https://www.youtube.com/@HillbillyHellfire" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.hillbillyhellfire.com/" target="_blank" rel="noopener noreferrer">Website</a></footer>
+</body>
+</html>

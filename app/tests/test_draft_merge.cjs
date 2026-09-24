@@ -1,0 +1,31 @@
+"use strict";
+const assert = require("node:assert/strict");
+const {merge, equal} = require("../static/draft-merge.js");
+const base = {sheet_meta:{title:"Original",notes:"Teach slowly"},song:{title:"Song"},sections:[{start:0,end:8}],choreography:{parts:[{id:"A",moves:["step"]}]} };
+const local = structuredClone(base), remote = structuredClone(base);
+local.sheet_meta.notes = "Count aloud"; remote.song.title = "New recording";
+remote.sheet_meta.title = "Other window title";
+assert.deepEqual(merge(base,local,remote), {value:{...remote,sheet_meta:{...remote.sheet_meta,notes:"Count aloud"}},conflicts:[]});
+assert.equal(base.sheet_meta.notes, "Teach slowly");
+const changedSections=structuredClone(base);changedSections.sections=[{start:0,end:16}];
+const changedChoreography=structuredClone(base);changedChoreography.choreography.parts[0].moves.push("turn");
+const parallel=merge(base,changedSections,changedChoreography);
+assert.deepEqual(parallel.conflicts,[]);assert.equal(parallel.value.sections[0].end,16);assert.equal(parallel.value.choreography.parts[0].moves.length,2);
+const otherChoreography=structuredClone(base);otherChoreography.choreography.parts[0].moves.push("hold");
+assert.deepEqual(merge(base,changedChoreography,otherChoreography).conflicts,["/choreography/parts"]);
+assert.deepEqual(merge({notes:"old"},{},{notes:"other"}).conflicts,["/notes"]);
+assert.deepEqual(merge({notes:"old",title:"A"},{title:"A"},{notes:"old",title:"B"}),{value:{title:"B"},conflicts:[]});
+assert.deepEqual(merge({}, {newField:1}, {newField:2}).conflicts,["/newField"]);
+assert.deepEqual(merge({}, {sheet_meta:{title:"Local"}}, {sheet_meta:{notes:"Remote"}}),{value:{sheet_meta:{title:"Local",notes:"Remote"}},conflicts:[]});
+assert.deepEqual(merge({a:1},{a:2},{a:2}),{value:{a:2},conflicts:[]});
+assert.deepEqual(merge({"a/b":0},{"a/b":1},{"a/b":2}).conflicts,["/a~1b"]);
+assert(equal({a:1,b:2},{b:2,a:1}));
+const hostile=JSON.parse('{"__proto__":{"polluted":true}}');
+const safelyMerged=merge({},hostile,{}).value;
+assert.equal({}.polluted,undefined);assert.equal(safelyMerged.__proto__.polluted,true);
+// Save A acknowledged while the user adds another edit: preserve the second
+// edit against the response while retaining another writer's unrelated title.
+const sent=structuredClone(local), stillEditing=structuredClone(local), acknowledged=structuredClone(local);
+stillEditing.sheet_meta.notes="Count aloud, then repeat";acknowledged.song.title="New recording";
+assert.deepEqual(merge(sent,stillEditing,acknowledged).value,{...acknowledged,sheet_meta:{...acknowledged.sheet_meta,notes:"Count aloud, then repeat"}});
+console.log("PASS: independent fields, ordered-array conflicts, deletion, concurrent save acknowledgement, input immutability and prototype-key safety");

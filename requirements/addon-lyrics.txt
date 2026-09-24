@@ -1,0 +1,4 @@
+# Opt-in local speech tool. Never installed by the normal launcher/build.
+# Its resolved dependencies and downloaded model licences need separate review.
+-r core.txt
+whisperx>=3.7.9,<3.8

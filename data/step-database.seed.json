@@ -1,0 +1,562 @@
+{
+  "schema_version": "0.1",
+  "purpose": "Seed step vocabulary for the Line Dancing line-dance step-sheet generator. Each step carries counts (beats), signed net rotation (deg; + = clockwise/right), and foot continuity (foot_start / foot_end). foot_end names the FREE foot after the step = the foot the next step must start on.",
+  "conventions": {
+    "net_rotation_sign": "+ = turn RIGHT / clockwise, - = turn LEFT / counter-clockwise",
+    "foot_continuity": "A step may follow only if its foot_start == current free_foot (or foot_start == either). After it, free_foot <- foot_end.",
+    "parity_rule": "Odd number of weight changes in a move SWITCHES the free foot; even keeps it. This is the crux the assembler must respect.",
+    "default_start_foot": "R (line dances overwhelmingly start on the right)",
+    "known_forks": "Several steps have a touch-vs-step ending fork (vine, charleston, lockstep) and STOMP has a weight/no-weight fork. The notes field flags these. The assembler must store which variant a given row represents; do not assume a default."
+  },
+  "steps": [
+    {
+      "name": "Grapevine (Vine)",
+      "aliases": [
+        "Vine",
+        "Grapevine right",
+        "Grapevine left"
+      ],
+      "counts": 4,
+      "notation": "step R, cross L behind R, step R, touch L beside R",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Absolute Beginner",
+      "notes": "Safest AB staple. Travels sideways in lead-foot direction. CONTINUITY CRUX: the 4th count decides the free foot. If it is a TOUCH/scuff/hitch/kick of L (as notated), weight stays on R and L is free -> the free foot SWITCHES (R-lead ends L free). If the 4th count is a weighted STEP L (common 'vine, step' ending), weight goes to L and R stays free -> free foot UNCHANGED. Assembler must know which ending a given sheet uses. Mirrors to L-lead."
+    },
+    {
+      "name": "Vine with 1/4 turn",
+      "aliases": [
+        "Grapevine 1/4 turn",
+        "Turning vine",
+        "1/4 turn vine"
+      ],
+      "counts": 4,
+      "notation": "step R, cross L behind R, step R turning 1/4 right, scuff/step L forward",
+      "net_rotation_deg": 90,
+      "foot_start": "R",
+      "foot_end": "L free (weight R) if 4th is scuff; R free if 4th is weighted step",
+      "level": "Beginner (turn)",
+      "notes": "The 1/4 turn is taken on count 3 so the dancer ends facing a new wall, then the 4th count steps/scuffs forward in the new direction. Value +90 = 1/4 turn RIGHT (clockwise); a 1/4-turn-LEFT vine = -90. Direction is choreographer's choice — I set +90 as the described version; flag that left is equally common. Same touch-vs-step continuity caveat as the plain vine."
+    },
+    {
+      "name": "Vine with 1/2 turn",
+      "aliases": [
+        "Grapevine 1/2 turn",
+        "Rolling vine",
+        "Rolling grapevine"
+      ],
+      "counts": 4,
+      "notation": "step R turning 1/4 R, step L turning 1/2 R, step R turning 1/4 R, touch/step L",
+      "net_rotation_deg": 180,
+      "foot_start": "R",
+      "foot_end": "L free (weight R) if 4th is touch; R free if weighted step",
+      "level": "Beginner (turn)",
+      "notes": "Often executed as a 'rolling vine' (full unwind: 1/4 + 1/2 + 1/4 across counts 1-3, ending the 1/2 turn, 4th count touches or steps). +180 = turn RIGHT; left version = -180. Higher difficulty than a static vine. Flag: some sheets label a '1/2 turn vine' that only rotates 180 total via a different distribution — net is still ±180."
+    },
+    {
+      "name": "Jazz Box (Jazz Square)",
+      "aliases": [
+        "Jazz square",
+        "Jazz box",
+        "Box step"
+      ],
+      "counts": 4,
+      "notation": "cross R over L, step back L, step R to side, step L together (or forward)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Absolute Beginner",
+      "notes": "AB staple. 4 weight changes (even) so the free foot is UNCHANGED: R-lead starts R free and ends R free. Very portable in the assembler. Variant seen on some sheets starts with a forward step then crosses; ending free foot is the same. Mirrors to L-lead."
+    },
+    {
+      "name": "Jazz Box with 1/4 turn",
+      "aliases": [
+        "Jazz box 1/4 turn",
+        "Turning jazz box",
+        "1/4 turn jazz square"
+      ],
+      "counts": 4,
+      "notation": "cross R over L, step back L turning 1/4 right, step R to side, step L forward",
+      "net_rotation_deg": 90,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner (turn)",
+      "notes": "The 1/4 turn is taken on the 'step back L' (count 2). +90 = 1/4 turn RIGHT is the standard/most common jazz-box turn; a left version = -90 exists but is rarer. Still 4 weight changes so free foot is UNCHANGED (R free at end). Mirrors."
+    },
+    {
+      "name": "Rocking Chair",
+      "aliases": [
+        "Rock chair"
+      ],
+      "counts": 4,
+      "notation": "rock forward R, recover L, rock back R, recover L",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Absolute Beginner",
+      "notes": "AB staple, danced on the spot. The SAME foot (R) does both rocks; even weight changes so free foot UNCHANGED (starts and ends R free). Do not confuse with 'rock step' (2 counts) — the rocking chair is a rock-recover forward AND back = 4 counts."
+    },
+    {
+      "name": "Rock Step (Rock Recover)",
+      "aliases": [
+        "Rock recover",
+        "Rock, replace",
+        "Break step"
+      ],
+      "counts": 2,
+      "notation": "rock forward R, recover weight onto L",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Absolute Beginner",
+      "notes": "AB staple. Two opposite weight changes on 2 beats. Can rock forward, back, or to the side (rock forward R/recover L shown; 'rock back R, recover L' is identical count/continuity). Even changes -> free foot UNCHANGED (R free start and end). Mirrors."
+    },
+    {
+      "name": "Kick-Ball-Change",
+      "aliases": [
+        "Kick ball change",
+        "KBC"
+      ],
+      "counts": 2,
+      "notation": "kick R forward (1), step ball of R in place (&), change weight to L (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner",
+      "notes": "Counted 1&2 (syncopated) = 2 beats. Net effect is an in-place weight keeper: R kicks, and R ends free again (even net weight change). Very common; taught early but the & syncopation nudges it above pure AB. Mirrors."
+    },
+    {
+      "name": "Shuffle (Chasse / Triple Step)",
+      "aliases": [
+        "Chasse",
+        "Triple step",
+        "Cha cha",
+        "Shuffle step"
+      ],
+      "counts": 2,
+      "notation": "step R (1), close L to R (&), step R (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Beginner",
+      "notes": "Counted 1&2 = 2 beats, THREE weight changes (odd) so the free foot SWITCHES: R-lead shuffle ends with L free. Can go forward, back, or to the side (side = 'chasse'). Direction of travel does not change rotation (0). This odd-switch is a key continuity rule for the assembler. Mirrors."
+    },
+    {
+      "name": "Coaster Step",
+      "aliases": [
+        "Coaster",
+        "Back coaster"
+      ],
+      "counts": 2,
+      "notation": "step back R (1), step L beside R (&), step forward R (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Beginner",
+      "notes": "Counted 1&2 = 2 beats. Back-together-forward on the SAME lead foot (R steps back and forward). Three weight changes (odd) -> free foot SWITCHES: R-lead ends L free. A 'forward coaster' (forward-together-back) mirrors the shape but same count/continuity logic. Mirrors."
+    },
+    {
+      "name": "Heel Strut",
+      "aliases": [
+        "Heel strut",
+        "Strut"
+      ],
+      "counts": 2,
+      "notation": "touch R heel forward (1), drop R toe down taking weight (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Absolute Beginner",
+      "notes": "AB staple. Two counts but ONE weight change (weight lands on R when toe drops) -> free foot SWITCHES (R-lead ends L free). Usually travels forward. Mirrors."
+    },
+    {
+      "name": "Toe Strut",
+      "aliases": [
+        "Toe strut"
+      ],
+      "counts": 2,
+      "notation": "touch R toe forward (1), drop R heel down taking weight (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Absolute Beginner",
+      "notes": "AB staple. Same count/continuity as heel strut (one weight change, free foot switches to L). Toe-first instead of heel-first. Mirrors."
+    },
+    {
+      "name": "Step Touch",
+      "aliases": [
+        "Step touch",
+        "Side touch",
+        "Touch step"
+      ],
+      "counts": 2,
+      "notation": "step R to side (1), touch L beside R (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Absolute Beginner",
+      "notes": "The safest AB building block. One weight change (the touch takes no weight) -> free foot SWITCHES (R-lead ends L free / touching). Can go side, forward, or back. Mirrors."
+    },
+    {
+      "name": "Point / Touch",
+      "aliases": [
+        "Point",
+        "Toe point",
+        "Touch"
+      ],
+      "counts": 1,
+      "notation": "point R toe to side (or touch beside), weight stays on L",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight stays L)",
+      "level": "Absolute Beginner",
+      "notes": "1 count, NO weight change -> the pointing/touching foot stays free (R free before and after). Often paired (point side, point together = 2 counts) or point-and-return (2 counts) — as a single gesture it is 1 count. Weight-neutral filler; extremely flexible for the assembler. Mirrors."
+    },
+    {
+      "name": "Pivot Turn 1/2",
+      "aliases": [
+        "Pivot 1/2",
+        "Half pivot",
+        "Pivot turn"
+      ],
+      "counts": 2,
+      "notation": "step R forward (1), pivot 1/2 turn left on balls of both feet, weight ends on L (2)",
+      "net_rotation_deg": -180,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner (turn)",
+      "notes": "Default pivot = 1/2 turn (per glossaries). Step FORWARD on R, turn toward the back foot = LEFT/counterclockwise, so R-lead = -180. Two weight changes (even) -> free foot UNCHANGED (R free at end). Direction is dictated by lead foot: an L-lead forward step pivots RIGHT = +180. Sign here is for the R-lead version."
+    },
+    {
+      "name": "Pivot Turn 1/4",
+      "aliases": [
+        "Pivot 1/4",
+        "Quarter pivot"
+      ],
+      "counts": 2,
+      "notation": "step R forward (1), pivot 1/4 turn left, weight ends on L (2)",
+      "net_rotation_deg": -90,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner (turn)",
+      "notes": "Same mechanics as the 1/2 pivot but only 90 degrees. R-lead forward step -> turn LEFT = -90; L-lead mirrors to +90. Even weight changes -> R free at end. Must be explicitly labelled '1/4' since default pivot = 1/2."
+    },
+    {
+      "name": "Paddle Turn",
+      "aliases": [
+        "Paddle turn",
+        "Push turn",
+        "Paddle"
+      ],
+      "counts": 2,
+      "notation": "step/point R forward (1), pivot 1/4 turn left on ball of L, weight stays over L (2)",
+      "net_rotation_deg": -90,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner (turn)",
+      "notes": "A series of small ball-change/push turns with weight staying over the PIVOT (support) foot. One 'paddle' = 2 counts = 1/4 turn (shown as -90, i.e. turning LEFT while the R foot pushes). FLAG: both count and direction vary widely — a 4-count paddle can make 1/2 turn (±180), and paddles are done to either side. The pushing foot (R) stays free throughout. Confirm per-sheet."
+    },
+    {
+      "name": "Monterey Turn 1/2",
+      "aliases": [
+        "Monterey 1/2",
+        "Monterey turn",
+        "Monterey point turn"
+      ],
+      "counts": 4,
+      "notation": "point R toe to side (1), turn 1/2 right on ball of L and step R beside L (2), point L toe to side (3), step L beside R (4)",
+      "net_rotation_deg": 180,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner (turn)",
+      "notes": "Default Monterey = 1/2 turn (per glossaries). The turn happens on count 2 as the pointed R foot is pulled in; +180 = turn RIGHT (right Monterey). Only 2 of the 4 counts take weight (points are weightless) -> even changes, free foot UNCHANGED (R free start and end). A 'left Monterey' mirrors to -180."
+    },
+    {
+      "name": "Monterey Turn 1/4",
+      "aliases": [
+        "Monterey 1/4",
+        "Quarter Monterey"
+      ],
+      "counts": 4,
+      "notation": "point R toe to side (1), turn 1/4 right on ball of L and step R beside L (2), point L toe to side (3), step L beside R (4)",
+      "net_rotation_deg": 90,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner (turn)",
+      "notes": "Same shape as the 1/2 Monterey but only 90 degrees on count 2. +90 = right; left mirrors to -90. Must be explicitly labelled '1/4' since default Monterey = 1/2. Free foot UNCHANGED (R free)."
+    },
+    {
+      "name": "Weave",
+      "aliases": [
+        "Weave",
+        "Fancy vine",
+        "Weave left",
+        "Weave right"
+      ],
+      "counts": 4,
+      "notation": "cross R over L, step L to side, cross R behind L, step L to side",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner",
+      "notes": "Like a vine but the crossing foot goes both in FRONT and BEHIND (a vine only crosses behind). Travels sideways (this notation travels LEFT while R crosses). 4 weight changes (even) -> crossing foot R starts free and ends free (R free). Longer weaves (6-8 counts) exist; this is the common 4-count unit. Mirrors."
+    },
+    {
+      "name": "Sailor Step",
+      "aliases": [
+        "Sailor",
+        "Sailor shuffle"
+      ],
+      "counts": 2,
+      "notation": "cross R behind L (1), step L to side (&), step R to side/in place (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Beginner",
+      "notes": "Counted 1&2 = 2 beats, a shuffle-type step that begins with a cross BEHIND. Three weight changes (odd) -> free foot SWITCHES: R sailor (crossing R behind) ends weight on R, L free. A 'sailor 1/4 turn' variant adds ±90 but the plain sailor is 0. Mirrors."
+    },
+    {
+      "name": "Heel Ball Cross (Heel Jack)",
+      "aliases": [
+        "Heel jack",
+        "Heel ball cross",
+        "Cross & heel",
+        "Heel & cross"
+      ],
+      "counts": 2,
+      "notation": "step ball of R back (&), touch L heel forward (1), step L back in place (&), cross R over L (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R) — VARIABLE, see notes",
+      "level": "Improver",
+      "notes": "FLAG: this family is the least standardized. Counted syncopated (&1&2 or 1&2&) = ~2 beats. Two common resolutions: (a) HEEL JACK ending in a TOUCH/close (weight stays on the standing foot, for example, the version 'step back, touch heel forward, step down, touch together' -> free foot switches, ends with the heel foot free); (b) HEEL BALL CROSS ending in a weighted CROSS (as notated, ending weight on the crossing R, L free). The syncopation and the ending both vary by sheet — the assembler should treat count as ~2 and confirm the ending weight from the specific choreography rather than trusting a default."
+    },
+    {
+      "name": "Scissor Step",
+      "aliases": [
+        "Scissors",
+        "Side cross",
+        "Cross step"
+      ],
+      "counts": 2,
+      "notation": "step R to side (1), step L beside R (&), cross R over L (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Beginner",
+      "notes": "Most line-dance sheets count the scissor 1&2 = 2 beats (side, together, cross). Three weight changes (odd) -> free foot SWITCHES (R-lead ends L free). FLAG: some glossaries describe it as a 3-beat move (side/1, together/2, cross/3) — if a sheet uses even counts 1,2,3 treat it as 3 beats; the footwork and ending free foot are identical. Mirrors."
+    },
+    {
+      "name": "Cross Rock",
+      "aliases": [
+        "Cross rock",
+        "Cross rock recover"
+      ],
+      "counts": 2,
+      "notation": "cross R over L and rock onto it (1), recover weight back onto L (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner",
+      "notes": "A rock step where the working foot crosses OVER instead of stepping forward. Two opposite weight changes (even) -> free foot UNCHANGED (R crosses and R ends free). Distinct from the scissor step (no 'together' and no final weighted cross). Mirrors."
+    },
+    {
+      "name": "Kick",
+      "aliases": [
+        "Kick",
+        "Front kick"
+      ],
+      "counts": 1,
+      "notation": "kick R foot forward, weight stays on L",
+      "net_rotation_deg": 0,
+      "foot_start": "either (uses free foot)",
+      "foot_end": "same foot free (no weight change)",
+      "level": "Absolute Beginner",
+      "notes": "1-count weightless filler; the kicking foot is the currently free foot and stays free. Pairs into kick-ball-change or double kicks. Weight-neutral, so it never breaks foot continuity."
+    },
+    {
+      "name": "Hitch",
+      "aliases": [
+        "Hitch",
+        "Knee lift",
+        "Knee pop"
+      ],
+      "counts": 1,
+      "notation": "lift R knee up, weight stays on L",
+      "net_rotation_deg": 0,
+      "foot_start": "either (uses free foot)",
+      "foot_end": "same foot free (no weight change)",
+      "level": "Absolute Beginner",
+      "notes": "1-count weightless filler, raises the free knee. Often replaces the touch at the end of a vine. Weight-neutral -> does not affect continuity."
+    },
+    {
+      "name": "Scuff",
+      "aliases": [
+        "Scuff",
+        "Brush"
+      ],
+      "counts": 1,
+      "notation": "brush R heel forward along the floor, weight stays on L",
+      "net_rotation_deg": 0,
+      "foot_start": "either (uses free foot)",
+      "foot_end": "same foot free (no weight change)",
+      "level": "Absolute Beginner",
+      "notes": "1-count weightless filler (a heel brush; a 'brush' is the toe/ball version). Commonly ends a vine. Weight-neutral -> continuity-safe."
+    },
+    {
+      "name": "Stomp",
+      "aliases": [
+        "Stomp",
+        "Stomp up"
+      ],
+      "counts": 1,
+      "notation": "stomp R foot down (STOMP takes weight; STOMP UP does not)",
+      "net_rotation_deg": 0,
+      "foot_start": "either (uses free foot)",
+      "foot_end": "depends: 'stomp' -> that foot weighted (other free); 'stomp up' -> same foot free",
+      "level": "Absolute Beginner",
+      "notes": "FLAG the continuity fork: a plain 'STOMP' plants the foot and TAKES weight (free foot switches to the other foot), whereas 'STOMP UP' is a weightless accent (free foot unchanged). The assembler must read which the sheet means — this is the one filler that can change weight."
+    },
+    {
+      "name": "Clap",
+      "aliases": [
+        "Clap",
+        "Hand clap"
+      ],
+      "counts": 1,
+      "notation": "clap hands; no foot action",
+      "net_rotation_deg": 0,
+      "foot_start": "either (no foot action)",
+      "foot_end": "unchanged (no weight change)",
+      "level": "Absolute Beginner",
+      "notes": "1-count upper-body accent, zero foot movement. Purely a timing/holding filler — never affects foot continuity. Often layered ON a step rather than consuming its own beat, but written as 1 count when it stands alone."
+    },
+    {
+      "name": "Touch (filler)",
+      "aliases": [
+        "Touch",
+        "Toe touch",
+        "Together touch"
+      ],
+      "counts": 1,
+      "notation": "touch R toe/ball beside or in front of L, weight stays on L",
+      "net_rotation_deg": 0,
+      "foot_start": "either (uses free foot)",
+      "foot_end": "same foot free (no weight change)",
+      "level": "Absolute Beginner",
+      "notes": "1-count weightless filler (distinct from 'step touch' which is 2 counts). The touching foot stays free. Weight-neutral -> continuity-safe. Mirrors."
+    },
+    {
+      "name": "Hold",
+      "aliases": [
+        "Hold",
+        "Pause"
+      ],
+      "counts": 1,
+      "notation": "hold position for the count, no movement",
+      "net_rotation_deg": 0,
+      "foot_start": "either",
+      "foot_end": "unchanged (no weight change)",
+      "level": "Absolute Beginner",
+      "notes": "1-count pause consuming a beat with no weight change; whatever foot was free stays free. Useful for the assembler to pad phrasing to fill a musical count without altering continuity. Can span multiple counts if written 'hold 2'."
+    },
+    {
+      "name": "Vaudeville",
+      "aliases": [
+        "Vaudeville step",
+        "Vaudeville",
+        "Crossing heel jack"
+      ],
+      "counts": 2,
+      "notation": "cross R over L (1), step L to side (&), touch R heel to right diagonal (2), step R beside L (&)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Improver",
+      "notes": "Syncopated 1&2& = 2 beats (a cross, a side, a heel dig, a close). Related to the heel jack ('crossing heel jack'). Three weighted changes (cross R, side L, close R; the heel dig is weightless) -> free foot SWITCHES (R-lead ends L free). FLAG: often written as a repeating pair, so some sheets label the full unit '4 counts'; count and exact footwork vary — confirm per sheet. Mirrors."
+    },
+    {
+      "name": "Lock Step (Lockstep Shuffle)",
+      "aliases": [
+        "Lock step",
+        "Lockstep",
+        "Locking shuffle"
+      ],
+      "counts": 2,
+      "notation": "step R forward (1), lock L behind R (&), step R forward (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Beginner",
+      "notes": "A shuffle whose middle step LOCKS tightly behind (forward travel) or in front (backward travel) instead of closing. Counted 1&2 = 2 beats, three weight changes (odd) -> free foot SWITCHES (R-lead forward lockstep ends L free). FLAG: a simpler 2-count 'step-lock' (step R, lock L) with even count 1,2 also exists and ends with weight on the LOCK foot (L) — different ending; check whether the sheet means the shuffle (1&2) or the plain step-lock. Mirrors."
+    },
+    {
+      "name": "Mambo Step",
+      "aliases": [
+        "Mambo",
+        "Mambo rock"
+      ],
+      "counts": 2,
+      "notation": "rock forward R (1), recover L (&), step R back beside L (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "L free (weight R)",
+      "level": "Beginner",
+      "notes": "Counted 1&2 = 2 beats: rock, recover, step. Three weight changes (odd) -> free foot SWITCHES (R-lead forward mambo ends weight on R, L free). Can be forward, back, or side mambo (rotation stays 0). A 'mambo 1/4 turn' adds ±90 on the 3rd step. FLAG: the 3rd step is variously written 'in place', 'together', or 'back' — all keep weight on R and L free. Mirrors."
+    },
+    {
+      "name": "Charleston",
+      "aliases": [
+        "Charleston",
+        "Charleston kick",
+        "Charleston step"
+      ],
+      "counts": 4,
+      "notation": "step R forward (1), kick L forward (2), step L back (3), touch/point R back (4)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Absolute Beginner",
+      "notes": "AB staple, danced roughly on the spot. Only 2 of the 4 counts take weight (the kick and back-touch are weightless) -> even changes, free foot UNCHANGED (R free start and end). Some sheets end count 4 with a weighted step back on R (then L free) — check the ending. Mirrors."
+    },
+    {
+      "name": "Step Together",
+      "aliases": [
+        "Step together",
+        "Side together",
+        "Together"
+      ],
+      "counts": 2,
+      "notation": "step R to side (1), step L together taking weight (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Absolute Beginner",
+      "notes": "Two weighted steps (even) -> free foot UNCHANGED (R free start and end). Differs from 'step touch' because the together step TAKES weight. Basic connector/traveling unit. Mirrors."
+    },
+    {
+      "name": "Ball Change",
+      "aliases": [
+        "Ball change",
+        "Ball-change"
+      ],
+      "counts": 1,
+      "notation": "step ball of R (&), change weight onto L (2)",
+      "net_rotation_deg": 0,
+      "foot_start": "R",
+      "foot_end": "R free (weight L)",
+      "level": "Beginner",
+      "notes": "Syncopated &2 — borrows the '&' of the previous beat and lands on the next downbeat, so it effectively consumes ~1 beat (I set counts=1; flag the syncopation, it is not a clean whole beat). Two quick opposite weight changes (even) -> free foot UNCHANGED. Building block of kick-ball-change and paddle turns. Mirrors."
+    }
+  ],
+  "sources": [
+    "https://www.cldaa.org/world/home/what-is-line-dance/line-dance-terminology/",
+    "https://www.outlawdance.com/line-dance-glossary",
+    "https://www.linedanceforever.com/htmls/terminology.html",
+    "https://linedance4you.com/2013/05/01/step-of-the-week-monterey-turn/",
+    "https://worldlinedancenewsletter.com/information/beg_basic_line_dance_terms.pdf",
+    "https://en.wikipedia.org/wiki/Coaster_Step",
+    "https://en.wikipedia.org/wiki/Ball_change"
+  ]
+}
