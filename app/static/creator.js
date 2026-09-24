@@ -86,7 +86,7 @@ async function loadProjects() { projects = await api("/api/projects"); renderPro
 function renderProjects() {
   const query = $("projectSearch").value.toLowerCase();
   const list = projects.filter(p => `${p.name} ${p.title || ""}`.toLowerCase().includes(query));
-  $("projectList").innerHTML = list.length ? list.map(p => `<article class="project-tile"><small>${p.has_dance ? "DANCE SAVED" : "WORKING DRAFT"}</small><strong>${escapeHtml(p.name)}</strong><span>${p.has_audio ? "Local audio attached" : "No local audio"}</span><div class="tile-actions"><button type="button" data-project="${escapeHtml(p.id)}">Open dance</button><button type="button" data-publish="${escapeHtml(p.id)}">Publish</button></div></article>`).join("") : '<p class="empty">Your next dance starts here. Choose a starting path above.</p>';
+  $("projectList").innerHTML = list.length ? list.map(p => `<article class="project-tile"><small>${p.sample ? "STARTER SAMPLE" : p.has_dance ? "DANCE SAVED" : "WORKING DRAFT"}</small><strong>${escapeHtml(p.name)}</strong><span>${p.has_audio ? "Local audio attached" : "No local audio"}</span><div class="tile-actions"><button type="button" data-project="${escapeHtml(p.id)}">Open dance</button><button type="button" data-publish="${escapeHtml(p.id)}">Publish</button></div></article>`).join("") : '<p class="empty">Your next dance starts here. Choose a starting path above.</p>';
   document.querySelectorAll("[data-project]").forEach(b => b.onclick = () => openProject(b.dataset.project).catch(e => notify(e.message)));
   document.querySelectorAll("[data-publish]").forEach(b => b.onclick = () => publishDance(b.dataset.publish));
 }

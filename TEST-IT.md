@@ -41,7 +41,7 @@ node --check app\static\creator.js
 node --check app\static\app.js
 ```
 
-The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 626 backend tests, including the Publish pack, Community shelf, Song card, and Advanced drawer checks. Two of them store a synthetic key with Windows DPAPI and need a normal Windows user session: `test_optional_ai_key_stays_private_to_the_local_server` and `test_windows_dpapi_keeps_the_bootstepper_key_out_of_the_settings_file`. A sandbox that blocks `CryptProtectData` fails those two tests; the rest of the suite can still be read on its own.
+The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 631 backend tests, including the Publish pack, Community shelf, Song card, Advanced drawer, and Corn Maze starter checks. Two of them store a synthetic key with Windows DPAPI and need a normal Windows user session: `test_optional_ai_key_stays_private_to_the_local_server` and `test_windows_dpapi_keeps_the_bootstepper_key_out_of_the_settings_file`. A sandbox that blocks `CryptProtectData` fails those two tests; the rest of the suite can still be read on its own.
 
 These additional Node scripts are in the tree and passed on the Linux rerun below:
 
@@ -94,6 +94,13 @@ Do this only if you want to try a personal key. The checks above do not need it.
 11. **Empty by default.** Set Workspace view to **Advanced**. Open **Settings / Help** and open **Advanced**. It should say the app works with no keys, that a personal key stays on this computer, and that BootStepper search is read-only. **Spotify** should say a client id is not enabled, with no box to paste one. **Optional AI settings** opens the same connection screen as before. Leave the key blank. Switch Workspace view back to **Basic**. The Advanced drawer should be gone. Create, practice, and Publish still work, and Publish does not ask for a key.
 12. **BootStepper search, if you have your own key.** On your BootStepper account, create a personal key. Paste it under Advanced and choose **Save key on this computer**. Search for a dance, a song, and a choreographer. Results should name BootStepper and offer **Open on BootStepper**. This app does not upload the dance. Choose **Forget saved key** when you are done. The key should not appear in a Publish folder or a portable draft.
 
+## Starter dance and freeware line
+
+These checks use a new projects folder. They do not need a song file or an Advanced key. Publish, the song card, and Advanced stay as they were.
+
+13. **The Corn Maze Dance.** On My Dances, the list should include **The Corn Maze Dance**, marked as a starter sample, with no local audio. Open it. The steps are a beginner sample written in this app from its own moves. They are not a copy of a published step sheet. Open **Practice**, set Count-in to **None**, and choose **Play**. The count should advance. No song starts playing.
+14. **About.** Open **Settings / Help**. About should say **Freeware from Hillbilly Hellfire** and link to [https://hillbillyhellfire.com](https://hillbillyhellfire.com). The same line is in the footer on the dance page, the older creator page, and Sound Repair Studio.
+
 ## Linux rerun used to check this checkout
 
 Cloud verification used CPython 3.12.3. `requirements\core-win-py312.lock.txt` is a Windows version snapshot, so this host installed the ranges in `requirements\core.txt` plus the test tools:
@@ -105,7 +112,7 @@ python3.12 -m venv .venv
 .venv/bin/python -B -m pytest -q
 ```
 
-The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command was **616 passed, 1 skipped, 0 failed**. After the Advanced drawer, the same command on this branch was **626 passed, 2 skipped, 0 failed** in about 21 seconds. The skips are the two Windows DPAPI key tests. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, `test_song_card_ui.cjs`, and `test_advanced_drawer_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
+The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command was **616 passed, 1 skipped, 0 failed**. After the Advanced drawer, the same command was **626 passed, 2 skipped, 0 failed**. After the Corn Maze starter and the freeware line, the same command on this branch was **631 passed, 2 skipped, 0 failed** in about 20 seconds. The skips are the two Windows DPAPI key tests. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, `test_song_card_ui.cjs`, and `test_advanced_drawer_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
 
 Server start from `app\`, which is what `run.bat` does after its environment check:
 
