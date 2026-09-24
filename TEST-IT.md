@@ -41,7 +41,7 @@ node --check app\static\creator.js
 node --check app\static\app.js
 ```
 
-The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 582 backend tests. One of them, `test_optional_ai_key_stays_private_to_the_local_server`, stores a synthetic key with Windows DPAPI and needs a normal Windows user session. A sandbox that blocks `CryptProtectData` fails that single test; the rest of the suite can still be read on its own.
+The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 595 backend tests, including the Publish pack and Community shelf checks. One of them, `test_optional_ai_key_stays_private_to_the_local_server`, stores a synthetic key with Windows DPAPI and needs a normal Windows user session. A sandbox that blocks `CryptProtectData` fails that single test; the rest of the suite can still be read on its own.
 
 These additional Node scripts are in the tree and passed on the Linux rerun below:
 
@@ -52,6 +52,8 @@ node app\tests\test_move_form.cjs
 node app\tests\test_move_timing.cjs
 node app\tests\test_phrases_ui.cjs
 node app\tests\test_profile_storage.cjs
+node app\tests\test_publish_ui.cjs
+node app\tests\test_community_shelf_ui.cjs
 ```
 
 ## Five manual smoke checks
@@ -66,6 +68,15 @@ Do these in the browser at [http://127.0.0.1:8766/dance](http://127.0.0.1:8766/d
 
 A headless Linux browser completed this same five-step path against `server.py` on 24 September 2026, including Advanced mode (Workspace view shows **Creator Studio**). Repeat it on your Windows machine before treating the session as yours.
 
+## Publish pack and Community shelf
+
+Do these after the five checks above. They stay on the normal menu. Optional AI settings stay empty.
+
+6. **Publish.** With a dance open, choose **Publish** in the top bar (My Dances has the same button on each dance). Wait until the window says the step sheet and portable draft are in a folder on this computer. Choose **BootStepper**, **CopperKnob**, or **LineDance.com** and confirm the browser opens that site. You upload the step sheet yourself; the app does not send the dance. Choose **Copy folder** and confirm the folder path is copied. Choose **Show folder** if you want to see the files. Nothing on this screen asks for a key.
+7. **Community.** Open **Line Dance Tools** (or **Open community links** under Settings / Help). The list should include BootStepper, CopperKnob, LineDance.com, BootStepper’s add-a-dance page, the Hillbilly Hellfire site, and the Hillbilly Hellfire YouTube channel. Add a link, edit it, remove it, then refresh the page. Your change should still be there. **Restore starter links** puts the original list back. This panel is not inside Optional AI settings.
+
+LineDance.com opens [https://www.linedance.com/submit](https://www.linedance.com/submit) (Submit a Dance; sign in there if the site asks). CopperKnob opens [https://www.copperknob.co.uk/contactus](https://www.copperknob.co.uk/contactus). BootStepper opens [https://bootstepper.com/dances/create](https://bootstepper.com/dances/create).
+
 ## Linux rerun used to check this checkout
 
 Cloud verification used CPython 3.12.3. `requirements\core-win-py312.lock.txt` is a Windows version snapshot, so this host installed the ranges in `requirements\core.txt` plus the test tools:
@@ -77,7 +88,7 @@ python3.12 -m venv .venv
 .venv/bin/python -B -m pytest -q
 ```
 
-Result: **581 passed, 1 skipped, 0 failed** in about 17 seconds. The skip is the Windows DPAPI key test. Every `app/tests/*.cjs` script exited 0, and `node --check` passed for every file in `app/static/*.js`.
+The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command on this branch was **595 passed, 1 skipped, 0 failed** in about 21 seconds. The skip is the Windows DPAPI key test. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs` and `test_community_shelf_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
 
 Server start from `app\`, which is what `run.bat` does after its environment check:
 

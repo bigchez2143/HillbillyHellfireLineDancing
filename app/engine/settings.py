@@ -65,6 +65,35 @@ def _read_raw():
         return {}
 
 
+def read_lenient():
+    """Settings for display. A damaged file yields an empty document."""
+    return _read_raw()
+
+
+def _read_strict():
+    if not os.path.exists(SETTINGS_FILE):
+        return {}
+    try:
+        with open(SETTINGS_FILE, "r", encoding="utf-8") as handle:
+            value = json.load(handle)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SettingsError("Local settings could not be read, so this change was not saved.") from exc
+    if not isinstance(value, dict):
+        raise SettingsError("Local settings could not be read, so this change was not saved.")
+    return value
+
+
+@_synchronized
+def update_settings(mutator):
+    """Update one part of local settings without dropping the rest of the file."""
+    raw = _read_strict()
+    mutator(raw)
+    if not isinstance(raw, dict):
+        raise SettingsError("Local settings could not be saved.")
+    _write_raw(raw)
+    return raw
+
+
 def _write_raw(value):
     parent = os.path.dirname(SETTINGS_FILE)
     os.makedirs(parent, exist_ok=True)

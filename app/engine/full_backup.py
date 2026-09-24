@@ -25,7 +25,7 @@ from urllib.parse import urlsplit, urlunsplit
 import uuid
 import zipfile
 
-from . import project, library_store, instructor_tools, settings, steps
+from . import project, library_store, instructor_tools, settings, steps, community_shelf
 
 MAX_ARCHIVE_BYTES = 2 * 1024**3
 MAX_EXPANDED_BYTES = 4 * 1024**3
@@ -267,11 +267,14 @@ def _safe_browser(value):
 def _safe_settings(raw):
     ai = raw.get('ai') or {}
     # Never copy a key, protected credential, arbitrary header or credential URL.
-    return {'ai': {'enabled': False,
+    safe = {'ai': {'enabled': False,
                    'provider': ai.get('provider') if ai.get('provider') in {'openai_compatible', 'anthropic_messages', 'custom'} else 'openai_compatible',
                    'model': str(ai.get('model') or '')[:160],
                    'timeout_seconds': ai.get('timeout_seconds') if type(ai.get('timeout_seconds')) is int and 5 <= ai['timeout_seconds'] <= 180 else 60,
                    'base_url': ''}}
+    if isinstance(raw, dict) and 'community' in raw:
+        safe['community'] = {'links': community_shelf.links_for_backup(raw)}
+    return safe
 
 
 def _project_json(raw, pid, filename):
