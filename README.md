@@ -8,6 +8,8 @@ Double-click `app/run.bat`. Source setup uses Python 3.12 and the pinned core re
 
 Install, launch, automated tests, and a five-step manual smoke list are in [TEST-IT.md](TEST-IT.md).
 
+A one-page class guide is [release/Instructor one-pager.pdf](release/Instructor%20one-pager.pdf). The editable source is [release/instructor-one-pager.md](release/instructor-one-pager.md). Rebuild the PDF with `python scripts/render_instructor_one_pager.py`. The portable candidate copies that PDF to the top of the folder, beside `Launch Line Dance Creator.bat`.
+
 An internal portable Windows candidate includes its own runtime and stores new user data under `%LOCALAPPDATA%/HillbillyHellfire/LineDanceCreator`, unless you choose explicit data-directory overrides. Public distribution is pending the release gates below.
 
 ## Create and teach

@@ -40,6 +40,9 @@ def allowed(relative):
         return len(parts) == 2 and (relative.suffix == '.txt' or relative.name == 'README.md')
     if parts[0] == 'scripts':
         return len(parts) == 2 and relative.suffix == '.py'
+    if parts[0] == 'release':
+        return len(parts) == 2 and relative.name in {
+            'instructor-one-pager.md', 'Instructor one-pager.pdf'}
     if parts[:2] == ('docs','steering'):
         return (len(parts) == 3 and relative.suffix == '.md') or (
             len(parts) == 5 and parts[2:4] == ('evidence','dependency-notices') and relative.name in NOTICE_FILES)

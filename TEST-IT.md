@@ -41,7 +41,7 @@ node --check app\static\creator.js
 node --check app\static\app.js
 ```
 
-The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 631 backend tests, including the Publish pack, Community shelf, Song card, Advanced drawer, and Corn Maze starter checks. Two of them store a synthetic key with Windows DPAPI and need a normal Windows user session: `test_optional_ai_key_stays_private_to_the_local_server` and `test_windows_dpapi_keeps_the_bootstepper_key_out_of_the_settings_file`. A sandbox that blocks `CryptProtectData` fails those two tests; the rest of the suite can still be read on its own.
+The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 636 backend tests, including the Publish pack, Community shelf, Song card, Advanced drawer, Corn Maze starter, and instructor one-pager checks. Two of them store a synthetic key with Windows DPAPI and need a normal Windows user session: `test_optional_ai_key_stays_private_to_the_local_server` and `test_windows_dpapi_keeps_the_bootstepper_key_out_of_the_settings_file`. A sandbox that blocks `CryptProtectData` fails those two tests; the rest of the suite can still be read on its own.
 
 These additional Node scripts are in the tree and passed on the Linux rerun below:
 
@@ -101,6 +101,10 @@ These checks use a new projects folder. They do not need a song file or an Advan
 13. **The Corn Maze Dance.** On My Dances, the list should include **The Corn Maze Dance**, marked as a starter sample, with no local audio. Open it. The steps are a beginner sample written in this app from its own moves. They are not a copy of a published step sheet. Open **Practice**, set Count-in to **None**, and choose **Play**. The count should advance. No song starts playing.
 14. **About.** Open **Settings / Help**. About should say **Freeware from Hillbilly Hellfire** and link to [https://hillbillyhellfire.com](https://hillbillyhellfire.com). The same line is in the footer on the dance page, the older creator page, and Sound Repair Studio.
 
+## Instructor one-pager
+
+The class walkthrough is [release/Instructor one-pager.pdf](release/Instructor%20one-pager.pdf), written from [release/instructor-one-pager.md](release/instructor-one-pager.md). It follows the screens above: open the app, My Dances, The Corn Maze Dance, Create / Edit, Practice, the Song card, Export, Publish, and Community. It does not ask for an Advanced key. The portable candidate places the same PDF beside `Launch Line Dance Creator.bat`. After editing the markdown, rebuild it with `python scripts/render_instructor_one_pager.py`.
+
 ## Linux rerun used to check this checkout
 
 Cloud verification used CPython 3.12.3. `requirements\core-win-py312.lock.txt` is a Windows version snapshot, so this host installed the ranges in `requirements\core.txt` plus the test tools:
@@ -112,7 +116,7 @@ python3.12 -m venv .venv
 .venv/bin/python -B -m pytest -q
 ```
 
-The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command was **616 passed, 1 skipped, 0 failed**. After the Advanced drawer, the same command was **626 passed, 2 skipped, 0 failed**. After the Corn Maze starter and the freeware line, the same command on this branch was **631 passed, 2 skipped, 0 failed** in about 20 seconds. The skips are the two Windows DPAPI key tests. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, `test_song_card_ui.cjs`, and `test_advanced_drawer_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
+The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command was **616 passed, 1 skipped, 0 failed**. After the Advanced drawer, the same command was **626 passed, 2 skipped, 0 failed**. After the Corn Maze starter and the freeware line, the same command was **631 passed, 2 skipped, 0 failed**. After the instructor one-pager, the same command on this branch was **636 passed, 2 skipped, 0 failed** in about 20 seconds. The skips are the two Windows DPAPI key tests. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, `test_song_card_ui.cjs`, and `test_advanced_drawer_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
 
 Server start from `app\`, which is what `run.bat` does after its environment check:
 
