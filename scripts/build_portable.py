@@ -134,6 +134,16 @@ def copy_dependencies(core, destination: Path):
     return rows
 
 
+def copy_instructor_guide(destination: Path):
+    """Ship the class one-pager at the top of the portable folder."""
+    import importlib.util
+    path = ROOT / "scripts" / "render_instructor_one_pager.py"
+    spec = importlib.util.spec_from_file_location("render_instructor_one_pager", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.copy_into_portable(destination)
+
+
 def copy_application(destination: Path):
     # Public source allowlist: no projects, keys, cached media, private research,
     # database sidecars, tests, or arbitrary top-level files enter the package.
@@ -193,6 +203,15 @@ os.environ.setdefault("LINE_DANCE_TOOLS_DIR", str(data / "tools"))
 sys.path.insert(0, str(app))
 runpy.run_path(str(app / "server.py"), run_name="__main__")
 '''
+
+
+def _release_bundle():
+    import importlib.util
+    path = ROOT / "scripts" / "release_bundle.py"
+    spec = importlib.util.spec_from_file_location("hh_release_bundle", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def verify(destination: Path):
@@ -259,18 +278,22 @@ def build(destination: Path, archive: bool):
     packages = copy_dependencies(core, destination / "runtime" / "Lib" / "site-packages")
     copy_supplemental_notices(packages, destination)
     copy_application(destination)
+    copy_instructor_guide(destination)
     (destination / "launch.py").write_text(BOOTSTRAP, encoding="utf-8")
-    (destination / "Launch Line Dance Creator.bat").write_text(
-        '@echo off\ncd /d "%~dp0"\n"%~dp0runtime\\python.exe" -I -B "%~dp0launch.py"\n'
-        'if errorlevel 1 pause\n', encoding="utf-8")
+    _release_bundle().add_shared_files(destination)
     (destination / "RELEASE-STATUS.txt").write_text(
         "Internal portable candidate; not a certified public release.\n"
-        "Extract and open Launch Line Dance Creator.bat.\n"
+        "Extract and open Launch Line Dance Creator.bat. run.bat starts that same launcher.\n"
+        "There is no Setup installer and no desktop icon.\n"
+        "Read START-HERE.txt and Instructor one-pager.pdf in this folder.\n"
+        "That guide does not need an account or a key.\n"
+        "sample/the-corn-maze-dance is a readable copy of the starter. No song file is included.\n"
+        "Freeware terms are in LICENSE.\n"
         "Data defaults to %LOCALAPPDATA%/HillbillyHellfire/LineDanceCreator; explicit data overrides are retained.\n"
-        "The core needs no Python installation, internet, AI account or speech model.\n"
+        "When runtime\\python.exe is present, the core needs no Python installation, internet, AI account or speech model.\n"
         "Optional local models are not included. Store a separate backup of your projects.\n"
-        "Pending release gates include clean-machine/offline/upgrade testing, content and licence\n"
-        "review, instructor/user acceptance, supported OS declaration and final freeware terms.\n",
+        "Pending release gates include clean-machine/offline/upgrade testing, content review,\n"
+        "instructor/user acceptance, and supported OS declaration.\n",
         encoding="utf-8")
     notes = ["# Third-party distribution notices", "",
              "CPython's full notice is retained at `runtime/LICENSE.txt`.",

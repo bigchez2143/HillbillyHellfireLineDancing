@@ -394,11 +394,14 @@ def list_projects():
         try:
             data = load_project(pid)
             song, dance = data.get('song') or {}, data.get('dance') or {}
+            draft = data.get('draft') if isinstance(data.get('draft'), dict) else {}
+            choreography = draft.get('choreography') if isinstance(draft.get('choreography'), dict) else {}
             out.append({'id': pid, 'name': data.get('name', pid), 'title': song.get('title'),
                         'created': data.get('created'), 'has_audio': bool(song.get('path')),
                         'has_analysis': bool(data.get('analysis')),
                         'has_dance': bool(dance.get('candidates') or dance.get('custom')),
-                        'has_draft': bool((data.get('draft', {}).get('editor') or {}).get('moves')),
+                        'has_draft': bool((draft.get('editor') or {}).get('moves') or choreography.get('parts')),
+                        'sample': data.get('sample') is True,
                         'document_revision': data['document_revision'], 'recovery': data.recovery})
         except (OSError, ValueError):
             continue
@@ -470,6 +473,9 @@ def save_workspace(pid, draft, expected_revision):
                 data['tutorial']['status'] = 'STALE'
                 if isinstance(draft.get('tutorial'), dict):
                     draft['tutorial']['status'] = 'STALE'
+        if 'sheet_meta' in draft:
+            from .song_card import apply_spotify_url
+            draft['sheet_meta'] = apply_spotify_url(draft['sheet_meta'])
         # Omitted fields survive older clients; provided fields replace a field.
         data['draft'].update(copy.deepcopy(draft))
         for field in AUTHOR_FIELDS:

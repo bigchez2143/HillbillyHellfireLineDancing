@@ -31,10 +31,10 @@ MAX_MEMBERS = 16
 MAX_COMPRESSION_RATIO = 200
 FORMATS = {"pdf", "docx", "txt", "html", "csv", "xlsx", "srt", "vtt", "json", "zip"}
 META_FIELDS = {"dance_title", "choreographer", "country", "contact", "level_label", "description",
-               "signature_note", "ending_note", "youtube_url", "sheet_url", "song_url", "source_url", "credits", "links", "print_qr"}
+               "signature_note", "ending_note", "youtube_url", "sheet_url", "song_url", "spotify_url", "source_url", "credits", "links", "print_qr"}
 MUSIC_FIELDS = {"bpm", "first_count", "meter", "key", "anchors", "measured_bpm", "manually_corrected", "timing_confirmed"}
-PRIVATE_FIELDS = {"api_key", "apikey", "access_token", "refresh_token", "authorization", "password", "secret",
-                  "client_secret", "api_token", "credentials", "provider_settings", "ai_settings", "connection", "endpoint", "path", "local_path", "file_path", "source_path", "audio_data", "base64", "data_url"}
+PRIVATE_FIELDS = {"api_key", "apikey", "api_key_protected", "access_token", "refresh_token", "authorization", "password", "secret",
+                  "client_secret", "client_id", "api_token", "credentials", "provider_settings", "ai_settings", "connection", "endpoint", "path", "local_path", "file_path", "source_path", "audio_data", "base64", "data_url"}
 
 
 class ExportError(ValueError):
@@ -114,9 +114,19 @@ def _compile_project(project):
         raise ExportError("The choreography cannot be compiled; review its saved structure.") from exc
 
 
+def _public_spotify(meta):
+    """Share link only. A missing or unusable value is omitted from the sheet."""
+    from .song_card import normalize_spotify_url
+    try:
+        return normalize_spotify_url(meta.get("spotify_url")) or None
+    except ValueError:
+        return None
+
+
 def _links(meta):
     values = [("Video demonstration", meta.get("youtube_url")), ("Step sheet", meta.get("sheet_url")),
-              ("Music", meta.get("song_url")), ("Movement source", meta.get("source_url"))]
+              ("Spotify link", _public_spotify(meta)), ("Music", meta.get("song_url")),
+              ("Movement source", meta.get("source_url"))]
     for entry in meta.get("links", []) if isinstance(meta.get("links"), list) else []:
         if isinstance(entry, str):
             entry = {"url": entry}
@@ -707,6 +717,8 @@ def portable_project(project, include_lyrics=False):
     for key in ("youtube_url", "sheet_url", "song_url", "source_url"):
         if key in portable_meta:
             portable_meta[key] = safe_url(portable_meta[key]) or ""
+    if "spotify_url" in portable_meta:
+        portable_meta["spotify_url"] = _public_spotify(portable_meta) or ""
     references = _media_references(project)
     for item in _used_annotations(project, compiled):
         for attachment in item.get("attachments", []):

@@ -14,6 +14,8 @@ This describes the intended product. The README and release notes must distingui
 
 ## Add license
 
+**Update, 24 September 2026:** the repository now has an operative custom `LICENSE` (freeware version 1.0, copyright Lee Burnette, product published under Hillbilly Hellfire). It is not an OSI open source license. Do not replace it with a license from GitHub's dropdown. Lee Burnette still needs to confirm that rights-holder line before a public release.
+
 Select **No license for now** in the GitHub creation form. Add a software-specific custom `LICENSE` before releasing the application. No license is a temporary setup choice, not the intended final freeware permission: default copyright restrictions apply, while GitHub's terms allow viewing/forking a public repository. [GitHub licensing guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository).
 
 The eventual terms need to grant free use and the requested use of dances at paid classes/events while prohibiting sale or monetization of the software. Ordinary open-source licenses allow commercial activity and therefore do not implement this restriction. Call a restricted public-source release **source-available freeware**, rather than OSI open source. [Open Source Definition](https://opensource.org/osd).
