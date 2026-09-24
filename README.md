@@ -6,6 +6,8 @@ A local Windows application for writing, rehearsing and sharing line dances. Bas
 
 Double-click `app/run.bat`. Source setup uses Python 3.12 and the pinned core requirements; the first setup needs internet. Later launches use the local environment and open `http://127.0.0.1:8766/dance`. Optional speech/stem models are not installed at startup. Existing project data remains under `app/projects` in source mode.
 
+Install, launch, automated tests, and a five-step manual smoke list are in [TEST-IT.md](TEST-IT.md).
+
 An internal portable Windows candidate includes its own runtime and stores new user data under `%LOCALAPPDATA%/HillbillyHellfire/LineDanceCreator`, unless you choose explicit data-directory overrides. Public distribution is pending the release gates below.
 
 ## Create and teach
