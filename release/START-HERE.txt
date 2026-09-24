@@ -1,0 +1,22 @@
+Hillbilly Hellfire Line Dance Creator
+
+A free Windows application for writing, rehearsing, and teaching line dances.
+
+No account is required. You do not sign up, and you do not sign in, to use the dance tools.
+
+Optional connections are zero-cost in this app. Bring your own credentials if you want them. This download does not include a shared AI account, a shared key, or paid credits. Classes, practice, the starter dance, and Publish work with no key.
+
+How to run
+1. Unzip this folder. Keep the files together.
+2. There is no Setup installer and no desktop icon to click. Do not look for Setup.exe.
+3. Double-click "Launch Line Dance Creator.bat".
+   "run.bat" in this same folder starts that same launcher.
+   When this zip includes runtime\python.exe, the launcher uses that private Python.
+   When it does not, the launcher uses app\run.bat. The first setup then needs Python 3.12 and internet. Later launches stay on this computer.
+4. The dance page opens at http://127.0.0.1:8766/dance
+5. Read "Instructor one-pager.pdf" in this folder for a one-page class guide. That guide does not ask for an account or a key.
+6. sample\the-corn-maze-dance is a readable copy of the starter dance, The Corn Maze Dance. No song file is included. The app also adds that dance when My Dances is empty.
+
+The freeware terms are in LICENSE. You may use the app for paid dance classes and charge for your own teaching and dances. Do not sell the Software or charge for access to it. Your dances stay yours. Songs and other people's materials stay under their own terms. The Software is provided as is.
+
+Discover Hillbilly Hellfire at https://hillbillyhellfire.com and https://www.youtube.com/@HillbillyHellfire

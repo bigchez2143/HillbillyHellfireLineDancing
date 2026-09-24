@@ -1,6 +1,6 @@
 # Third-party software and content notices
 
-Inventory date: 3 September 2026. This source-level index is not a replacement for the full licenses included with a binary, and is not a certification that every redistribution obligation has been discharged. The application's proposed freeware restrictions govern only material its licensor can license; upstream components retain their own permissions and obligations.
+Inventory date: 3 September 2026. This source-level index is not a replacement for the full licenses included with a binary, and is not a certification that every redistribution obligation has been discharged. The application's freeware license is [LICENSE](LICENSE). It governs only material its licensor can license; upstream components retain their own permissions and obligations.
 
 The tested Windows x64 / CPython 3.12.14 core resolution contains 49 distributions, pinned in `requirements/core-win-py312.lock.txt`. `scripts/build_portable.py` copies their installed wheel files, retains license/NOTICE files and emits `build-manifest.json`, `THIRD-PARTY-NOTICES.md` and `SHA256SUMS.txt` inside each candidate. The generated manifest names the actual license files for that build. CPython's notice is retained at `runtime/LICENSE.txt`. Consult those complete texts before redistribution.
 

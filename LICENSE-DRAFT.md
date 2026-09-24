@@ -1,3 +1,11 @@
+# Historical draft — not the license
+
+**Superseded on 24 September 2026.** The operative license is [`LICENSE`](LICENSE) (version 1.0). This file keeps draft 0.1 for the record. Do not apply this draft. `LICENSE` names **Lee Burnette** as licensor and copyright holder, with the product published under the Hillbilly Hellfire name. That rights-holder line still needs Lee Burnette's confirmation before a public release.
+
+The text below is the unrevised draft, including its original “not adopted” warning. It is history, not a second set of terms.
+
+---
+
 # Line Dance Creator freeware license — owner review draft
 
 **DRAFT 0.1 — not adopted and not an operative public license.** Prepared 3 September 2026. The owner must approve the wording, identify the legal rights holder and publish an adopted `LICENSE` before relying on these terms for a release. This document does not itself change existing ownership or grant rights the publisher does not hold. It is not a guarantee of enforceability.

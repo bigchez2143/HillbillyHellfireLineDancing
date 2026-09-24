@@ -1,6 +1,6 @@
 # Contributing to Line Dance Creator
 
-Thank you for helping make a practical tool for line dancers. This is freeware with restrictions on monetizing the software; paid dance teaching and the permitted use of people's own outputs are separate. The final software license must be adopted before contribution licensing is treated as settled. While only `LICENSE-DRAFT.md` exists, discuss proposed contributions without assuming an operative license grant or a copyright transfer.
+Thank you for helping make a practical tool for line dancers. This is freeware under [LICENSE](LICENSE): paid dance teaching and people's own outputs are allowed, and selling the Software is not. [LICENSE-DRAFT.md](LICENSE-DRAFT.md) is the earlier draft, not a second license. This document does not assign your copyright to the publisher and does not create a separate contributor agreement.
 
 ## Useful contributions
 
@@ -33,4 +33,4 @@ Keep Basic mode useful without technical setup. Preserve existing values when ch
 
 Describe the concrete behavior changed, why it matters, and how it was checked. Flag schema migrations, compatibility limits, new dependencies, outbound data and content rights. Never put account secrets or protected project data in source, examples or release artifacts.
 
-The maintainer reviews code, content permissions and instructor evidence before promotion into the default catalog or release. Follow the adopted project license and retain upstream notices; this document does not create a separate contributor agreement or require assignment of ownership. A source commit, passing unit test or generated installer alone does not establish a supported public release.
+The maintainer reviews code, content permissions and instructor evidence before promotion into the default catalog or release. Follow [LICENSE](LICENSE) and retain upstream notices; this document does not create a separate contributor agreement or require assignment of ownership. A source commit, passing unit test, or generated zip alone does not establish a supported public release.

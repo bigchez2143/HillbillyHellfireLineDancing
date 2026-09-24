@@ -116,7 +116,7 @@ python3.12 -m venv .venv
 .venv/bin/python -B -m pytest -q
 ```
 
-The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command was **616 passed, 1 skipped, 0 failed**. After the Advanced drawer, the same command was **626 passed, 2 skipped, 0 failed**. After the Corn Maze starter and the freeware line, the same command was **631 passed, 2 skipped, 0 failed**. After the instructor one-pager, the same command on this branch was **636 passed, 2 skipped, 0 failed** in about 20 seconds. The skips are the two Windows DPAPI key tests. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, `test_song_card_ui.cjs`, and `test_advanced_drawer_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
+The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command was **616 passed, 1 skipped, 0 failed**. After the Advanced drawer, the same command was **626 passed, 2 skipped, 0 failed**. After the Corn Maze starter and the freeware line, the same command was **631 passed, 2 skipped, 0 failed**. After the instructor one-pager, the same command on that branch was **636 passed, 2 skipped, 0 failed** in about 20 seconds. After the freeware LICENSE and the portable zip builder, the same command was **640 passed, 2 skipped, 0 failed** in about 20 seconds. The skips are the two Windows DPAPI key tests. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, `test_song_card_ui.cjs`, and `test_advanced_drawer_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
 
 Server start from `app\`, which is what `run.bat` does after its environment check:
 
@@ -128,6 +128,24 @@ cd app
 Confirmed: `GET /dance`, `/`, `/legacy`, the stylesheet and script tags on the dance page, `GET /api/health`, `GET /api/moves/summary` (39 buildable moves), and `POST /api/projects` all returned success. The only HTTP 404 in the browser smoke was `/favicon.ico`.
 
 `.venv` is gitignored. Do not commit it, `app\projects`, `app\settings.json`, or media.
+
+## Portable zip
+
+From the repository root, this builds the Windows folder layout on Linux or Windows (no embedded Python, no installer, no desktop icon):
+
+```bash
+python scripts/build_release_zip.py
+```
+
+The zip is `build/HillbillyHellfire-LineDanceCreator-windows.zip`. It contains `Launch Line Dance Creator.bat`, `run.bat`, `app/run.bat`, `Instructor one-pager.pdf`, `sample/the-corn-maze-dance`, and `LICENSE`. Unzip it and double-click the Launch bat. No account is required. Details are in [docs/windows-portable-zip.md](docs/windows-portable-zip.md).
+
+The self-contained Windows runtime, for a PC that should not install Python, is still:
+
+```bat
+.venv\Scripts\python.exe scripts\build_portable.py --output build\portable-candidate --zip
+```
+
+That command needs Windows x64 and CPython 3.12. It uses the same Launch bat, and it adds `runtime\python.exe`.
 
 ## Still needs a real Windows session
 
