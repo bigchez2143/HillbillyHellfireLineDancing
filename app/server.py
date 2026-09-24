@@ -37,6 +37,7 @@ from workspace_api import router as workspace_router
 from creator_api import router as creator_router
 from export_api import router as creator_export_router
 from community_api import router as community_router
+from advanced_api import router as advanced_router
 from library_api import router as creator_library_router
 from instructor_api import router as instructor_router
 from media_api import router as recording_media_router
@@ -44,6 +45,7 @@ app.include_router(workspace_router)
 app.include_router(creator_router)
 app.include_router(creator_export_router)
 app.include_router(community_router)
+app.include_router(advanced_router)
 app.include_router(creator_library_router)
 app.include_router(instructor_router)
 app.include_router(recording_media_router)

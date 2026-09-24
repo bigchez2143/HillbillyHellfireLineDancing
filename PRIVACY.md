@@ -26,6 +26,14 @@ On Windows, the saved API key is protected with Windows DPAPI in the local setti
 
 Disabling AI prevents normal assistant requests but may retain its saved key. The remove-key action deletes the local saved key; it does not revoke a credential at the provider or delete the provider's existing records. Manage those controls in your own provider account. A custom endpoint requires a supported adapter; saving an address does not establish support for every service.
 
+## Advanced personal keys
+
+The Advanced drawer on the dance page is optional and empty until you save a key. Basic writing, practice, Publish, and the song card do not ask for one.
+
+A BootStepper personal key, when you save one, is protected with the same Windows DPAPI store as an AI key. The local server uses it only as a request header for a search you start. That search reads dances, songs, or choreographers. It does not upload a dance, and the results are not written into your project or into a saved catalog. The settings response, backups, and dance exports do not include the key. Forgetting the key removes the local copy. It does not delete the key in your BootStepper account.
+
+A Spotify client id is not collected. The song card stores a share link only.
+
 ## Optional local tools and links
 
 Speech transcription/alignment and stem separation are optional user-managed modules. Their packages and model weights may need network downloads during installation or first use. The core portable package does not include these models. Review the chosen packages/model hosts and any additional settings before installing them. Normal Basic startup does not install or download them.

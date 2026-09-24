@@ -33,8 +33,8 @@ FORMATS = {"pdf", "docx", "txt", "html", "csv", "xlsx", "srt", "vtt", "json", "z
 META_FIELDS = {"dance_title", "choreographer", "country", "contact", "level_label", "description",
                "signature_note", "ending_note", "youtube_url", "sheet_url", "song_url", "spotify_url", "source_url", "credits", "links", "print_qr"}
 MUSIC_FIELDS = {"bpm", "first_count", "meter", "key", "anchors", "measured_bpm", "manually_corrected", "timing_confirmed"}
-PRIVATE_FIELDS = {"api_key", "apikey", "access_token", "refresh_token", "authorization", "password", "secret",
-                  "client_secret", "api_token", "credentials", "provider_settings", "ai_settings", "connection", "endpoint", "path", "local_path", "file_path", "source_path", "audio_data", "base64", "data_url"}
+PRIVATE_FIELDS = {"api_key", "apikey", "api_key_protected", "access_token", "refresh_token", "authorization", "password", "secret",
+                  "client_secret", "client_id", "api_token", "credentials", "provider_settings", "ai_settings", "connection", "endpoint", "path", "local_path", "file_path", "source_path", "audio_data", "base64", "data_url"}
 
 
 class ExportError(ValueError):

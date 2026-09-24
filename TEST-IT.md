@@ -41,7 +41,7 @@ node --check app\static\creator.js
 node --check app\static\app.js
 ```
 
-The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 616 backend tests, including the Publish pack, Community shelf, and Song card checks. One of them, `test_optional_ai_key_stays_private_to_the_local_server`, stores a synthetic key with Windows DPAPI and needs a normal Windows user session. A sandbox that blocks `CryptProtectData` fails that single test; the rest of the suite can still be read on its own.
+The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 626 backend tests, including the Publish pack, Community shelf, Song card, and Advanced drawer checks. Two of them store a synthetic key with Windows DPAPI and need a normal Windows user session: `test_optional_ai_key_stays_private_to_the_local_server` and `test_windows_dpapi_keeps_the_bootstepper_key_out_of_the_settings_file`. A sandbox that blocks `CryptProtectData` fails those two tests; the rest of the suite can still be read on its own.
 
 These additional Node scripts are in the tree and passed on the Linux rerun below:
 
@@ -55,6 +55,7 @@ node app\tests\test_profile_storage.cjs
 node app\tests\test_publish_ui.cjs
 node app\tests\test_community_shelf_ui.cjs
 node app\tests\test_song_card_ui.cjs
+node app\tests\test_advanced_drawer_ui.cjs
 ```
 
 ## Five manual smoke checks
@@ -86,6 +87,13 @@ Do this with a dance open. Optional AI settings stay empty. Nothing on this scre
 9. **No local file.** Leave **Local audio file** empty. Open **Practice**. The note should say rehearsal uses the metronome. Set Count-in to **None**, then choose **Play**. The big count should advance. Spotify should not start playing.
 10. **Local audio.** Back on **Music**, choose a local audio file you have permission to use. **Analyze local audio** uses that file. Open **Practice** again. The note should say rehearsal plays the local file, and **Play** should play that file. The Spotify link can stay filled in. It still does not replace the file.
 
+## Advanced drawer
+
+Do this only if you want to try a personal key. The checks above do not need it. Leave Advanced empty for a normal dance session.
+
+11. **Empty by default.** Set Workspace view to **Advanced**. Open **Settings / Help** and open **Advanced**. It should say the app works with no keys, that a personal key stays on this computer, and that BootStepper search is read-only. **Spotify** should say a client id is not enabled, with no box to paste one. **Optional AI settings** opens the same connection screen as before. Leave the key blank. Switch Workspace view back to **Basic**. The Advanced drawer should be gone. Create, practice, and Publish still work, and Publish does not ask for a key.
+12. **BootStepper search, if you have your own key.** On your BootStepper account, create a personal key. Paste it under Advanced and choose **Save key on this computer**. Search for a dance, a song, and a choreographer. Results should name BootStepper and offer **Open on BootStepper**. This app does not upload the dance. Choose **Forget saved key** when you are done. The key should not appear in a Publish folder or a portable draft.
+
 ## Linux rerun used to check this checkout
 
 Cloud verification used CPython 3.12.3. `requirements\core-win-py312.lock.txt` is a Windows version snapshot, so this host installed the ranges in `requirements\core.txt` plus the test tools:
@@ -97,7 +105,7 @@ python3.12 -m venv .venv
 .venv/bin/python -B -m pytest -q
 ```
 
-The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command on this branch was **616 passed, 1 skipped, 0 failed** in about 19 seconds. The skip is the Windows DPAPI key test. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, and `test_song_card_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
+The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command was **616 passed, 1 skipped, 0 failed**. After the Advanced drawer, the same command on this branch was **626 passed, 2 skipped, 0 failed** in about 21 seconds. The skips are the two Windows DPAPI key tests. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, `test_song_card_ui.cjs`, and `test_advanced_drawer_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
 
 Server start from `app\`, which is what `run.bat` does after its environment check:
 
@@ -113,7 +121,7 @@ Confirmed: `GET /dance`, `/`, `/legacy`, the stylesheet and script tags on the d
 ## Still needs a real Windows session
 
 - Double-click `app\run.bat` on your PC, including a first-time install into `.venv`.
-- The DPAPI API-key test in a normal Windows user session, if you want that one case green.
+- The two DPAPI key tests in a normal Windows user session, if you want those cases green. One covers Optional AI. The other covers the BootStepper personal key.
 - A human dance session: a song you have rights to use, timing by ear, practice on the floor, and a print or export you can read.
 - Clean-machine, non-admin, offline-after-install, and portable-candidate checks.
 - Accessibility, screen reader, and zoom.

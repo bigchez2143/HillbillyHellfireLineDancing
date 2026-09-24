@@ -1,10 +1,11 @@
-"""Local, optional connection settings for the AI dance assistant.
+"""Local, optional connection settings for this Windows account.
 
 Project files must stay portable and safe to share, so connection settings are
-kept once for this Windows account under app/settings.json.  The API key is
-encrypted with Windows Data Protection API (DPAPI) before it is written; it is
-never returned to the browser, included in project backups, or sent to an AI
-unless a future, explicit AI action is requested by the dancer.
+kept once under app/settings.json.  API keys are encrypted with Windows Data
+Protection API (DPAPI) before they are written.  They are never returned to the
+browser, included in project backups, or placed in dance exports.  An AI key is
+sent only when the dancer explicitly tests or asks that provider.  A BootStepper
+key is sent only as a request header for a read-only search the dancer starts.
 """
 from __future__ import annotations
 
@@ -189,12 +190,14 @@ def public_connection():
     return {**_safe_public(ai), 'connection_fingerprint': _fingerprint(ai), 'test_status': 'not_tested'}
 
 
-def _protect_for_current_windows_user(secret):
+def _protect_for_current_windows_user(secret, description="Line Dance Creator API key"):
     """Encrypt a small secret with DPAPI.  It can only be read by this user."""
     if os.name != "nt":
         raise SettingsError("Secure API-key storage is available in the Windows desktop app only.")
     if not secret:
         raise SettingsError("The API key cannot be empty.")
+    if not isinstance(description, str) or not description or len(description) > 80:
+        raise SettingsError("Windows could not securely store this API key.")
 
     class DataBlob(ctypes.Structure):
         _fields_ = [("cbData", wintypes.DWORD),
@@ -206,7 +209,7 @@ def _protect_for_current_windows_user(secret):
     protected = DataBlob()
     crypt32 = ctypes.windll.crypt32
     kernel32 = ctypes.windll.kernel32
-    ok = crypt32.CryptProtectData(ctypes.byref(source), "Line Dance Creator API key",
+    ok = crypt32.CryptProtectData(ctypes.byref(source), description,
                                   None, None, None, 0x01, ctypes.byref(protected))
     if not ok:
         raise SettingsError("Windows could not securely store this API key.")
@@ -216,16 +219,18 @@ def _protect_for_current_windows_user(secret):
         kernel32.LocalFree(protected.pbData)
 
 
-def _unprotect_for_current_windows_user(protected_text):
+def _unprotect_for_current_windows_user(protected_text, label="AI key"):
     """Read a DPAPI-protected key inside the local server only."""
     if os.name != "nt":
         raise SettingsError("Secure API-key storage is available in the Windows desktop app only.")
+    if not isinstance(label, str) or not label:
+        label = "API key"
     try:
         payload = base64.b64decode(protected_text.encode("ascii"), validate=True)
     except (ValueError, UnicodeEncodeError):
-        raise SettingsError("The saved AI key could not be read. Please save it again.")
+        raise SettingsError(f"The saved {label} could not be read. Please save it again.")
     if not payload:
-        raise SettingsError("The saved AI key could not be read. Please save it again.")
+        raise SettingsError(f"The saved {label} could not be read. Please save it again.")
 
     class DataBlob(ctypes.Structure):
         _fields_ = [("cbData", wintypes.DWORD),
@@ -239,7 +244,7 @@ def _unprotect_for_current_windows_user(protected_text):
     ok = crypt32.CryptUnprotectData(ctypes.byref(source), None, None, None, None,
                                     0x01, ctypes.byref(clear))
     if not ok:
-        raise SettingsError("Windows could not unlock the saved AI key. Please save it again.")
+        raise SettingsError(f"Windows could not unlock the saved {label}. Please save it again.")
     try:
         return ctypes.string_at(clear.pbData, clear.cbData).decode("utf-8")
     finally:
@@ -322,3 +327,99 @@ def load_ai_connection(expected_fingerprint=None):
         raise SettingsError("Add an API address, model name, and key in Settings before asking the AI.")
     key = _unprotect_for_current_windows_user(ai['api_key_protected']) if ai.get('api_key_protected') else ''
     return {**public, 'api_key': key, 'connection_fingerprint': _fingerprint(ai)}
+
+
+BOOTSTEPPER_KEY_LABEL = "BootStepper key"
+_BOOTSTEPPER_DESCRIPTION = "Line Dance Creator BootStepper key"
+SPOTIFY_LATER = {
+    "enabled": False,
+    "client_id_collected": False,
+    "note": "A Spotify client id is not enabled. The song card still stores a share link only.",
+}
+
+
+def _bootstepper_block(raw):
+    block = raw.get("bootstepper") if isinstance(raw, dict) else None
+    return block if isinstance(block, dict) else {}
+
+
+def _public_bootstepper(raw):
+    block = _bootstepper_block(raw)
+    return {
+        "api_key_configured": bool(block.get("api_key_protected")),
+        "read_only": True,
+        "writes_enabled": False,
+    }
+
+
+def _validate_personal_key(api_key):
+    if api_key is None:
+        return ""
+    if not isinstance(api_key, str):
+        raise SettingsError("Enter a personal key without line breaks or control characters.")
+    if len(api_key) > 512 or any(ord(char) < 32 or ord(char) == 127 for char in api_key):
+        raise SettingsError("Enter a personal key without spaces, line breaks, or control characters.")
+    key = api_key.strip()
+    if not key:
+        return ""
+    if any(char.isspace() for char in key) or len(key) < 8 or "://" in key:
+        raise SettingsError("That does not look like a personal key. Paste the key itself, not a web address.")
+    return key
+
+
+@_synchronized
+def public_bootstepper():
+    """Whether a personal BootStepper key is saved. The key itself is never included."""
+    return _public_bootstepper(_read_raw())
+
+
+@_synchronized
+def public_advanced():
+    """Safe Advanced status. Spotify stays disabled and has no key field."""
+    raw = _read_raw()
+    return {
+        "bootstepper": _public_bootstepper(raw),
+        "ai": _safe_public(raw.get("ai") or {}),
+        "spotify": dict(SPOTIFY_LATER),
+    }
+
+
+@_synchronized
+def save_bootstepper_key(api_key):
+    """Store a personal BootStepper key for this Windows user, or keep the saved one.
+
+    A blank value keeps a key that is already saved. It does not contact BootStepper.
+    Other local settings, including Optional AI, are left in place.
+    """
+    key = _validate_personal_key(api_key)
+
+    def mutate(raw):
+        block = dict(_bootstepper_block(raw))
+        if key:
+            block["api_key_protected"] = _protect_for_current_windows_user(key, _BOOTSTEPPER_DESCRIPTION)
+        elif not block.get("api_key_protected"):
+            raise SettingsError("Enter your personal BootStepper key, or leave Advanced empty.")
+        raw["bootstepper"] = {"api_key_protected": block["api_key_protected"]}
+
+    update_settings(mutate)
+    return public_bootstepper()
+
+
+@_synchronized
+def clear_bootstepper_key():
+    """Remove the local BootStepper key. Other settings stay."""
+    def mutate(raw):
+        raw.pop("bootstepper", None)
+
+    update_settings(mutate)
+    return public_bootstepper()
+
+
+@_synchronized
+def load_bootstepper_key():
+    """Private server-only BootStepper key. Do not put this in a web response or export."""
+    block = _bootstepper_block(_read_raw())
+    protected = block.get("api_key_protected")
+    if not protected:
+        raise SettingsError("Add your personal BootStepper key in Advanced before searching. The rest of the app works without one.")
+    return _unprotect_for_current_windows_user(protected, BOOTSTEPPER_KEY_LABEL)

@@ -45,7 +45,7 @@ MEDIA_EXT = {'.mp3': 'music', '.wav': 'music', '.m4a': 'music', '.flac': 'music'
              '.jpeg': 'photos', '.gif': 'photos', '.webp': 'photos',
              '.mp4': 'videos', '.mov': 'videos', '.webm': 'videos'}
 SECRET_KEYS = {'api_key', 'apikey', 'api_key_protected', 'access_token', 'refresh_token',
-               'password', 'authorization', 'client_secret', 'secret', 'credentials'}
+               'password', 'authorization', 'client_secret', 'client_id', 'secret', 'credentials'}
 LIBRARY_TABLES = {
     'records': ('id', 'version', 'payload'),
     'versions': ('record_id', 'version', 'payload'),
@@ -267,6 +267,7 @@ def _safe_browser(value):
 def _safe_settings(raw):
     ai = raw.get('ai') or {}
     # Never copy a key, protected credential, arbitrary header or credential URL.
+    # The BootStepper personal key lives beside AI settings and is omitted here.
     safe = {'ai': {'enabled': False,
                    'provider': ai.get('provider') if ai.get('provider') in {'openai_compatible', 'anthropic_messages', 'custom'} else 'openai_compatible',
                    'model': str(ai.get('model') or '')[:160],
