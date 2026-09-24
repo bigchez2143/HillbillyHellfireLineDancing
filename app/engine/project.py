@@ -470,6 +470,9 @@ def save_workspace(pid, draft, expected_revision):
                 data['tutorial']['status'] = 'STALE'
                 if isinstance(draft.get('tutorial'), dict):
                     draft['tutorial']['status'] = 'STALE'
+        if 'sheet_meta' in draft:
+            from .song_card import apply_spotify_url
+            draft['sheet_meta'] = apply_spotify_url(draft['sheet_meta'])
         # Omitted fields survive older clients; provided fields replace a field.
         data['draft'].update(copy.deepcopy(draft))
         for field in AUTHOR_FIELDS:

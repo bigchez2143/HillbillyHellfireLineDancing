@@ -41,7 +41,7 @@ node --check app\static\creator.js
 node --check app\static\app.js
 ```
 
-The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 595 backend tests, including the Publish pack and Community shelf checks. One of them, `test_optional_ai_key_stays_private_to_the_local_server`, stores a synthetic key with Windows DPAPI and needs a normal Windows user session. A sandbox that blocks `CryptProtectData` fails that single test; the rest of the suite can still be read on its own.
+The September 4 Windows record in [final regression evidence](docs/steering/evidence/FINAL-REGRESSION.md) is 430 passed backend tests plus those two Node scripts and the two syntax checks. This tree now collects 616 backend tests, including the Publish pack, Community shelf, and Song card checks. One of them, `test_optional_ai_key_stays_private_to_the_local_server`, stores a synthetic key with Windows DPAPI and needs a normal Windows user session. A sandbox that blocks `CryptProtectData` fails that single test; the rest of the suite can still be read on its own.
 
 These additional Node scripts are in the tree and passed on the Linux rerun below:
 
@@ -54,6 +54,7 @@ node app\tests\test_phrases_ui.cjs
 node app\tests\test_profile_storage.cjs
 node app\tests\test_publish_ui.cjs
 node app\tests\test_community_shelf_ui.cjs
+node app\tests\test_song_card_ui.cjs
 ```
 
 ## Five manual smoke checks
@@ -77,6 +78,14 @@ Do these after the five checks above. They stay on the normal menu. Optional AI 
 
 LineDance.com opens [https://www.linedance.com/submit](https://www.linedance.com/submit) (Submit a Dance; sign in there if the site asks). CopperKnob opens [https://www.copperknob.co.uk/contactus](https://www.copperknob.co.uk/contactus). BootStepper opens [https://bootstepper.com/dances/create](https://bootstepper.com/dances/create).
 
+## Song card
+
+Do this with a dance open. Optional AI settings stay empty. Nothing on this screen asks you to sign in to Spotify or to paste a key.
+
+8. **Spotify link.** Open **Music**. On **Song card**, paste a Spotify song, album, or playlist link (it starts with `https://open.spotify.com/`). The note should say the link is for sharing and opening, and that it does not play with the dance. Choose **Open Spotify link** and confirm the browser opens that page. Choose **Copy link** if you want to share it. Save, leave the dance, and open it again. The link should still be there.
+9. **No local file.** Leave **Local audio file** empty. Open **Practice**. The note should say rehearsal uses the metronome. Set Count-in to **None**, then choose **Play**. The big count should advance. Spotify should not start playing.
+10. **Local audio.** Back on **Music**, choose a local audio file you have permission to use. **Analyze local audio** uses that file. Open **Practice** again. The note should say rehearsal plays the local file, and **Play** should play that file. The Spotify link can stay filled in. It still does not replace the file.
+
 ## Linux rerun used to check this checkout
 
 Cloud verification used CPython 3.12.3. `requirements\core-win-py312.lock.txt` is a Windows version snapshot, so this host installed the ranges in `requirements\core.txt` plus the test tools:
@@ -88,7 +97,7 @@ python3.12 -m venv .venv
 .venv/bin/python -B -m pytest -q
 ```
 
-The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command on this branch was **595 passed, 1 skipped, 0 failed** in about 21 seconds. The skip is the Windows DPAPI key test. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs` and `test_community_shelf_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
+The readiness rerun on 24 September 2026, before Publish and Community, was **581 passed, 1 skipped, 0 failed**. After those features, the same command was **595 passed, 1 skipped, 0 failed**. After the Song card, the same command on this branch was **616 passed, 1 skipped, 0 failed** in about 19 seconds. The skip is the Windows DPAPI key test. Every `app/tests/*.cjs` script exited 0, including `test_publish_ui.cjs`, `test_community_shelf_ui.cjs`, and `test_song_card_ui.cjs`, and `node --check` passed for every file in `app/static/*.js`.
 
 Server start from `app\`, which is what `run.bat` does after its environment check:
 
